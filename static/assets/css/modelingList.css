@@ -1,0 +1,151 @@
+#modelingList{
+   position: relative;
+   width: 140px;
+   height: 100%;
+   font-size: 12px;
+   background: #FCFCFC;
+   padding: 0 8px;
+   border-radius: 0 4px 0 0;
+}
+
+.modelingListContent{
+  overflow:hidden overlay;
+  width: 100%;
+  height: calc(100% - 48px);
+  position: relative;
+  z-index: 1
+}
+
+.modelingBox{
+  width: 100%;
+  height: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  margin-bottom: 5px;
+  line-height: 25px;
+  padding-left:10px ;
+  background-color: #ffffff;
+}
+
+.m-title{
+  width: 100%;
+  height: 40px;
+  border-radius: 0 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  color: #707070;
+  line-height: 40px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+.m-content{
+  width: 100%;
+}
+
+.m-c-title{
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.m-c-title:hover{
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.04);
+}
+
+.m-c-content{
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-c-box{
+   width: 32px;
+   height: 40px;
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-right: 8px;
+   cursor: pointer;
+   background-color: #fff;
+   margin-bottom: 8px;
+  position: relative;
+}
+
+.m-c-hint{
+   position: absolute;
+   /* width: 100%; */
+   /* height: 35px; */
+   border-radius: 4px;
+   background: #fff;
+   box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+   padding: 8px;
+   top: 50px;
+   left: 20px;
+   display: none;
+   z-index: 1000;
+}
+
+.m-c-h-title{
+  font-weight: 700;
+  font-size: 14px;
+  color: #707070;
+}
+
+.m-c-h-content{
+  font-weight: 300;
+  font-size: 12px;
+  color: #707070;
+}
+
+.m-c-box:hover .m-c-hint{
+  display: block;
+}
+
+.m-c-box:hover{
+  box-shadow: 2px 2px 2px 2px rgba(0, 85, 157, 0.04);
+}
+
+.m-c-box-check{
+  background: rgba(0, 85, 157, 0.04);
+}
+
+.m-c-box svg{
+   width: 18px;
+   height: 17px;
+   font-size: 50px;
+}
+
+.m-c-modelOperation{
+  position: absolute;
+  left: 232px;
+  top: 0;
+  width: 200px;
+  border-radius: 4px;
+  background: #fcfcfc;
+  display: none;
+  padding: 10px 8px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+.m-c-m-title{
+  font-weight: 600;
+  font-size: 12px;
+  text-align: left;
+  color: #00559d;
+}

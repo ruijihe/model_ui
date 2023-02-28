@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 40">
+  <defs>
+    <style>.cls-1{fill:#ccc;}.cls-2{fill:#e6e6e6;}.cls-3{fill:#b3b3b3;}</style>
+  </defs>
+  <g id="&#x56FE;&#x5C42;_2">
+    <g id="&#x56FE;&#x5C42;_1-2">
+      <path class="cls-1" d="M0,6V35.14H.07C.73,37.87,6.94,40,14.5,40s13.77-2.13,14.43-4.86H29V6Z"></path>
+      <ellipse class="cls-2" cx="14.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+      <rect class="cls-3" x="22.9" y="10" width="0.2" height="29"></rect>
+    </g>
+  </g>
+</svg>

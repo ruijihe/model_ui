@@ -1,0 +1,239 @@
+#modelProperties{
+  width: 100%;
+  height: 100%;
+}
+
+.m-p-window{
+  width: 100%;
+  min-height: 184px;
+  margin-bottom: 8px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.m-p-setting{
+  width: 208px;
+  height: 100%;
+  background-color: #fcfcfc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 4px 0 0 0;
+}
+
+.m-p-w-btn{
+    width: 16px;
+    height: 85px;
+    background: #fff;
+    border-radius: 10px 0px 0px 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: absolute;
+    right: 100%;
+    top: calc(50% - 42px);
+    line-height: 85px;
+    text-align: center;
+}
+
+.m-p-w-show{
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px 0 0 0 ;
+  margin-left: calc(100% - 25px);
+}
+
+.m-p-s-show{
+  width: 16px;
+  height: 85px;
+  background: #fff;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  line-height: 85px;
+  text-align: center;
+}
+
+.m-p-s-btn{
+  width: 16px;
+  height: 85px;
+  background: #fff;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  position: absolute;
+  right: 100%;
+  top: calc(50% - 170px);
+  line-height: 85px;
+  text-align: center;
+}
+
+.m-p-w-title{
+  width: 100%;
+  height: 24px;
+  display: flex;
+  font-size: 12px;
+  color: #707070;
+  font-weight: 400;
+} 
+
+.m-p-w-t-move{
+  width: 6%;
+  background-color: #fcfcfc;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 4px 0 0 0;
+  cursor: pointer;
+}
+
+.m-p-w-t-3D{
+  width: 47%;
+  background-color: #fcfcfc;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.m-p-w-t-plane{
+  width: 47%;
+  background-color: #fcfcfc;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.viewCheck{
+  background-color: #00559C;
+  color:#FFFFFF;
+}
+
+.m-p-s-title,
+.m-p-s-b-title
+{
+  height: 24px;
+  border-radius: 4px 0 0 0;
+  background: #f5f5f5;
+  font-weight: 700;
+  font-size: 12px;
+  color: #707070;
+  line-height: 24px;
+  padding: 0 8px 0 5px;
+}
+
+.icon-move{
+  width: 6px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.icon-shrink{
+  width:22px ;
+  height: 22px;
+  cursor: pointer;
+}
+
+.m-p-s-box{
+  width: 100%;
+  height: calc(100% - 192px);
+  background-color: #fcfcfc;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 8%);
+  border-radius: 4px 0 0 0;
+  position: relative;
+}
+
+.m-p-s-b-content{
+  width:100% ;
+  height: calc(100% - 24px);
+  overflow: hidden overlay;
+}
+
+.outlineTitle{
+  width: 100%;
+  height: 72px;
+  padding: 8px 8px;
+}
+
+.outlineContent{
+  width: 100%;
+}
+
+.outlineBtn{
+  width: 48px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  color: #707070;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.outlineBtnCheck{
+  background: #00559d;
+  color: #fff;
+}
+
+.changeCoordSelect{
+  width: 48px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  font-weight: 300;
+  font-size: 12px;
+  color: #b9b9b9;
+}
+
+.changeCoordInput{
+  width: 39px;
+  height: 22px;
+  background: #fff;
+  color: #B9B9B9;
+}
+
+.inputBoxOne,
+.inputBoxTwo,
+.inputBoxthree
+{
+  width: 48px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  position: relative;
+}
+
+.i-b-one{
+  width: 2px;
+  height: 22px;
+  border-radius: 2px 0 0 2px;
+  background: #d54e5c;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.i-b-two{
+  width: 2px;
+  height: 22px;
+  border-radius: 2px 0 0 2px;
+  background: #52adb5;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.i-b-three{
+  width: 2px;
+  height: 22px;
+  border-radius: 2px 0 0 2px;
+  background: #529fe1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

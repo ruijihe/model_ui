@@ -1,0 +1,98 @@
+.m-s-content{
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.m-s-c-box{
+  width: 56px;
+  height: 72px;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.m-s-c-box:hover{
+  box-shadow: 2px 2px 2px 2px rgb(0 85 157 / 4%);
+}
+
+.m-s-c-icon{
+  width: 35px;
+  height: 35px;
+  margin-bottom: 4px;
+}
+
+.m-s-c-box-check{
+  background: rgba(0, 85, 157, 0.04);
+}
+
+/* 立方体设置 */
+
+.m-p-s-gridding{
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.m-p-s-button{
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.m-p-s-g-box{
+  width: 100%;
+}
+
+.m-p-c-select{
+  width: 116px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+}
+
+.coordInputBox{
+  width: 56px;
+  height: 32px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 0 8px;
+}
+
+.coordInput{
+  width: 35px;
+  height: 30px;
+}
+
+/* 编辑设置 */
+.e-s-btn{
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.e-s-btn:hover{
+}
+
+.e-s-icon{
+  width: 15px;
+  height: 15px;
+}
+
+.e-s-c-title{
+  width: 100%;
+  padding: 6px 16px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+}

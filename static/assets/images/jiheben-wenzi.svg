@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.23 40.02">
+  <defs>
+    <style>.cls-1{fill:#999;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:#b3b3b3;}.cls-5{fill:#e6e6e6;}</style>
+    <clipPath id="clip-path">
+      <path class="cls-1" d="M12.2,6.06h1.41c-.72,4.38-1.56,8.92-2.41,13.08H9.79C10.63,15,11.47,10.44,12.2,6.06Z"></path>
+    </clipPath>
+  </defs>
+  <g id="&#x56FE;&#x5C42;_2">
+    <g id="&#x56FE;&#x5C42;_1-2">
+      <polygon class="cls-1" points="7.73 29.75 9.14 29.75 7.16 40.02 5.74 40.02 7.73 29.75"></polygon>
+      <polygon class="cls-1" points="9.79 19.14 11.2 19.14 10.36 23.53 8.95 23.53 9.79 19.14"></polygon>
+      <g class="cls-2">
+        <path class="cls-1" d="M12.2,6.06h1.41c-.72,4.38-1.56,8.92-2.41,13.08H9.79C10.63,15,11.47,10.44,12.2,6.06Z"></path>
+        <g class="cls-3">
+          <g class="cls-2">
+            <path class="cls-1" d="M12.2,6.06h1.41c-.27,1.68-.57,3.39-.88,5.09H11.32c.31-1.7.6-3.41.88-5.09"></path>
+            <path class="cls-1" d="M11.32,11.15h1.41c-.49,2.73-1,5.43-1.53,8H9.79c.52-2.56,1-5.26,1.53-8"></path>
+          </g>
+        </g>
+      </g>
+      <polygon class="cls-4" points="15.72 0 17.13 0 26.23 40.02 24.82 40.02 15.72 0"></polygon>
+      <path class="cls-5" d="M15.72,0l9.1,40H18.89l-2-10.28H7.73L5.74,40H0L9.06,0ZM9,23.53h6.73l-.84-4.39C14,15,13.19,10.39,12.35,6.06H12.2c-.73,4.38-1.57,8.92-2.41,13.08L9,23.53"></path>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>.cls-1{fill:#595757;}</style>
+  </defs>
+  <g id="&#x56FE;&#x5C42;_2">
+    <g id="&#x56FE;&#x5C42;_1-2">
+      <path class="cls-1" d="M37,25,3.8,39.91A1,1,0,0,1,2.4,39V24a1,1,0,0,1,1-1H36.6A1,1,0,0,1,37,25Z"></path>
+      <path class="cls-1" d="M2.4,1V16a1,1,0,0,0,1,1H36.6a1,1,0,0,0,.4-2L3.8.09A1,1,0,0,0,2.4,1Zm3,3.07,22,9.9H5.4Z"></path>
+      <rect class="cls-1" x="6" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" x="12" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" x="36" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" x="30" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" x="18" y="18.5" width="4" height="3"></rect>
+      <rect class="cls-1" x="24" y="18.5" width="4" height="3"></rect>
+    </g>
+  </g>
+</svg>
