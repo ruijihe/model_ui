@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-03 09:12:25
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-02 17:14:02
+ * @LastEditTime: 2023-03-06 17:32:37
  * @FilePath: \RjhUitraEdit\src\webui\view\modelProperties\index.js
  * @Description:
  *
@@ -102,7 +102,8 @@ class modelProperties {
                           type: options.type,
                           icon: options.icon,
                           optionsList: options.optionsList,
-                          checkboxList: options.checkboxList
+                          checkboxList: options.checkboxList,
+                          options: options
                         })
                       })
                       .join('')}

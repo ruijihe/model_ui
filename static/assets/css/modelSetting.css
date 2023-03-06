@@ -97,3 +97,10 @@
   background-color: #ffffff;
   margin-bottom: 8px;
 }
+
+.btnPosition{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fcfcfc;
+}

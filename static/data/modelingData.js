@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 10:24:24
+ * @LastEditTime: 2023-03-06 18:29:36
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -128,6 +128,7 @@ const shapeSettingList = [
       {
         name: '矩形',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -208,6 +209,7 @@ const shapeSettingList = [
       {
         name: '圆柱',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -287,6 +289,7 @@ const shapeSettingList = [
       {
         name: '球形',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -366,6 +369,7 @@ const shapeSettingList = [
       {
         name: '锥形',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -444,6 +448,7 @@ const shapeSettingList = [
       {
         name: '环形',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -522,6 +527,7 @@ const shapeSettingList = [
       {
         name: '箭头',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -602,6 +608,7 @@ const shapeSettingList = [
       {
         name: '方片',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -684,6 +691,7 @@ const shapeSettingList = [
       {
         name: '碟片',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -764,6 +772,7 @@ const shapeSettingList = [
       {
         name: '梯形',
         id: 'confirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -848,7 +857,7 @@ const shapeSettingList = [
 
 const modelSettingList = [
   {
-    name: '立方体',
+    name: '挤出模型',
     typeList: [
       {
         name: '选项',
@@ -1338,7 +1347,57 @@ const triModelList = [
           { val: '显示颜色接缝', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
-      { name: '高级', id: 't-s-twoAdvanced', options: [{ val: '厚度缩放', type: 'input' }] },
+      {
+        name: '高级',
+        id: 't-s-twoAdvanced',
+        options: [
+          { val: '厚度缩放', type: 'input' },
+          {
+            val: '线框颜色',
+            type: 'colorModule',
+            id: 't-m-wireFrameColor',
+            inputList: [
+              { val: 'R', num: '128' },
+              { val: 'G', num: '128' },
+              { val: 'B', num: '128' },
+              { val: 'A', num: '255' }
+            ]
+          },
+          {
+            val: '边界边缘颜色',
+            type: 'colorModule',
+            id: 't-m-boundaryColor',
+            inputList: [
+              { val: 'R', num: '245' },
+              { val: 'G', num: '15' },
+              { val: 'B', num: '15' },
+              { val: 'A', num: '255' }
+            ]
+          },
+          {
+            val: 'UV接缝颜色',
+            type: 'colorModule',
+            id: 't-m-uvColor',
+            inputList: [
+              { val: 'R', num: '240' },
+              { val: 'G', num: '160' },
+              { val: 'B', num: '15' },
+              { val: 'A', num: '255' }
+            ]
+          },
+          {
+            val: '法线接缝颜色',
+            type: 'colorModule',
+            id: 't-m-normalColor',
+            inputList: [
+              { val: 'R', num: '128' },
+              { val: 'G', num: '128' },
+              { val: 'B', num: '240' },
+              { val: 'A', num: '1' }
+            ]
+          }
+        ]
+      },
       { name: '网格体统计数据', id: 't-s-gridData', options: [] }
     ]
   }
@@ -1346,11 +1405,12 @@ const triModelList = [
 
 const createList = [
   {
-    name: 'polyExt',
+    name: 'PolyExt',
     typeList: [
       {
         name: 'polyExt',
         id: 'polyExtConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1474,11 +1534,12 @@ const createList = [
     ]
   },
   {
-    name: 'pathExt',
+    name: 'PathExt',
     typeList: [
       {
-        name: 'pathExt',
+        name: 'PathExt',
         id: 'pathExtConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1532,6 +1593,7 @@ const createList = [
       {
         name: '路径定义',
         id: 'pathExtConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1608,11 +1670,12 @@ const createList = [
     ]
   },
   {
-    name: 'bdryRev',
+    name: 'BdryRev',
     typeList: [
       {
-        name: 'bdryRev',
+        name: 'BdryRev',
         id: 'bdryRevConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1689,11 +1752,12 @@ const createList = [
     ]
   },
   {
-    name: 'pattern',
+    name: 'Pattern',
     typeList: [
       {
-        name: 'pattern',
+        name: 'Pattern',
         id: 'patternConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1793,13 +1857,13 @@ const createList = [
       { name: '材质', id: 'patternImg', options: [{ val: '材质名称', type: 'img' }] }
     ]
   },
-
   {
-    name: 'mashup',
+    name: 'Mashup',
     typeList: [
       {
-        name: 'mashup',
+        name: 'Mashup',
         id: 'mashupConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1848,6 +1912,7 @@ const createList = [
       {
         name: '附加',
         id: 'subjoinConfirm',
+        position: 'ture',
         options: [
           {
             val: '取消',
@@ -1986,8 +2051,8 @@ const outlineList = [
       { val: '查看目标是寻找摄像机组件', type: '', class: 's-c-b-box' },
       { val: '忽略原点偏移', type: '', class: 's-c-b-box' },
       { val: '可存在于集群中', type: '', class: 's-c-b-box' },
-      { val: '图层', type: 'addElement' },
-      { val: '标签', type: 'addElement' }
+      { val: '图层', type: 'addElement', num: '1' },
+      { val: '标签', type: 'addElement', num: '2' }
     ]
   },
   {

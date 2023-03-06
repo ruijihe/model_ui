@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 09:40:37
+ * @LastEditTime: 2023-03-06 18:26:20
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -16,11 +16,10 @@ class toolSet {
         name: '', //标题
         optionsList: [], //下拉框选项
         type: '', //类型
-        checkboxList: [], //多个单选框
-        class: '',
+        class: '', //类名
         buttonId: '', //按钮id
-        publicSettingList: [],
-        tooltip: '' //提示信息
+        tooltip: '', //提示信息
+        options: [] //二级选项内容
       },
       options
     )
@@ -239,9 +238,18 @@ class toolSet {
 
            <div class="x-y-flex addElementBox">
             <div class="s-c-b-border"></div>
-             <div>数组元素</div>
-             <button class="s-c-b-button"></button>
-             <button class="s-c-b-button"></button>
+             <div>${this.opts.options.num}数组元素</div>
+             <button class="s-c-b-button">
+              <svg class="icon-withdraw" aria-hidden="true">
+                <use xlink:href="#icon-xinceng"></use>
+              </svg>
+             </button>
+
+             <button class="s-c-b-button">
+              <svg class="icon-withdraw" aria-hidden="true">
+                <use xlink:href="#icon-shanshu"></use>
+              </svg>
+             </button>
            </div>
 
          </div>  
@@ -303,6 +311,35 @@ class toolSet {
      
           `)
     }
+    // 颜色框
+    else if (this.opts.type == 'colorModule') {
+      let options = this.opts.options
+      $(function () {
+        let setColor = `rgb(${options.inputList[0].num},${options.inputList[1].num},${options.inputList[2].num},${options.inputList[3].num})`
+        $(`#${options.id}`).css('background-color', setColor)
+      })
+      $('#' + this.opts.location).append(`
+        <div class="s-c-b-options">
+         <div class="x-y-flex" style="margin-bottom: 12px;">
+            <div>${this.opts.options.val}</div>
+            <div class="t-s-colorBox" id="${this.opts.options.id}"></div>
+          </div>
+
+          <div class="x-y-flex">
+            ${this.opts.options.inputList
+              .map((inputList) => {
+                return `
+                <div class="x-y-flex t-s-colorInputBox">
+                  <div class="t-s-colorText">${inputList.val}</div>
+                  <input value="${inputList.num}" class="t-s-colorInput">
+                </div>
+              `
+              })
+              .join('')}
+          </div>
+        </div>
+       `)
+    }
   }
 
   event() {
@@ -327,6 +364,7 @@ class toolSet {
         }
       })
     })
+
     //标题开关
     $('.e-s-c-title')
       .off('click')

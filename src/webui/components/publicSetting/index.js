@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-16 09:58:40
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-02 17:14:46
+ * @LastEditTime: 2023-03-06 17:32:06
  * @FilePath: \RjhUitraEdit\src\webui\components\publicSetting\index.js
  * @Description:
  *
@@ -43,7 +43,7 @@ class publicSetting {
         ${this.opts.publicSettingList[this.opts.index].typeList
           .map((publicSettingList) => {
             return `
-              <div class="s-c-box">
+              <div class="s-c-box ${publicSettingList.position == 'ture' ? 'btnPosition' : ''}">
 
                 <div class="e-s-c-title x-y-flex">
                   ${publicSettingList.name}
@@ -60,8 +60,8 @@ class publicSetting {
                         icon: options.icon,
                         class: options.class,
                         optionsList: options.optionsList,
-                        checkboxList: options.checkboxList,
-                        tooltip: options.tooltip
+                        tooltip: options.tooltip,
+                        options: options
                       })
                     })
                     .join('')}
