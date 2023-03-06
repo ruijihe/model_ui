@@ -57,7 +57,7 @@
 }
 
 .coordInputBox{
-  width: 56px;
+  width: 64px;
   height: 32px;
   border-radius: 4px;
   background: #fff;
@@ -72,22 +72,23 @@
 
 /* 编辑设置 */
 .e-s-btn{
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border-radius: 4px;
   background: #fff;
   text-align: center;
-  line-height: 28px;
+  line-height: 32px;
   margin-right: 8px;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .e-s-btn:hover{
 }
 
 .e-s-icon{
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
 }
 
 .e-s-c-title{

@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-03 09:12:25
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-25 11:47:16
+ * @LastEditTime: 2023-03-02 17:14:02
  * @FilePath: \RjhUitraEdit\src\webui\view\modelProperties\index.js
  * @Description:
  *
@@ -89,7 +89,7 @@ class modelProperties {
       
                   <div class="e-s-c-title x-y-flex">
                   ${outLineSettingList.name}
-                    <div class="iconfont icon-shangla-xiaoxiao"></div>
+                    <div class="iconfont icon-shangla-xiaoxiao shousuColor"></div>
                   </div>
       
                   <div style="padding:0 8px" id="${outLineSettingList.id}">

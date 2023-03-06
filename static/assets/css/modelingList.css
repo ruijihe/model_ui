@@ -4,7 +4,6 @@
    height: 100%;
    font-size: 12px;
    background: #FCFCFC;
-   padding: 0 8px;
    border-radius: 0 4px 0 0;
 }
 
@@ -13,7 +12,8 @@
   width: 100%;
   height: calc(100% - 48px);
   position: relative;
-  z-index: 1
+  z-index: 1;
+  padding: 0 8px;
 }
 
 .modelingBox{
@@ -70,6 +70,7 @@
   margin-bottom: 16px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .m-c-box{
@@ -85,6 +86,10 @@
    background-color: #fff;
    margin-bottom: 8px;
   position: relative;
+}
+
+.m-c-box:nth-child(3n){
+ margin-right: 0;
 }
 
 .m-c-hint{
@@ -125,10 +130,19 @@
   background: rgba(0, 85, 157, 0.04);
 }
 
-.m-c-box svg{
-   width: 18px;
-   height: 17px;
-   font-size: 50px;
+.icon{
+   width: 22px;
+   height: 22px;
+}
+
+.icon-s{
+  width: 19px;
+  height: 19px;
+}
+
+.icon-b{
+  width: 26px;
+  height: 23px;
 }
 
 .m-c-modelOperation{
@@ -148,4 +162,39 @@
   font-size: 12px;
   text-align: left;
   color: #00559d;
+}
+
+.tooltip{
+  border: 0 !important;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 10%) !important;
+  border-radius: 4px;
+}
+
+.tooltip-content{
+  font-weight: 700;
+  font-size: 14px;
+  color: #707070;
+  word-wrap: normal;
+}
+
+.tooltipcontent-o{
+  font-weight: 700;
+  font-size: 14px;
+  color: #707070;
+  margin-bottom: 8px;
+}
+
+.tooltipcontent-t{
+  font-weight: 300;
+  font-size: 12px;
+  color: #707070;
+  margin-bottom: 8px;
+}
+
+.shousuColor{
+  color: #e4e4e4;
+}
+
+.icon-xia-xiaoxiao{
+  color: #e4e4e4 !important;
 }

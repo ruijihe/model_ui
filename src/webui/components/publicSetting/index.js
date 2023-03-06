@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-16 09:58:40
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-27 16:28:29
+ * @LastEditTime: 2023-03-02 17:14:46
  * @FilePath: \RjhUitraEdit\src\webui\components\publicSetting\index.js
  * @Description:
  *
@@ -42,35 +42,12 @@ class publicSetting {
     
         ${this.opts.publicSettingList[this.opts.index].typeList
           .map((publicSettingList) => {
-            if (publicSettingList.name == '') {
-              return `
-              <div class="s-c-c-box">
-                <div id="${publicSettingList.id}">
-                  ${publicSettingList.options
-                    .map((options) => {
-                      new toolSet({
-                        publicSettingList: publicSettingList,
-                        location: publicSettingList.id,
-                        name: options.val,
-                        type: options.type,
-                        icon: options.icon,
-                        optionsList: options.optionsList,
-                        checkboxList: options.checkboxList,
-                        class: options.class,
-                        buttonId: options.id
-                      })
-                    })
-                    .join('')}
-                 </div>    
-              </div>
-                `
-            } else {
-              return `
+            return `
               <div class="s-c-box">
 
                 <div class="e-s-c-title x-y-flex">
-                ${publicSettingList.name}
-                  <div class="iconfont icon-shangla-xiaoxiao"></div>
+                  ${publicSettingList.name}
+                  <div class="iconfont icon-shangla-xiaoxiao shousuColor"></div>
                 </div>
 
                 <div style="padding:0 8px" id="${publicSettingList.id}">
@@ -81,15 +58,16 @@ class publicSetting {
                         name: options.val,
                         type: options.type,
                         icon: options.icon,
+                        class: options.class,
                         optionsList: options.optionsList,
-                        checkboxList: options.checkboxList
+                        checkboxList: options.checkboxList,
+                        tooltip: options.tooltip
                       })
                     })
                     .join('')}
                  </div>    
               </div>
                 `
-            }
           })
           .join('')}
     `)

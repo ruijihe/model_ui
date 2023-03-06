@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-28 09:19:46
+ * @LastEditTime: 2023-03-02 17:16:58
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -42,7 +42,7 @@ class modelingList {
 
                  <div class="m-c-title">
                     <div style="color: #00559d;">${e.name}</div>
-                    <div class="iconfont icon-shangla-xiaoxiao"></div>
+                    <div class="iconfont icon-shangla-xiaoxiao shousuColor"></div>
                  </div>
 
                  <div>
@@ -50,18 +50,13 @@ class modelingList {
                       ${e.list
                         .map((iconList) => {
                           return `
-                            <div id="${iconList.id}" class="m-c-box  ${iconList.class}">
+                            <div title="${iconList.name}" id="${iconList.id}" class="m-c-box  ${iconList.class}">
 
-                              <svg class="icon" aria-hidden="true">
+                              <svg class="${iconList.iconclass}" aria-hidden="true">
                                 <use xlink:href="${iconList.icon}"></use>
                               </svg>
 
-                              <div class="m-c-hint">
-                                <div class="m-c-h-title">${iconList.name}</div>
-                              </div>
-
                             </div>    
-
                             
                         `
                         })
@@ -81,27 +76,51 @@ class modelingList {
   }
 
   event() {
+    $(function () {
+      $('.m-c-box').tooltip({
+        track: true,
+        classes: {
+          'ui-tooltip': 'tooltip',
+          'ui-tooltip-content': 'tooltip-content'
+        },
+        position: {
+          my: 'left top+25'
+        }
+      })
+    })
+
     //总隐藏开关
     $('.m-c-btn').click(function () {
       let modelingWidth = $('.modelingContent').width()
-      // 关
-      if (modelingWidth > 0) {
-        $('#modelingList').css('display', 'none')
-        $('.m-p-setting').css('display', 'none')
-        // $('#modelingList').css('padding', '0px')
-        $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
-        // 立方体
-        if ($('#cube').hasClass('m-c-box-check') || $('#edit').hasClass('m-c-box-check')) {
+
+      // 点击左侧图标后
+      if ($('.m-c-box').hasClass('m-c-box-check')) {
+        console.log(111)
+        // 关
+        if (modelingWidth > 0) {
+          $('#modelingList').css('display', 'none')
+          $('.m-p-setting').addClass('none')
+          $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
+        }
+        // 开
+        else {
+          $('#modelingList').css('display', 'block')
+          $('.m-p-setting').removeClass('none')
+          $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
         }
       }
-      // 开
+      // 初始状态
       else {
-        $('#modelingList').css('display', 'block')
-        $('.m-p-setting').css('display', 'block')
-        // $('#modelingList').css('padding', '0px 8px')
-        $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
-        // 立方体
-        if ($('#cube').hasClass('m-c-box-check')) {
+        // 关
+        if (modelingWidth > 0) {
+          $('#modelingList').css('display', 'none')
+          $('.m-p-setting').addClass('none')
+          $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
+        }
+        // 开
+        else {
+          $('#modelingList').css('display', 'block')
+          $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
         }
       }
     })
@@ -112,16 +131,17 @@ class modelingList {
 
       if ($(content).hasClass('none')) {
         $(content).removeClass('none')
-        $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao')
+        $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao shousuColor')
       } else {
         $(content).addClass('none')
-        $(icon).attr('class', 'iconfont icon-xia-xiaoxiao')
+        $(icon).attr('class', 'iconfont icon-xia-xiaoxiao shousuColor')
       }
     })
 
     // 选择操作
 
     $('.m-c-box').click(function () {
+      $('.m-p-setting').removeClass('none')
       let arr = []
       let val = this.lastElementChild.firstElementChild.innerHTML
       let index = $(this).index()

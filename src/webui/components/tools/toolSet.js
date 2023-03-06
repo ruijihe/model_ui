@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-27 10:06:16
+ * @LastEditTime: 2023-03-06 09:40:37
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -19,7 +19,8 @@ class toolSet {
         checkboxList: [], //多个单选框
         class: '',
         buttonId: '', //按钮id
-        publicSettingList: []
+        publicSettingList: [],
+        tooltip: '' //提示信息
       },
       options
     )
@@ -57,7 +58,7 @@ class toolSet {
     else if (this.opts.type == 'checkbox') {
       $('#' + this.opts.location).append(`
             <div class="x-y-flex s-c-b-options">
-              <div style="width:96px">${this.opts.name}</div>
+              <div class="${this.opts.class}">${this.opts.name}</div>
               <input type="checkbox" />
             </div>
         `)
@@ -112,7 +113,7 @@ class toolSet {
     else if (this.opts.type == 'select') {
       $('#' + this.opts.location).append(`
           <div class="x-y-flex s-c-b-options">
-              <div>${this.opts.name}</div>
+              <div class="${this.opts.class}">${this.opts.name}</div>
 
               <select class="s-c-b-select" name="" id="">
                 ${this.opts.optionsList
@@ -157,8 +158,8 @@ class toolSet {
     // 图标按钮
     else if (this.opts.type == 'button') {
       $('#' + this.opts.location).append(`
-              <button class="e-s-btn">
-                <svg class="e-s-icon" aria-hidden="true">
+              <button class="e-s-btn" name="${this.opts.tooltip}" title="${this.opts.name}">
+                <svg class="${this.opts.class}" aria-hidden="true">
                   <use xlink:href="${this.opts.icon}"></use>
                 </svg>
               </button>
@@ -233,6 +234,15 @@ class toolSet {
       $('#' + this.opts.location).append(`
          <div class="s-c-b-options x-y-flex" style="margin-bottom:8px">
 
+           <div>${this.opts.name}</div>
+
+
+           <div class="x-y-flex addElementBox">
+            <div class="s-c-b-border"></div>
+             <div>数组元素</div>
+             <button class="s-c-b-button"></button>
+             <button class="s-c-b-button"></button>
+           </div>
 
          </div>  
           `)
@@ -296,6 +306,27 @@ class toolSet {
   }
 
   event() {
+    //提示框
+    $(function () {
+      $('.e-s-btn').tooltip({
+        track: true,
+        classes: {
+          'ui-tooltip': 'tooltip',
+          'ui-tooltip-content': 'tooltip-content'
+        },
+        position: {
+          my: 'left top+25'
+        },
+        content: function () {
+          if ($(this).is('button')) {
+            return `<div class="tooltipcontent-o">${this.title}</div>
+                    <div class="tooltipcontent-t">选定对象上调用事件</div>
+                    <div class="tooltipcontent-t">${this.name}</div>
+                    `
+          }
+        }
+      })
+    })
     //标题开关
     $('.e-s-c-title')
       .off('click')
@@ -304,10 +335,10 @@ class toolSet {
         let icon = this.lastElementChild
         if ($(content).hasClass('none')) {
           $(content).removeClass('none')
-          $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao')
+          $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao shousuColor')
         } else {
           $(content).addClass('none')
-          $(icon).attr('class', 'iconfont icon-xia-xiaoxiao')
+          $(icon).attr('class', 'iconfont icon-xia-xiaoxiao shousuColor')
         }
       })
     //设置取消按钮

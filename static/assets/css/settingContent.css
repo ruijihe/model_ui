@@ -32,6 +32,7 @@
   background: #00559d;
   cursor: pointer;
   color: #fff;
+  margin-bottom: 8px;
 }
 
 .cancelButton{
@@ -42,6 +43,7 @@
   cursor: pointer;
   color: #B9B9B9;
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .s-c-b-title{
@@ -58,6 +60,13 @@
   color: #707070;
   margin-bottom: 8px;
   padding: 0 8px;
+}
+
+.s-c-b-box{
+  /* width: 59px;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
 }
 
 .s-c-b-input{
@@ -96,7 +105,7 @@
 }
 
 .s-c-b-select{
-  width: 112px;
+  width: 114px;
   height: 24px;
   border-radius: 4px;
   background: #fff;
@@ -182,4 +191,13 @@
   z-index: 10;
   color: #707070;
   font-weight: 500;
+}
+
+.addElementBox div {
+  margin-left: 17px;
+  margin-right: 8px;
+}
+
+.addElementBox button {
+  margin-left: 8px;
 }

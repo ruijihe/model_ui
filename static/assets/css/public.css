@@ -73,7 +73,7 @@ input[type='checkbox'] {
 
 /* 滚动条样式 */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
   margin-left: 1px;
 }
 
@@ -84,7 +84,7 @@ input[type='checkbox'] {
 ::-webkit-scrollbar-thumb {
   border-radius: 3px;
   height: 100px;
-  background-color: #CBE8E7;
+  background: rgba(0, 85, 157,0.4);
   margin-left: 1px
 }
 

@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-28 09:37:45
+ * @LastEditTime: 2023-03-06 10:24:24
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -51,59 +51,73 @@ const modelingData = [
   {
     name: '形状',
     list: [
-      { name: '矩形', tooltip: '', icon: '#icon-juxing-3', class: 'shape', id: 'rectangle' },
-      { name: '圆柱', tooltip: '', icon: '#icon-yuanzhu', class: 'shape', id: 'cylinder' },
-      { name: '球形', tooltip: '', icon: '#icon-qiuxing', class: 'shape', id: 'sphere' },
-      { name: '锥形', tooltip: '', icon: '#icon-zhuixing', class: 'shape', id: 'taper' },
-      { name: '环形', tooltip: '', icon: '#icon-huanxing', class: 'shape', id: 'annular' },
-      { name: '箭头', tooltip: '', icon: '#icon-jiantou-1', class: 'shape', id: 'arrows' },
-      { name: '方片', tooltip: '', icon: '#icon-fangpian', class: 'shape', id: 'fangpian' },
-      { name: '碟片', tooltip: '', icon: '#icon-shepian', class: 'shape', id: 'disc' },
-      { name: '梯形', tooltip: '', icon: '#icon-tixing-1', class: 'shape', id: 'trapezoid' }
+      { name: '矩形', tooltip: '', icon: '#icon-juxing-3', iconclass: 'icon', class: 'shape', id: 'rectangle' },
+      { name: '圆柱', tooltip: '', icon: '#icon-yuanzhu', iconclass: 'icon', class: 'shape', id: 'cylinder' },
+      { name: '球形', tooltip: '', icon: '#icon-qiuxing', iconclass: 'icon', class: 'shape', id: 'sphere' },
+      { name: '锥形', tooltip: '', icon: '#icon-zhuixing', iconclass: 'icon', class: 'shape', id: 'taper' },
+      { name: '环形', tooltip: '', icon: '#icon-huanxing', iconclass: 'icon-b', class: 'shape', id: 'annular' },
+      { name: '箭头', tooltip: '', icon: '#icon-jiantou-1', iconclass: 'icon', class: 'shape', id: 'arrows' },
+      { name: '方片', tooltip: '', icon: '#icon-fangpian', iconclass: 'icon-b', class: 'shape', id: 'fangpian' },
+      { name: '碟片', tooltip: '', icon: '#icon-shepian', iconclass: 'icon-b', class: 'shape', id: 'disc' },
+      { name: '梯形', tooltip: '', icon: '#icon-tixing-1', iconclass: 'icon', class: 'shape', id: 'trapezoid' }
     ]
   },
   {
     name: '模型',
     list: [
-      { name: '挤出模型', tooltip: '', icon: '#icon-jichumuxing', class: 'model', id: 'cube' },
-      { name: '编辑', tooltip: '', icon: '#icon-bianji-2', class: 'model', id: 'edit' },
-      { name: '变形', tooltip: '', icon: '#icon-bianxing', class: 'model', id: 'transformation' },
-      { name: '网格布尔', tooltip: '', icon: '#icon-wangluobuer', class: 'model', id: 'mshBool' },
-      { name: '布尔分割', tooltip: '', icon: '#icon-buerfenge', class: 'model', id: 'mshCut' },
-      { name: '细分', tooltip: '', icon: '#icon-xifen', class: 'model', id: 'subDiv' }
+      { name: '挤出模型', tooltip: '', icon: '#icon-jichumuxing-3', iconclass: 'icon-b', class: 'model', id: 'cube' },
+      { name: '编辑', tooltip: '', icon: '#icon-bianji-2', iconclass: 'icon', class: 'model', id: 'edit' },
+      { name: '变形', tooltip: '', icon: '#icon-bianxing', iconclass: 'icon', class: 'model', id: 'transformation' },
+      { name: '网格布尔', tooltip: '', icon: '#icon-wangluobuer', iconclass: 'icon-b', class: 'model', id: 'mshBool' },
+      { name: '布尔分割', tooltip: '', icon: '#icon-buerfenge', iconclass: 'icon-b', class: 'model', id: 'mshCut' },
+      { name: '细分', tooltip: '', icon: '#icon-xifen', iconclass: 'icon', class: 'model', id: 'subDiv' }
     ]
   },
   {
     name: '创造',
     list: [
-      { name: 'PolyExt', tooltip: '', icon: '#icon-PolyExt', class: 'create', id: 'PolyExt' },
-      { name: 'PathExt', tooltip: '', icon: '#icon-PathExt', class: 'create', id: 'PathExt' },
-      { name: '路径定义', tooltip: '', icon: '#icon-luojingxiuding', class: 'create', id: 'pathDefinition' },
-      { name: 'BdryRev', tooltip: '', icon: '#icon-BdryRev', class: 'create', id: 'BdryRev' },
-      { name: 'Pattern', tooltip: '', icon: '#icon-Pattern', class: 'create', id: 'Pattern' },
-      { name: 'Mashup', tooltip: '', icon: '#icon-Mashup', class: 'create', id: 'Mashup' },
-      { name: '附加', tooltip: '', icon: '#icon-bujia', class: 'create', id: 'subjoin' }
+      { name: 'PolyExt', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'create', id: 'PolyExt' },
+      { name: 'PathExt', tooltip: '', icon: '#icon-PathExt', iconclass: 'icon', class: 'create', id: 'PathExt' },
+      {
+        name: '路径定义',
+        tooltip: '',
+        icon: '#icon-luojingxiuding',
+        iconclass: 'icon-s',
+        class: 'create',
+        id: 'pathDefinition'
+      },
+      { name: 'BdryRev', tooltip: '', icon: '#icon-BdryRev', iconclass: 'icon-s', class: 'create', id: 'BdryRev' },
+      { name: 'Pattern', tooltip: '', icon: '#icon-Pattern', iconclass: 'icon', class: 'create', id: 'Pattern' },
+      { name: 'Mashup', tooltip: '', icon: '#icon-Mashup', iconclass: 'icon', class: 'create', id: 'Mashup' },
+      { name: '附加', tooltip: '', icon: '#icon-bujia', iconclass: 'icon-b', class: 'create', id: 'subjoin' }
     ]
   },
   {
     name: '三角形编辑',
     list: [
-      { name: 'TriSel', tooltip: '', icon: '#icon-TriSel', class: 'triModel', id: 'TriSel' },
-      { name: 'TriED', tooltip: '', icon: '#icon-sanjiaoxingbianji', class: 'triModel', id: 'TriED' },
-      { name: 'HFill', tooltip: '', icon: '#icon-chenbutong', class: 'triModel', id: 'HFill' },
-      { name: 'Mirror', tooltip: '', icon: '#icon-jingxiang', class: 'triModel', id: 'Mirror' },
-      { name: 'PinCut', tooltip: '', icon: '#icon-pingmianjianqi', class: 'triModel', id: 'PinCut' },
-      { name: 'PolyCut', tooltip: '', icon: '#icon-PolyCut', class: 'triModel', id: 'PolyCut' },
-      { name: 'Trim', tooltip: '', icon: '#icon-Trim', class: 'triModel', id: 'Trim' }
+      { name: 'TriSel', tooltip: '', icon: '#icon-TriSel', iconclass: 'icon', class: 'triModel', id: 'TriSel' },
+      {
+        name: 'TriED',
+        tooltip: '',
+        icon: '#icon-sanjiaoxingbianji',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'TriED'
+      },
+      { name: 'HFill', tooltip: '', icon: '#icon-chenbutong', iconclass: 'icon', class: 'triModel', id: 'HFill' },
+      { name: 'Mirror', tooltip: '', icon: '#icon-jingxiang', iconclass: 'icon', class: 'triModel', id: 'Mirror' },
+      { name: 'PinCut', tooltip: '', icon: '#icon-pingmianjianqi', iconclass: 'icon', class: 'triModel', id: 'PinCut' },
+      { name: 'PolyCut', tooltip: '', icon: '#icon-PolyCut', iconclass: 'icon', class: 'triModel', id: 'PolyCut' },
+      { name: 'Trim', tooltip: '', icon: '#icon-Trim', iconclass: 'icon', class: 'triModel', id: 'Trim' }
     ]
   },
   {
     name: '造型',
-    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', class: 'deForm', id: '' }]
+    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'deForm', id: '' }]
   },
   {
     name: '变换',
-    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', class: 'transForm', id: '' }]
+    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'transForm', id: '' }]
   }
 ]
 
@@ -112,7 +126,7 @@ const shapeSettingList = [
     name: '矩形',
     typeList: [
       {
-        name: '',
+        name: '矩形',
         id: 'confirm',
         options: [
           {
@@ -136,6 +150,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -153,6 +168,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -161,10 +177,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -173,8 +196,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -183,7 +206,7 @@ const shapeSettingList = [
     name: '圆柱',
     typeList: [
       {
-        name: '',
+        name: '圆柱',
         id: 'confirm',
         options: [
           {
@@ -207,6 +230,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -223,6 +247,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -231,10 +256,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -243,8 +275,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -253,7 +285,7 @@ const shapeSettingList = [
     name: '球形',
     typeList: [
       {
-        name: '',
+        name: '球形',
         id: 'confirm',
         options: [
           {
@@ -277,6 +309,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -289,22 +322,30 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           },
           { val: '细分', type: 'input' },
           { val: '水平切片', type: 'input' },
           { val: '垂直切片', type: 'input' },
-          { val: '多边形组模式', type: 'select', optionsList: [{ val: '多面' }, { val: '每面' }] }
+          { val: '多边形组模式', type: 'select', class: 's-c-b-box', optionsList: [{ val: '多面' }, { val: '每面' }] }
         ]
       },
       {
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -313,8 +354,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -323,7 +364,7 @@ const shapeSettingList = [
     name: '锥形',
     typeList: [
       {
-        name: '',
+        name: '锥形',
         id: 'confirm',
         options: [
           {
@@ -347,6 +388,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -362,6 +404,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -370,10 +413,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -382,8 +432,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -392,7 +442,7 @@ const shapeSettingList = [
     name: '环形',
     typeList: [
       {
-        name: '',
+        name: '环形',
         id: 'confirm',
         options: [
           {
@@ -416,6 +466,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -431,6 +482,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -439,10 +491,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -451,8 +510,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -461,7 +520,7 @@ const shapeSettingList = [
     name: '箭头',
     typeList: [
       {
-        name: '',
+        name: '箭头',
         id: 'confirm',
         options: [
           {
@@ -485,6 +544,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -502,6 +562,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -510,10 +571,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -522,8 +590,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -532,7 +600,7 @@ const shapeSettingList = [
     name: '方片',
     typeList: [
       {
-        name: '',
+        name: '方片',
         id: 'confirm',
         options: [
           {
@@ -556,6 +624,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -564,7 +633,8 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '矩形类型', type: 'select', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
+          { val: '矩形类型', type: 'select', class: 's-c-b-box', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
+
           { val: '宽度', type: 'input' },
           { val: '深度', type: 'input' },
           { val: '宽度细化', type: 'input' },
@@ -574,6 +644,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -582,10 +653,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -594,8 +672,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -604,7 +682,7 @@ const shapeSettingList = [
     name: '碟片',
     typeList: [
       {
-        name: '',
+        name: '碟片',
         id: 'confirm',
         options: [
           {
@@ -628,6 +706,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -636,7 +715,8 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '矩形类型', type: 'select', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
+          { val: '矩形类型', type: 'select', class: 's-c-b-box', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
+
           { val: '半径', type: 'input' },
           { val: '径向切片', type: 'input' },
           { val: '径向细分', type: 'input' },
@@ -644,6 +724,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -652,10 +733,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -664,8 +752,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -674,7 +762,7 @@ const shapeSettingList = [
     name: '梯形',
     typeList: [
       {
-        name: '',
+        name: '梯形',
         id: 'confirm',
         options: [
           {
@@ -698,6 +786,7 @@ const shapeSettingList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -709,6 +798,7 @@ const shapeSettingList = [
           {
             val: '楼梯类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '线性' }, { val: '浮动' }, { val: '弯曲' }, { val: '螺旋' }]
           },
           { val: '步骤数', type: 'input' },
@@ -720,6 +810,7 @@ const shapeSettingList = [
           {
             val: '多边形组模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           }
         ]
@@ -728,10 +819,17 @@ const shapeSettingList = [
         name: '定位',
         id: 'position',
         options: [
-          { val: '目标表面', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-          { val: '枢轴点位置', type: 'select', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
           { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox' }
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -740,8 +838,8 @@ const shapeSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -758,11 +856,11 @@ const modelSettingList = [
         options: [
           { val: '网格框架原点', type: 'coord' },
           { val: '网格框架朝向', type: 'coord' },
-          { val: '显示小工具', type: 'checkbox' },
+          { val: '显示小工具', type: 'checkbox', class: 's-c-b-box' },
           { val: '网格幂', type: 'input' },
           { val: '当前块大小', type: 'input' },
           { val: '每块的步', type: 'input' },
-          { val: '斜向对角', type: 'checkbox' },
+          { val: '斜向对角', type: 'checkbox', class: 's-c-b-box' },
           { val: '高级', type: 'advanced' }
         ]
       },
@@ -770,20 +868,25 @@ const modelSettingList = [
         name: '高级',
         id: 'advancedOne',
         options: [
-          { val: '二次幂块大小', type: 'checkbox' },
+          { val: '二次幂块大小', type: 'checkbox', class: 's-c-b-box' },
           { val: '块基础大小', type: 'input' },
-          { val: '保持侧组', type: 'checkbox' }
+          { val: '保持侧组', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
-      { name: '块选择', id: 'pieceOptions', options: [{ val: '命中无关几何体', type: 'checkbox' }] },
+      {
+        name: '块选择',
+        id: 'pieceOptions',
+        options: [{ val: '命中无关几何体', type: 'checkbox', class: 's-c-b-box' }]
+      },
       {
         name: '高级',
         id: 'advancedTwo',
         options: [
-          { val: '命中网格地平面', type: 'checkbox' },
+          { val: '命中网格地平面', type: 'checkbox', class: 's-c-b-box' },
           {
             val: '面选择模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [
               { val: '外部基于法线' },
               { val: '内部基于法线' },
@@ -800,6 +903,7 @@ const modelSettingList = [
           {
             val: '面选择模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网' }, { val: '体积' }, { val: '动态网' }]
           }
         ]
@@ -810,8 +914,8 @@ const modelSettingList = [
         options: [
           { val: '材质名称', type: 'img' },
           { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox' },
-          { val: '显示线框', type: 'checkbox' }
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
       }
     ]
@@ -823,102 +927,282 @@ const modelSettingList = [
         name: '操作',
         id: 'shapeHandle',
         options: [
-          { val: '挤出', tooltip: '', icon: '#icon-jichu', type: 'button' },
-          { val: 'offSet', tooltip: '', icon: '#icon-Offset_1', type: 'button' },
-          { val: 'lnset', tooltip: '', icon: '#icon-lnset', type: 'button' },
-          { val: 'outSet', tooltip: '', icon: '#icon-Outset', type: 'button' },
-          { val: '斜角', tooltip: '', icon: '#icon-xiejiao', type: 'button' },
-          { val: '合并', tooltip: '', icon: '#icon-hebing-1', type: 'button' },
-          { val: '面部切割', tooltip: '', icon: '#icon-mianbuqige', type: 'button' },
-          { val: '面部翻转', tooltip: '', icon: '#icon-mianbufanzhuan', type: 'button' },
-          { val: '重分三角', tooltip: '', icon: '#icon-tongfensanjiao', type: 'button' },
-          { val: '断开面部', tooltip: '', icon: '#icon-duankaimianbu', type: 'button' }
+          { val: '挤出', tooltip: '', icon: '#icon-jichu', class: 'e-s-icon', type: 'button' },
+          { val: 'offSet', tooltip: '', icon: '#icon-Offset_1', class: 'e-s-icon', type: 'button' },
+          { val: 'lnset', tooltip: '', icon: '#icon-lnset', class: 'e-s-icon', type: 'button' },
+          { val: 'outSet', tooltip: '', icon: '#icon-Outset', class: 'e-s-icon', type: 'button' },
+          { val: '斜角', tooltip: '', icon: '#icon-xiejiao', class: 'e-s-icon', type: 'button' },
+          { val: '合并', tooltip: '', icon: '#icon-hebing-1', class: 'e-s-icon', type: 'button' },
+          { val: '面部切割', tooltip: '', icon: '#icon-mianbuqige', class: 'e-s-icon', type: 'button' },
+          { val: '面部翻转', tooltip: '', icon: '#icon-mianbufanzhuan', class: 'icon-b', type: 'button' },
+          { val: '重分三角', tooltip: '', icon: '#icon-tongfensanjiao', class: 'e-s-icon', type: 'button' },
+          { val: '断开面部', tooltip: '', icon: '#icon-duankaimianbu', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '形状编辑',
         id: 'shapeEditing',
         options: [
-          { val: '插入边缘', icon: '#icon-zharubianhuan1', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '', icon: '', type: 'button' }
+          { val: '插入边缘', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘2', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' },
+          { val: '', icon: '', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '边缘编辑',
         id: 'edgeEditing',
         options: [
-          { val: '焊接', icon: '#icon-hanxie', type: 'button' },
-          { val: '伸直', icon: '#icon-shenzhi', type: 'button' },
-          { val: '填充孔', icon: '#icon-chenchongkong', type: 'button' },
-          { val: '斜角_1', icon: '#icon-xiejiao_1', type: 'button' },
-          { val: '桥', icon: '#icon-qiao', type: 'button' }
+          { val: '焊接', icon: '#icon-hanxie', class: 'e-s-icon', type: 'button' },
+          { val: '伸直', icon: '#icon-shenzhi', class: 'e-s-icon', type: 'button' },
+          { val: '填充孔', icon: '#icon-chenchongkong', class: 'e-s-icon', type: 'button' },
+          { val: '斜角_1', icon: '#icon-xiejiao_1', class: 'e-s-icon', type: 'button' },
+          { val: '桥', icon: '#icon-qiao', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: 'UV',
         id: 'UV',
-        options: [{ val: '平面投影', icon: '#icon-pingmiantouying', type: 'button' }]
+        options: [{ val: '平面投影', icon: '#icon-pingmiantouying', class: 'e-s-icon', type: 'button' }]
       },
       {
         name: '选择操作',
         id: 'selectingOperation',
         options: [
-          { val: '反相选区', icon: '#icon-fanxiangxuanqu', type: 'button' },
-          { val: '全选', icon: '#icon-quanxuan', type: 'button' }
+          { val: '反相选区', icon: '#icon-fanxiangxuanqu', class: 'e-s-icon', type: 'button' },
+          { val: '全选', icon: '#icon-quanxuan', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '选项过滤器',
         id: 'optionFilter',
         options: [
-          { val: '选择点', icon: '#icon-xuanzhaidian', type: 'button' },
-          { val: '选择线', icon: '#icon-xuanzhaixian', type: 'button' },
-          { val: '选择面', icon: '#icon-xuanzhaimian', type: 'button' },
-          { val: '插入边缘1', icon: '#icon-zharubianhuan1', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' }
+          { val: '选择点', icon: '#icon-xuanzhaidian', class: 'e-s-icon', type: 'button' },
+          { val: '选择线', icon: '#icon-xuanzhaixian', class: 'e-s-icon', type: 'button' },
+          { val: '选择面', icon: '#icon-xuanzhaimian', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘1', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘2', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '正交视口行为',
         id: 'otViewport',
         options: [
-          { val: '首选投影元素', type: 'checkbox' },
-          { val: '选择下射线', type: 'checkbox' },
-          { val: '忽略遮挡', type: 'checkbox' }
+          { val: '首选投影元素', type: 'checkbox', class: 's-c-b-box' },
+          { val: '选择下射线', type: 'checkbox', class: 's-c-b-box' },
+          { val: '忽略遮挡', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
         name: '高级',
         id: 'edAdvanced',
         options: [
-          { val: '命中返回面', type: 'checkbox' },
-          { val: '启动边框', type: 'checkbox' }
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box' },
+          { val: '启动边框', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
         name: '选项',
         id: 'edSelect',
         options: [
-          { val: '显示可选择角落', type: 'checkbox' },
-          { val: '小工具可见', type: 'checkbox' }
+          { val: '显示可选择角落', type: 'checkbox', class: 's-c-b-box' },
+          { val: '小工具可见', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
         name: '小工具',
         id: 'edTool',
         options: [
-          { val: '本地帧模式', type: 'select', optionsList: [{ val: '来自几何体' }] },
-          { val: '锁定旋转', type: 'checkbox' }
+          { val: '本地帧模式', type: 'select', class: 's-c-b-box', optionsList: [{ val: '来自几何体' }] },
+
+          { val: '锁定旋转', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
         name: '拓扑选项',
         id: 'edTopology',
         options: [
-          { val: '再生额外的角落', icon: '#icon-zaishengewaidijiaola', type: 'button' },
-          { val: '添加额外的角', type: 'checkbox' },
+          { val: '再生额外的角落', icon: '#icon-zaishengewaidijiaola', class: 'e-s-icon', type: 'button' },
+          { val: '添加额外的角', type: 'checkbox', class: 's-c-b-box' },
           { val: '额外角度度数', type: 'input' }
+        ]
+      }
+    ]
+  },
+  {
+    name: '变形',
+    typeList: [
+      {
+        name: '选项',
+        id: 'm-t-s-one',
+        options: [
+          {
+            val: '变形',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '平滑' }, { val: '线性' }]
+          },
+          {
+            val: '变换',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '平移' }, { val: '旋转' }]
+          }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'm-t-s-two',
+        options: [
+          { val: '选择面', type: 'checkbox', class: '' },
+          { val: '选择边', type: 'checkbox', class: '' },
+          { val: '选择顶点', type: 'checkbox', class: '' }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'm-t-s-there',
+        options: [{ val: '显示线框', type: 'checkbox', class: '' }]
+      }
+    ]
+  },
+  {
+    name: '网格布尔',
+    typeList: [
+      {
+        name: '布尔',
+        id: 'm-b-one',
+        options: [
+          {
+            val: '操作',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '差异A-B' }, { val: '差异B-A' }, { val: '相交' }, { val: '联合' }]
+          }
+        ]
+      },
+      {
+        name: '高级',
+        id: 'm-b-two',
+        options: [
+          { val: '尝试修复洞', type: 'checkbox', class: '' },
+          { val: '尝试折叠边缘', type: 'checkbox', class: '' },
+          { val: '卷绕阈值', type: 'input', class: '' }
+        ]
+      },
+      {
+        name: '显示',
+        id: 'm-b-there',
+        options: [
+          { val: '显示新边界', type: 'checkbox', class: '' },
+          { val: '透明度减去网格体', type: 'checkbox', class: '' },
+          { val: '不透明减网格体', type: 'input', class: '' },
+          { val: '颜色减网格体', type: 'coord', class: '' }
+        ]
+      },
+      {
+        name: '材质',
+        id: 'm-b-four',
+        options: [{ val: '使用首个网格体材质', type: 'checkbox', class: '' }]
+      },
+      {
+        name: '变换',
+        id: 'm-b-five',
+        options: [{ val: '显示小工具', type: 'checkbox', class: '' }]
+      },
+      {
+        name: '输出类型',
+        id: 'm-b-six',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }, { val: 'From Input' }]
+          }
+        ]
+      },
+      {
+        name: '输出对象',
+        id: 'm-b-seven',
+        options: [
+          {
+            val: '写出至',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '新对象' }, { val: '首次输入Object' }, { val: '最后输入Object' }]
+          },
+          { val: '名称', type: 'input', class: '' }
+        ]
+      },
+      {
+        name: '处理输入',
+        id: 'm-b-eight',
+        options: [{ val: '处理输入', type: 'input', class: '' }]
+      }
+    ]
+  },
+  {
+    name: '布尔分割',
+    typeList: [
+      {
+        name: '布尔',
+        id: 'm-m-c-one',
+        options: [
+          { val: '尝试修复洞', type: 'checkbox', class: '' },
+          { val: '尝试折叠边缘', type: 'checkbox', class: '' }
+        ]
+      },
+      {
+        name: '高级',
+        id: 'm-m-c-two',
+        options: [{ val: '卷绕阈值', type: 'input', class: '' }]
+      },
+      {
+        name: '显示',
+        id: 'm-m-c-there',
+        options: [{ val: '显示新边界', type: 'checkbox', class: '' }]
+      },
+      {
+        name: '材质',
+        id: 'm-m-c-four',
+        options: [{ val: '使用首个网格体材质', type: 'checkbox', class: '' }]
+      },
+      {
+        name: '变换',
+        id: 'm-m-c-six',
+        options: [{ val: '显示小工具', type: 'checkbox', class: '' }]
+      }
+    ]
+  },
+  {
+    name: '细分',
+    typeList: [
+      {
+        name: '设置',
+        id: 'm-s-d-one',
+        options: [
+          { val: '细分关卡', type: 'input', class: '' },
+          {
+            val: '细分模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '循环' }, { val: '双线性' }, { val: '卡特穆尔.克拉克细分算法' }]
+          },
+          {
+            val: '法线计算方法',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '已生成' }, { val: '已插值' }, { val: '无' }]
+          },
+          {
+            val: 'UV计算方法',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '已插值' }, { val: '无' }]
+          },
+          { val: '新多边形行组', type: 'checkbox', class: '' },
+          { val: '渲染组', type: 'checkbox', class: '' },
+          { val: '渲染笼', type: 'checkbox', class: '' }
         ]
       }
     ]
@@ -931,20 +1215,131 @@ const triModelList = [
     typeList: [
       {
         name: '选项编辑',
-        id: 'selectEditing',
+        id: 't-s-selectEditing',
         options: [
-          { val: '插入边缘', icon: '#icon-zharubianhuan1', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', type: 'button' }
+          { val: '清除', icon: '#icon-qingshu', class: 'e-s-icon', type: 'button', tooltip: '清除激活的三角形选择' },
+          {
+            val: '全选',
+            icon: '#icon-ziyaocaoxing-quanxuan',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '选择网格体中的所有三角形'
+          },
+          { val: '反转', icon: '#icon-fanzhuan-3', class: 'e-s-icon', type: 'button', tooltip: '反转激活三角形选择' },
+          {
+            val: '增加',
+            icon: '#icon-cengjia-1',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '增加激活三角形选择，以包括接触选择边界上顶点的所有三角形'
+          },
+          {
+            val: '移除',
+            icon: '#icon-yishu',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '移除接触到选择边界上顶点的所有三角形，以缩小激活三角形选择'
+          },
+          {
+            val: '全部增加',
+            icon: '#icon-quanbucengjia',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '增加激活选择以包含通过共享边连接的所有三角形（即泛填充)'
+          },
+          {
+            val: '全部连接',
+            icon: '#icon-quanbulianxie',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '按三角形数量选择最大的连接网格体组件'
+          },
+          {
+            val: '区域连接',
+            icon: '#icon-quyulianxie',
+            class: 'e-s-icon',
+            type: 'button',
+            tooltip: '按网格体区域选择最大的连接网格体组件'
+          },
+          { val: '优化', icon: '#icon-youhua', class: 'e-s-icon', type: 'button', tooltip: '优化选择边界' }
         ]
-      }
+      },
+      {
+        name: '笔刷',
+        id: 't-s-brush',
+        options: [
+          {
+            val: '尺寸',
+            type: 'input'
+          }
+        ]
+      },
+      {
+        name: '高级',
+        id: 't-s-advanced',
+        options: [
+          { val: '指定半径', type: 'checkbox', class: 's-c-b-box' },
+          { val: '半径', type: 'input' }
+        ]
+      },
+      {
+        name: '选项',
+        id: 't-s-option',
+        options: [
+          {
+            val: '选择模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '笔刷' },
+              { val: '体积笔刷' },
+              { val: '角度过滤' },
+              { val: '可见' },
+              { val: '所有已连接项' },
+              { val: '分组中所有项' },
+              { val: '按材质' },
+              { val: '按UV岛状区' },
+              { val: '角度内中所有项' }
+            ]
+          },
+          { val: '角度公差', type: 'input' },
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示点', type: 'checkbox', class: 's-c-b-box' },
+          {
+            val: '面颜色模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '无' }, { val: '按分组' }, { val: '按材质ID' }, { val: '按UV岛状区' }]
+          }
+        ]
+      },
+      {
+        name: 'PolyGroup层',
+        id: 't-s-polyGroup',
+        options: [
+          {
+            val: '激活',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Default' }]
+          }
+        ]
+      },
+      { name: '网格体编辑', id: 't-s-gridEditing', options: [] },
+      {
+        name: '网格体元素可视化',
+        id: 't-s-gridVisual',
+        options: [
+          { val: '可见', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示边框', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示UV接缝', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示法线接缝', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示颜色接缝', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      },
+      { name: '高级', id: 't-s-twoAdvanced', options: [{ val: '厚度缩放', type: 'input' }] },
+      { name: '网格体统计数据', id: 't-s-gridData', options: [] }
     ]
   }
 ]
@@ -954,7 +1349,7 @@ const createList = [
     name: 'polyExt',
     typeList: [
       {
-        name: '',
+        name: 'polyExt',
         id: 'polyExtConfirm',
         options: [
           {
@@ -978,6 +1373,7 @@ const createList = [
           {
             val: '绘制模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [
               { val: '自由绘制' },
               { val: '环形' },
@@ -989,7 +1385,8 @@ const createList = [
           },
           {
             val: '自相交',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '特性大小比例',
@@ -1005,7 +1402,8 @@ const createList = [
           },
           {
             val: '显示网格小工具',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           }
         ]
       },
@@ -1016,6 +1414,7 @@ const createList = [
           {
             val: '挤压模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '扁平' }, { val: '固定' }, { val: '交互式' }]
           }
         ]
@@ -1026,31 +1425,38 @@ const createList = [
         options: [
           {
             val: '启用对齐',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '对齐到顶点',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '对齐到边缘',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '对齐到轴',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '对齐到长度',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '对齐到表面',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '挤压模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '扁平' }, { val: '固定' }, { val: '交互式' }]
           }
         ]
@@ -1071,7 +1477,7 @@ const createList = [
     name: 'pathExt',
     typeList: [
       {
-        name: '',
+        name: 'pathExt',
         id: 'pathExtConfirm',
         options: [
           {
@@ -1092,13 +1498,15 @@ const createList = [
         name: '路径',
         id: 'pathExtPath',
         options: [
-          { val: '宽度模式', type: 'select', optionsList: [{ val: '交互式' }, { val: '固定' }] },
+          { val: '宽度模式', type: 'select', class: 's-c-b-box', optionsList: [{ val: '交互式' }, { val: '固定' }] },
+
           { val: '宽度', type: 'input' },
-          { val: '圆角', type: 'checkbox' },
-          { val: '半径模式', type: 'select', optionsList: [{ val: '交互式' }, { val: '固定' }] },
+          { val: '圆角', type: 'checkbox', class: 's-c-b-box' },
+          { val: '半径模式', type: 'select', class: 's-c-b-box', optionsList: [{ val: '交互式' }, { val: '固定' }] },
+
           { val: '角半径', type: 'input' },
           { val: '径向切片', type: 'input' },
-          { val: '单一多边形组', type: 'checkbox' }
+          { val: '单一多边形组', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
       {
@@ -1108,6 +1516,7 @@ const createList = [
           {
             val: '挤压模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '扁平' }, { val: '固定' }, { val: '交互式' }]
           },
           { val: '挤压高度', type: 'input' },
@@ -1121,7 +1530,7 @@ const createList = [
     name: '路径定义',
     typeList: [
       {
-        name: '',
+        name: '路径定义',
         id: 'pathExtConfirm',
         options: [
           {
@@ -1145,17 +1554,18 @@ const createList = [
           {
             val: '输出模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '体积' }, { val: '动态网格体' }]
           },
           { val: '角度', type: 'input' },
           { val: '偏移度数', type: 'input' },
           { val: '步最大角度', type: 'input' },
-          { val: '显示步骤', type: 'checkbox' },
+          { val: '显示步骤', type: 'checkbox', class: 's-c-b-box' },
           { val: '步', type: 'input' },
           { val: '高度偏移', type: 'input' },
-          { val: '倒回', type: 'checkbox' },
-          { val: '翻转网格体', type: 'checkbox' },
-          { val: '锐利法线', type: 'checkbox' },
+          { val: '倒回', type: 'checkbox', class: 's-c-b-box' },
+          { val: '翻转网格体', type: 'checkbox', class: 's-c-b-box' },
+          { val: '锐利法线', type: 'checkbox', class: 's-c-b-box' },
           { val: '锐利法线阈值', type: 'input' }
         ]
       },
@@ -1163,21 +1573,24 @@ const createList = [
         name: '高级',
         id: 'pathExtAdvanced',
         options: [
-          { val: '到轴的接近路径', type: 'checkbox' },
-          { val: '到轴的接近路径', type: 'checkbox' },
+          { val: '到轴的接近路径', type: 'checkbox', class: 's-c-b-box' },
+          { val: '到轴的接近路径', type: 'checkbox', class: 's-c-b-box' },
           {
             val: 'PolyGroup模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每个旋转步骤' }, { val: '每条路径段' }]
           },
           {
             val: '四形边分割模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '紧凑' }, { val: '统一' }]
           },
           {
             val: '上限填充模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '德劳内' }]
           }
         ]
@@ -1190,7 +1603,7 @@ const createList = [
           { val: '朝向', type: 'coord' }
         ]
       },
-      { name: '对齐', id: 'pathExtSnapping', options: [{ val: '启用对齐', type: 'checkbox' }] },
+      { name: '对齐', id: 'pathExtSnapping', options: [{ val: '启用对齐', type: 'checkbox', class: 's-c-b-box' }] },
       { name: '材质', id: 'pathExtTexture', options: [{ val: '材质名称', type: 'img' }] }
     ]
   },
@@ -1198,7 +1611,7 @@ const createList = [
     name: 'bdryRev',
     typeList: [
       {
-        name: '',
+        name: 'bdryRev',
         id: 'bdryRevConfirm',
         options: [
           {
@@ -1222,17 +1635,18 @@ const createList = [
           {
             val: '输出模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '静态网格体' }, { val: '体积' }, { val: '动态网格体' }]
           },
           { val: '角度', type: 'input' },
           { val: '偏移度数', type: 'input' },
           { val: '步最大角度', type: 'input' },
-          { val: '显示步骤', type: 'checkbox' },
+          { val: '显示步骤', type: 'checkbox', class: 's-c-b-box' },
           { val: '步', type: 'input' },
           { val: '高度偏移', type: 'input' },
-          { val: '倒回', type: 'checkbox' },
-          { val: '翻转网格体', type: 'checkbox' },
-          { val: '锐利法线', type: 'checkbox' },
+          { val: '倒回', type: 'checkbox', class: 's-c-b-box' },
+          { val: '翻转网格体', type: 'checkbox', class: 's-c-b-box' },
+          { val: '锐利法线', type: 'checkbox', class: 's-c-b-box' },
           { val: '锐利法线阈值', type: 'input' }
         ]
       },
@@ -1240,21 +1654,24 @@ const createList = [
         name: '高级',
         id: 'bdryRevAdvanced',
         options: [
-          { val: '到轴的接近路径', type: 'checkbox' },
-          { val: '到轴的接近路径', type: 'checkbox' },
+          { val: '到轴的接近路径', type: 'checkbox', class: 's-c-b-box' },
+          { val: '到轴的接近路径', type: 'checkbox', class: 's-c-b-box' },
           {
             val: 'PolyGroup模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每个旋转步骤' }, { val: '每条路径段' }]
           },
           {
             val: '四形边分割模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '紧凑' }, { val: '统一' }]
           },
           {
             val: '上限填充模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '德劳内' }]
           }
         ]
@@ -1267,7 +1684,7 @@ const createList = [
           { val: '朝向', type: 'coord' }
         ]
       },
-      { name: '对齐', id: 'pathExtSnapping', options: [{ val: '启用对齐', type: 'checkbox' }] },
+      { name: '对齐', id: 'pathExtSnapping', options: [{ val: '启用对齐', type: 'checkbox', class: 's-c-b-box' }] },
       { name: '材质', id: 'pathExtTexture', options: [{ val: '材质名称', type: 'img' }] }
     ]
   },
@@ -1275,7 +1692,7 @@ const createList = [
     name: 'pattern',
     typeList: [
       {
-        name: '',
+        name: 'pattern',
         id: 'patternConfirm',
         options: [
           {
@@ -1299,16 +1716,19 @@ const createList = [
           {
             val: '形状',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '行' }, { val: '网格' }, { val: '环形' }]
           },
           {
             val: '方向',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: 'X轴' }, { val: 'Y轴' }, { val: 'Z轴' }]
           },
           {
             val: '隐藏源',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           },
           {
             val: '种子',
@@ -1323,6 +1743,7 @@ const createList = [
           {
             val: '间距模式',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '按数量' }, { val: '步长' }, { val: '打包' }]
           },
           {
@@ -1339,7 +1760,8 @@ const createList = [
           },
           {
             val: '居中',
-            type: 'checkbox'
+            type: 'checkbox',
+            class: 's-c-b-box'
           }
         ]
       },
@@ -1363,7 +1785,7 @@ const createList = [
         name: '缩放',
         id: 'patternZoom',
         options: [
-          { val: '统一', type: 'checkbox' },
+          { val: '统一', type: 'checkbox', class: 's-c-b-box' },
           { val: '开始缩放', type: 'coord' },
           { val: '结束缩放', type: 'coord' }
         ]
@@ -1376,7 +1798,7 @@ const createList = [
     name: 'mashup',
     typeList: [
       {
-        name: '',
+        name: 'mashup',
         id: 'mashupConfirm',
         options: [
           {
@@ -1401,6 +1823,7 @@ const createList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }, { val: 'From Input' }]
           }
         ]
@@ -1412,6 +1835,7 @@ const createList = [
           {
             val: '处理输入',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '删除输入' }, { val: '隐藏输入' }, { val: '保持输入' }]
           }
         ]
@@ -1422,7 +1846,7 @@ const createList = [
     name: '附加',
     typeList: [
       {
-        name: '',
+        name: '附加',
         id: 'subjoinConfirm',
         options: [
           {
@@ -1446,6 +1870,7 @@ const createList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '新对象' }]
           },
           { val: '名称', type: 'input' }
@@ -1458,6 +1883,7 @@ const createList = [
           {
             val: '输出类型',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }, { val: 'From Input' }]
           }
         ]
@@ -1469,6 +1895,7 @@ const createList = [
           {
             val: '处理输入',
             type: 'select',
+            class: 's-c-b-box',
             optionsList: [{ val: '删除输入' }, { val: '隐藏输入' }, { val: '保持输入' }]
           }
         ]
@@ -1486,14 +1913,14 @@ const outlineList = [
       {
         val: '位置',
         type: 'changeCoord',
-        icon: '#icon-shangsuo',
+        icon: '',
         checkIf: 'ture',
         optionsList: [{ val: '相对位置' }, { val: '绝对位置' }]
       },
       {
         val: '位置',
         type: 'changeCoord',
-        icon: '#icon-shangsuo',
+        icon: '',
         checkIf: 'ture',
         optionsList: [{ val: '相对位置' }, { val: '绝对位置' }]
       },
@@ -1531,13 +1958,15 @@ const outlineList = [
       {
         val: '转换Actor',
         type: 'select',
+        class: '',
         optionsList: [{ val: '选择一种类型' }]
       },
-      { val: '可被伤害', type: 'checkbox' },
+      { val: '可被伤害', type: '', class: 's-c-b-box' },
       { val: '初始生命周期', type: 'input' },
       {
         val: '生成碰撞处理方法',
         type: 'select',
+        class: '',
         optionsList: [
           { val: '默认' },
           { val: '固定生成，忽视碰撞' },
@@ -1553,10 +1982,10 @@ const outlineList = [
     id: 'actorAdvanced',
     type: 'actor',
     options: [
-      { val: '静态网格体复制移动', type: 'checkbox' },
-      { val: '查看目标是寻找摄像机组件', type: 'checkbox' },
-      { val: '忽略原点偏移', type: 'checkbox' },
-      { val: '可存在于集群中', type: 'checkbox' },
+      { val: '静态网格体复制移动', type: '', class: 's-c-b-box' },
+      { val: '查看目标是寻找摄像机组件', type: '', class: 's-c-b-box' },
+      { val: '忽略原点偏移', type: '', class: 's-c-b-box' },
+      { val: '可存在于集群中', type: '', class: 's-c-b-box' },
       { val: '图层', type: 'addElement' },
       { val: '标签', type: 'addElement' }
     ]
