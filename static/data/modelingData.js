@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 18:29:36
+ * @LastEditTime: 2023-03-07 15:00:48
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -49,7 +49,7 @@ const modelOperationSettingList = [
 ]
 const modelingData = [
   {
-    name: '形状',
+    name: 'Shapes',
     list: [
       { name: '矩形', tooltip: '', icon: '#icon-juxing-3', iconclass: 'icon', class: 'shape', id: 'rectangle' },
       { name: '圆柱', tooltip: '', icon: '#icon-yuanzhu', iconclass: 'icon', class: 'shape', id: 'cylinder' },
@@ -63,18 +63,7 @@ const modelingData = [
     ]
   },
   {
-    name: '模型',
-    list: [
-      { name: '挤出模型', tooltip: '', icon: '#icon-jichumuxing-3', iconclass: 'icon-b', class: 'model', id: 'cube' },
-      { name: '编辑', tooltip: '', icon: '#icon-bianji-2', iconclass: 'icon', class: 'model', id: 'edit' },
-      { name: '变形', tooltip: '', icon: '#icon-bianxing', iconclass: 'icon', class: 'model', id: 'transformation' },
-      { name: '网格布尔', tooltip: '', icon: '#icon-wangluobuer', iconclass: 'icon-b', class: 'model', id: 'mshBool' },
-      { name: '布尔分割', tooltip: '', icon: '#icon-buerfenge', iconclass: 'icon-b', class: 'model', id: 'mshCut' },
-      { name: '细分', tooltip: '', icon: '#icon-xifen', iconclass: 'icon', class: 'model', id: 'subDiv' }
-    ]
-  },
-  {
-    name: '创造',
+    name: 'Create',
     list: [
       { name: 'PolyExt', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'create', id: 'PolyExt' },
       { name: 'PathExt', tooltip: '', icon: '#icon-PathExt', iconclass: 'icon', class: 'create', id: 'PathExt' },
@@ -93,7 +82,18 @@ const modelingData = [
     ]
   },
   {
-    name: '三角形编辑',
+    name: 'PolyModel',
+    list: [
+      { name: '挤出模型', tooltip: '', icon: '#icon-jichumuxing-3', iconclass: 'icon-b', class: 'model', id: 'cube' },
+      { name: '编辑', tooltip: '', icon: '#icon-bianji-2', iconclass: 'icon', class: 'model', id: 'edit' },
+      { name: '变形', tooltip: '', icon: '#icon-bianxing', iconclass: 'icon', class: 'model', id: 'transformation' },
+      { name: '网格布尔', tooltip: '', icon: '#icon-wangluobuer', iconclass: 'icon-b', class: 'model', id: 'mshBool' },
+      { name: '布尔分割', tooltip: '', icon: '#icon-buerfenge', iconclass: 'icon-b', class: 'model', id: 'mshCut' },
+      { name: '细分', tooltip: '', icon: '#icon-xifen', iconclass: 'icon', class: 'model', id: 'subDiv' }
+    ]
+  },
+  {
+    name: 'TriModel',
     list: [
       { name: 'TriSel', tooltip: '', icon: '#icon-TriSel', iconclass: 'icon', class: 'triModel', id: 'TriSel' },
       {
@@ -112,11 +112,11 @@ const modelingData = [
     ]
   },
   {
-    name: '造型',
+    name: 'Deform',
     list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'deForm', id: '' }]
   },
   {
-    name: '变换',
+    name: 'Transform',
     list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'transForm', id: '' }]
   }
 ]
@@ -1357,10 +1357,10 @@ const triModelList = [
             type: 'colorModule',
             id: 't-m-wireFrameColor',
             inputList: [
-              { val: 'R', num: '128' },
-              { val: 'G', num: '128' },
-              { val: 'B', num: '128' },
-              { val: 'A', num: '255' }
+              { val: 'R', num: '128', inputId: 't-m-r-wireFrameInput' },
+              { val: 'G', num: '128', inputId: 't-m-g-wireFrameInput' },
+              { val: 'B', num: '128', inputId: 't-m-b-wireFrameInput' },
+              { val: 'A', num: '255', inputId: 't-m-a-wireFrameInput' }
             ]
           },
           {

@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-02 17:16:58
+ * @LastEditTime: 2023-03-07 14:28:57
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -55,7 +55,7 @@ class modelingList {
                               <svg class="${iconList.iconclass}" aria-hidden="true">
                                 <use xlink:href="${iconList.icon}"></use>
                               </svg>
-
+ 
                             </div>    
                             
                         `

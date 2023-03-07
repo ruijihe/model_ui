@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 18:26:20
+ * @LastEditTime: 2023-03-07 10:27:45
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -315,7 +315,7 @@ class toolSet {
     else if (this.opts.type == 'colorModule') {
       let options = this.opts.options
       $(function () {
-        let setColor = `rgb(${options.inputList[0].num},${options.inputList[1].num},${options.inputList[2].num},${options.inputList[3].num})`
+        let setColor = `rgba(${options.inputList[0].num},${options.inputList[1].num},${options.inputList[2].num},${options.inputList[3].num})`
         $(`#${options.id}`).css('background-color', setColor)
       })
       $('#' + this.opts.location).append(`
@@ -331,7 +331,7 @@ class toolSet {
                 return `
                 <div class="x-y-flex t-s-colorInputBox">
                   <div class="t-s-colorText">${inputList.val}</div>
-                  <input value="${inputList.num}" class="t-s-colorInput">
+                  <input maxlength="3" id="${inputList.inputId}" value="${inputList.num}" class="t-s-colorInput">
                 </div>
               `
               })
@@ -390,6 +390,54 @@ class toolSet {
       .off('click')
       .click(function () {
         console.log(this)
+      })
+
+    //颜色框input输入
+    $('.t-s-colorInput')
+      .off('change')
+      .change(function () {
+        let colorBox = $(this).parent().parent().siblings().children('.t-s-colorBox')[0]
+        let oldRgb = $(colorBox).css('background-color')
+        let id = $($(this).siblings()[0]).text()
+        let setColor = ''
+        function getRGB(str) {
+          var match = str.match(/rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d?))\))?/)
+          return match
+            ? {
+                red: match[1],
+                green: match[2],
+                blue: match[3]
+              }
+            : {}
+        }
+        let oldRgbStr = getRGB(oldRgb)
+        switch (id) {
+          case 'R':
+            oldRgbStr.red = $(this).val()
+            setColor = `rgb(${$(this).val()},${oldRgbStr.green},${oldRgbStr.blue})`
+            $(colorBox).css('background-color', setColor)
+            break
+
+          case 'G':
+            oldRgbStr.green = $(this).val()
+            setColor = `rgb(${oldRgbStr.red},${$(this).val()},${oldRgbStr.blue})`
+            $(colorBox).css('background-color', setColor)
+            break
+
+          case 'B':
+            oldRgbStr.blue = $(this).val()
+            setColor = `rgb(${oldRgbStr.red},${oldRgbStr.green},${$(this).val()})`
+            $(colorBox).css('background-color', setColor)
+            break
+
+          case 'A':
+            $(colorBox).css({ opacity: $(this).val() })
+            break
+
+          default:
+            break
+        }
+        let newRgb = $(colorBox).css('background-color')
       })
   }
 }
