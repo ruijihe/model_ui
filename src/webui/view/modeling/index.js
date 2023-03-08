@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-07 14:28:57
+ * @LastEditTime: 2023-03-08 10:57:15
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -50,11 +50,13 @@ class modelingList {
                       ${e.list
                         .map((iconList) => {
                           return `
-                            <div title="${iconList.name}" id="${iconList.id}" class="m-c-box  ${iconList.class}">
+                            <div title="${iconList.tooltip}" id="${iconList.id}" class="m-c-box  ${iconList.class}">
 
                               <svg class="${iconList.iconclass}" aria-hidden="true">
                                 <use xlink:href="${iconList.icon}"></use>
                               </svg>
+
+                              <div style="margin-top:12px">${iconList.name}</div>
  
                             </div>    
                             
@@ -80,11 +82,17 @@ class modelingList {
       $('.m-c-box').tooltip({
         track: true,
         classes: {
-          'ui-tooltip': 'tooltip',
-          'ui-tooltip-content': 'tooltip-content'
+          'ui-tooltip': 'ico-tooltip',
+          'ui-tooltip-content': 'ico-tooltip-content'
         },
         position: {
-          my: 'left top+25'
+          my: 'left top+35'
+        },
+        content: function () {
+          if ($(this).is('div')) {
+            return `<div>${this.title}</div>
+                    `
+          }
         }
       })
     })
@@ -143,7 +151,6 @@ class modelingList {
     $('.m-c-box').click(function () {
       $('.m-p-setting').removeClass('none')
       let arr = []
-      let val = this.lastElementChild.firstElementChild.innerHTML
       let index = $(this).index()
       // 点击添加背景色
       $('.m-c-box').removeClass('m-c-box-check')
@@ -151,13 +158,13 @@ class modelingList {
       //形状
       if ($(this).hasClass('shape')) {
         arr = data.shapeSettingList
-        new publicSetting({ title: val, index: index, publicSettingList: arr })
+        new publicSetting({ index: index, publicSettingList: arr })
       }
       //模型
       else if ($(this).hasClass('model')) {
         arr = data.modelSettingList
         let id = $(this).attr('id')
-        new publicSetting({ title: val, index: index, publicSettingList: arr })
+        new publicSetting({ index: index, publicSettingList: arr })
 
         switch (id) {
           //立方体
@@ -179,12 +186,12 @@ class modelingList {
       //创造
       else if ($(this).hasClass('create')) {
         arr = data.createList
-        new publicSetting({ title: val, index: index, publicSettingList: arr })
+        new publicSetting({ index: index, publicSettingList: arr })
       }
       //TriModel
       else if ($(this).hasClass('triModel')) {
         arr = data.triModelList
-        new publicSetting({ title: val, index: index, publicSettingList: arr })
+        new publicSetting({ index: index, publicSettingList: arr })
       }
       //deForm
       else if ($(this).hasClass('deForm')) {

@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-16 09:58:40
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 17:32:06
+ * @LastEditTime: 2023-03-08 10:13:49
  * @FilePath: \RjhUitraEdit\src\webui\components\publicSetting\index.js
  * @Description:
  *
@@ -14,7 +14,7 @@ class publicSetting {
   constructor(options) {
     this.opts = Object.assign(
       {
-        title: '', //名称，
+        // title: '', //名称，
         index: 0,
         publicSettingList: []
       },
@@ -32,11 +32,11 @@ class publicSetting {
   }
 
   renderView() {
-    $('.m-p-s-title').append(`
-      <div class="x-y-flex">
-        <div style="margin-left:3px">${this.opts.title}设置</div>
-      </div>
-    `)
+    // $('.m-p-s-title').append(`
+    //   <div class="x-y-flex">
+    //     <div style="margin-left:3px">${this.opts.title}设置</div>
+    //   </div>
+    // `)
 
     $('.m-p-s-content').append(`
     

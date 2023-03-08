@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-07 15:00:48
+ * @LastEditTime: 2023-03-08 18:15:12
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -51,73 +51,605 @@ const modelingData = [
   {
     name: 'Shapes',
     list: [
-      { name: '矩形', tooltip: '', icon: '#icon-juxing-3', iconclass: 'icon', class: 'shape', id: 'rectangle' },
-      { name: '圆柱', tooltip: '', icon: '#icon-yuanzhu', iconclass: 'icon', class: 'shape', id: 'cylinder' },
-      { name: '球形', tooltip: '', icon: '#icon-qiuxing', iconclass: 'icon', class: 'shape', id: 'sphere' },
-      { name: '锥形', tooltip: '', icon: '#icon-zhuixing', iconclass: 'icon', class: 'shape', id: 'taper' },
-      { name: '环形', tooltip: '', icon: '#icon-huanxing', iconclass: 'icon-b', class: 'shape', id: 'annular' },
-      { name: '箭头', tooltip: '', icon: '#icon-jiantou-1', iconclass: 'icon', class: 'shape', id: 'arrows' },
-      { name: '方片', tooltip: '', icon: '#icon-fangpian', iconclass: 'icon-b', class: 'shape', id: 'fangpian' },
-      { name: '碟片', tooltip: '', icon: '#icon-shepian', iconclass: 'icon-b', class: 'shape', id: 'disc' },
-      { name: '梯形', tooltip: '', icon: '#icon-tixing-1', iconclass: 'icon', class: 'shape', id: 'trapezoid' }
+      {
+        name: 'Box',
+        tooltip: 'Create new Box objects',
+        icon: '#icon-juxing-3',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'rectangle'
+      },
+      {
+        name: 'Cyl',
+        tooltip: 'Create new Cyl objects',
+        icon: '#icon-yuanzhu',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'cylinder'
+      },
+      {
+        name: 'Sphere',
+        tooltip: 'Create new Sphere objects',
+        icon: '#icon-qiuxing',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'sphere'
+      },
+      {
+        name: 'Cone',
+        tooltip: 'Create new Cone objects',
+        icon: '#icon-zhuixing',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'taper'
+      },
+      {
+        name: 'Torus',
+        tooltip: 'Create new Torus objects',
+        icon: '#icon-huanxing',
+        iconclass: 'icon-b',
+        class: 'shape',
+        id: 'annular'
+      },
+      {
+        name: 'Arrow',
+        tooltip: 'Create new Arrow objects',
+        icon: '#icon-jiantou-1',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'arrows'
+      },
+      {
+        name: 'Rect',
+        tooltip: 'Create new Rect objects',
+        icon: '#icon-fangpian',
+        iconclass: 'icon-b',
+        class: 'shape',
+        id: 'fangpian'
+      },
+      {
+        name: 'Disc',
+        tooltip: 'Create new Disc objects',
+        icon: '#icon-shepian',
+        iconclass: 'icon-b',
+        class: 'shape',
+        id: 'disc'
+      },
+      {
+        name: 'Stairs',
+        tooltip: 'Create new Stairs objects',
+        icon: '#icon-tixing-1',
+        iconclass: 'icon',
+        class: 'shape',
+        id: 'trapezoid'
+      }
     ]
   },
   {
     name: 'Create',
     list: [
-      { name: 'PolyExt', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'create', id: 'PolyExt' },
-      { name: 'PathExt', tooltip: '', icon: '#icon-PathExt', iconclass: 'icon', class: 'create', id: 'PathExt' },
       {
-        name: '路径定义',
-        tooltip: '',
+        name: 'PolyExt',
+        tooltip: 'Draw and extrude polygons to create new objects',
+        icon: '#icon-PolyExt',
+        iconclass: 'icon',
+        class: 'create',
+        id: 'PolyExt'
+      },
+      {
+        name: 'PathExt',
+        tooltip: 'Draw and extrude PolyPaths to create new objects',
+        icon: '#icon-PathExt',
+        iconclass: 'icon',
+        class: 'create',
+        id: 'PathExt'
+      },
+      {
+        name: 'PathRev',
+        tooltip: 'Draw and revolve PolyPaths to create new objects',
         icon: '#icon-luojingxiuding',
         iconclass: 'icon-s',
         class: 'create',
         id: 'pathDefinition'
       },
-      { name: 'BdryRev', tooltip: '', icon: '#icon-BdryRev', iconclass: 'icon-s', class: 'create', id: 'BdryRev' },
-      { name: 'Pattern', tooltip: '', icon: '#icon-Pattern', iconclass: 'icon', class: 'create', id: 'Pattern' },
-      { name: 'Mashup', tooltip: '', icon: '#icon-Mashup', iconclass: 'icon', class: 'create', id: 'Mashup' },
-      { name: '附加', tooltip: '', icon: '#icon-bujia', iconclass: 'icon-b', class: 'create', id: 'subjoin' }
+      {
+        name: 'BdryRev',
+        tooltip: 'Revolve mesh boundary loops to create new objects',
+        icon: '#icon-BdryRev',
+        iconclass: 'icon-s',
+        class: 'create',
+        id: 'BdryRev'
+      },
+      {
+        name: 'Pattern',
+        tooltip: 'Create patterns of meshes',
+        icon: '#icon-Pattern',
+        iconclass: 'icon',
+        class: 'create',
+        id: 'Pattern'
+      },
+      {
+        name: 'MshDup',
+        tooltip: 'Duplicate single meshes to create new objects',
+        icon: '#icon-Mashup',
+        iconclass: 'icon',
+        class: 'create',
+        id: 'Mashup'
+      },
+      {
+        name: 'MshMrg',
+        tooltip: 'Merge multiple meshes to create new objects',
+        icon: '#icon-bujia',
+        iconclass: 'icon-b',
+        class: 'create',
+        id: 'subjoin'
+      }
     ]
   },
   {
     name: 'PolyModel',
     list: [
-      { name: '挤出模型', tooltip: '', icon: '#icon-jichumuxing-3', iconclass: 'icon-b', class: 'model', id: 'cube' },
-      { name: '编辑', tooltip: '', icon: '#icon-bianji-2', iconclass: 'icon', class: 'model', id: 'edit' },
-      { name: '变形', tooltip: '', icon: '#icon-bianxing', iconclass: 'icon', class: 'model', id: 'transformation' },
-      { name: '网格布尔', tooltip: '', icon: '#icon-wangluobuer', iconclass: 'icon-b', class: 'model', id: 'mshBool' },
-      { name: '布尔分割', tooltip: '', icon: '#icon-buerfenge', iconclass: 'icon-b', class: 'model', id: 'mshCut' },
-      { name: '细分', tooltip: '', icon: '#icon-xifen', iconclass: 'icon', class: 'model', id: 'subDiv' }
+      {
+        name: 'CubeGr',
+        tooltip: 'create block out meshes using a repositionable grid',
+        icon: '#icon-jichumuxing-3',
+        iconclass: 'icon-b',
+        class: 'model',
+        id: 'cube'
+      },
+      {
+        name: 'PolyEd',
+        tooltip: 'Edit meshes via PolyGroups',
+        icon: '#icon-bianji-2',
+        iconclass: 'icon',
+        class: 'model',
+        id: 'edit'
+      },
+      {
+        name: 'PolyDef',
+        tooltip: 'Deform meshes via PolyGroups',
+        icon: '#icon-bianxing',
+        iconclass: 'icon',
+        class: 'model',
+        id: 'transformation'
+      },
+      {
+        name: 'MshBool',
+        tooltip: 'Apply Boolean operations to mesh pairs',
+        icon: '#icon-wangluobuer',
+        iconclass: 'icon-b',
+        class: 'model',
+        id: 'mshBool'
+      },
+      {
+        name: 'MshCut',
+        tooltip: 'split one mesh into parts using a second mesh',
+        icon: '#icon-buerfenge',
+        iconclass: 'icon-b',
+        class: 'model',
+        id: 'mshCut'
+      },
+      {
+        name: 'SubDiv',
+        tooltip: 'Subdivide mesh via PolyGroups or triangles',
+        icon: '#icon-xifen',
+        iconclass: 'icon',
+        class: 'model',
+        id: 'subDiv'
+      }
     ]
   },
   {
     name: 'TriModel',
     list: [
-      { name: 'TriSel', tooltip: '', icon: '#icon-TriSel', iconclass: 'icon', class: 'triModel', id: 'TriSel' },
+      {
+        name: 'TriSel',
+        tooltip: 'Select and edit mesh triangles',
+        icon: '#icon-TriSel',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'TriSel'
+      },
       {
         name: 'TriED',
-        tooltip: '',
+        tooltip: 'Edit mesh via triangles',
         icon: '#icon-sanjiaoxingbianji',
         iconclass: 'icon',
         class: 'triModel',
         id: 'TriED'
       },
-      { name: 'HFill', tooltip: '', icon: '#icon-chenbutong', iconclass: 'icon', class: 'triModel', id: 'HFill' },
-      { name: 'Mirror', tooltip: '', icon: '#icon-jingxiang', iconclass: 'icon', class: 'triModel', id: 'Mirror' },
-      { name: 'PinCut', tooltip: '', icon: '#icon-pingmianjianqi', iconclass: 'icon', class: 'triModel', id: 'PinCut' },
-      { name: 'PolyCut', tooltip: '', icon: '#icon-PolyCut', iconclass: 'icon', class: 'triModel', id: 'PolyCut' },
-      { name: 'Trim', tooltip: '', icon: '#icon-Trim', iconclass: 'icon', class: 'triModel', id: 'Trim' }
+      {
+        name: 'HFill',
+        tooltip: 'Fill holes in mesh',
+        icon: '#icon-chenbutong',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'HFill'
+      },
+      {
+        name: 'Mirror',
+        tooltip: 'Mirror selected meshes',
+        icon: '#icon-jingxiang',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'Mirror'
+      },
+      {
+        name: 'PinCut',
+        tooltip: 'cut selected meshes with plane',
+        icon: '#icon-pingmianjianqi',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'PinCut'
+      },
+      {
+        name: 'PolyCut',
+        tooltip: 'cut mesh with extruded polygon',
+        icon: '#icon-PolyCut',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'PolyCut'
+      },
+      {
+        name: 'Trim',
+        tooltip: 'Trim/cut selected mesh with second mesh',
+        icon: '#icon-Trim',
+        iconclass: 'icon',
+        class: 'triModel',
+        id: 'Trim'
+      }
     ]
   },
   {
     name: 'Deform',
-    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'deForm', id: '' }]
+    list: [
+      { name: 'VSclpt', tooltip: 'vertex sculpting', icon: '#icon-VSclpt', iconclass: 'icon', class: 'deForm', id: '' },
+      {
+        name: 'DSclpt',
+        tooltip: 'Dynamic mesh sculpting',
+        icon: '#icon-DSclpt',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'DSclpt'
+      },
+      {
+        name: 'Smooth',
+        tooltip: 'Smooth mesh surface',
+        icon: '#icon-pinghua',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'Smooth'
+      },
+      {
+        name: 'Offset',
+        tooltip: 'offset mesh surface',
+        icon: '#icon-offsef',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'Offset'
+      },
+      {
+        name: 'Warp',
+        tooltip: 'Reshape mesh using space deformers',
+        icon: '#icon-zhouqu',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'Warp'
+      },
+      {
+        name: 'Lattice',
+        tooltip: 'Deform mesh with 3D lattice/grid',
+        icon: '#icon-dianzhenbianxing',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'Lattice'
+      },
+      {
+        name: 'Displce',
+        tooltip: 'Displace mesh surface with optional subdivision',
+        icon: '#icon-zhihuan',
+        iconclass: 'icon',
+        class: 'deForm',
+        id: 'Displce'
+      }
+    ]
   },
   {
     name: 'Transform',
-    list: [{ name: '', tooltip: '', icon: '#icon-PolyExt', iconclass: 'icon', class: 'transForm', id: '' }]
+    list: [
+      {
+        name: 'XForm',
+        tooltip: 'Transform selected meshes',
+        icon: '#icon-bianhuan',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'XForm'
+      },
+      {
+        name: 'Align',
+        tooltip: 'Align objects',
+        icon: '#icon-duiqi-3',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'Align'
+      },
+      {
+        name: 'Pivot',
+        tooltip: 'Edit mesh pivots',
+        icon: '#icon-bianjishuzhoudian',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'Pivot'
+      },
+      {
+        name: 'PivotAct',
+        tooltip: 'Add actor to act as a pivot for child components',
+        icon: '#icon-tianjiashuzhoudian',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'PivotAct'
+      },
+      {
+        name: 'BakeRS',
+        tooltip: 'Bake rotation and scale into mesh asset',
+        icon: '#icon-hongbeibianhuan',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'BakeRS'
+      },
+      {
+        name: 'Transfer',
+        tooltip: 'Transfer meshes',
+        icon: '#icon-zhuanyi',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'Transfer'
+      },
+      {
+        name: 'Convert',
+        tooltip: 'Convert meshes',
+        icon: '#icon-zhuanhuan',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'Convert'
+      },
+      {
+        name: 'Split',
+        tooltip: 'split meshes',
+        icon: '#icon-fenge',
+        iconclass: 'icon',
+        class: 'transForm',
+        id: 'Split'
+      }
+    ]
+  },
+  {
+    name: 'MeshOps',
+    list: [
+      {
+        name: 'Simplfy',
+        tooltip: 'Simplify mesh',
+        icon: '#icon-Simplfy',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Simplfy'
+      },
+      {
+        name: 'Remesh',
+        tooltip: 'Re-triangulate mesh',
+        icon: '#icon-Remesh',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Remesh'
+      },
+      {
+        name: 'Weld',
+        tooltip: 'Weld overlapping mesh edges',
+        icon: '#icon-Weld',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Weld'
+      },
+      {
+        name: 'Jacket',
+        tooltip: 'Remove hidden triangles from selected meshes',
+        icon: '#icon-Jacket',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Jacket'
+      },
+      {
+        name: 'Merge',
+        tooltip: 'Self-union selected meshes to resolve self-intersections',
+        icon: '#icon-Merge',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Merge'
+      },
+      {
+        name: 'Project',
+        tooltip: 'Map/re-mesh onto target mesh (second selection)',
+        icon: '#icon-Project',
+        iconclass: 'icon',
+        class: 'MeshOps',
+        id: 'Project'
+      }
+    ]
+  },
+  {
+    name: 'VoxOps',
+    list: [
+      {
+        name: 'VoxWrap',
+        tooltip: 'Wrap selected meshes using voxels',
+        icon: '#icon-VoxWrap',
+        iconclass: 'icon',
+        class: 'VoxOps',
+        id: 'VoxWrap'
+      },
+      {
+        name: 'VoxBlnd',
+        tooltip: 'Blend selected meshes using voxels',
+        icon: '#icon-VoxBlnd',
+        iconclass: 'icon',
+        class: 'VoxOps',
+        id: 'VoxBlnd'
+      },
+      {
+        name: 'VoxMrph',
+        tooltip: 'Offset/inset selected meshes using voxels',
+        icon: '#icon-VoxMrph',
+        iconclass: 'icon',
+        class: 'VoxOps',
+        id: 'VoxMrph'
+      },
+      {
+        name: 'VoxBool',
+        tooltip: 'Boolean selected meshes using voxels',
+        icon: '#icon-VoxBool',
+        iconclass: 'icon',
+        class: 'VoxOps',
+        id: 'VoxBool'
+      },
+      {
+        name: 'VoxMrg',
+        tooltip: 'Merge selected meshes using voxels',
+        icon: '#icon-VoxMrg',
+        iconclass: 'icon',
+        class: 'VoxOps',
+        id: 'VoxMrg'
+      }
+    ]
+  },
+  {
+    name: 'Attributes',
+    list: [
+      {
+        name: 'Inspct',
+        tooltip: 'lnspect mesh attributes',
+        icon: '#icon-Inspct',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'Inspct'
+      },
+      {
+        name: 'Nrmls',
+        tooltip: 'Update mesh normals',
+        icon: '#icon-Nrmls',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'Nrmls'
+      },
+      {
+        name: 'Tngnts',
+        tooltip: 'update mesh tangents',
+        icon: '#icon-Tngnts',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'Tngnts'
+      },
+      {
+        name: 'AttrEd',
+        tooltip: 'Edit/configure mesh attributes',
+        icon: '#icon-AttrEd',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'AttrEd'
+      },
+      {
+        name: 'GrpGen',
+        tooltip: 'Generate new PolyGroups',
+        icon: '#icon-GrpGen',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'GrpGen'
+      },
+      {
+        name: 'GrpPnt',
+        tooltip: 'Paint new PolyGroups',
+        icon: '#icon-GrpPnt',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'GrpPnt'
+      },
+      {
+        name: 'MapPnt',
+        tooltip: 'Paint attribute maps',
+        icon: '#icon-MapPnt',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'MapPnt'
+      },
+      {
+        name: 'MatEd',
+        tooltip: 'Assign materials to selected triangles',
+        icon: '#icon-MatEd',
+        iconclass: 'icon',
+        class: 'Attributes',
+        id: 'MatEd'
+      }
+    ]
+  },
+  {
+    name: 'UVs',
+    list: [
+      {
+        name: 'AutoUV',
+        tooltip: 'Automatically unwrap and pack Uvs for mesh',
+        icon: '#icon-AutoUV',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'AutoUV'
+      },
+      {
+        name: 'Unwrap',
+        tooltip: 'Perform uv unwrapping for mesh',
+        icon: '#icon-Unwrap',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'Unwrap'
+      },
+      {
+        name: 'Project',
+        tooltip: 'set Uvs from projection',
+        icon: '#icon-Project_1',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'Project'
+      },
+      {
+        name: 'SeamEd',
+        tooltip: 'Add UV seams to mesh',
+        icon: '#icon-SeamEd',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'SeamEd'
+      },
+      {
+        name: 'XFormUV',
+        tooltip: 'Transform Uv islands in uv space',
+        icon: '#icon-XFormUV',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'XFormUV'
+      },
+      {
+        name: 'Layout',
+        tooltip: 'Transform and pack existing uvs',
+        icon: '#icon-Layout',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'Layout'
+      },
+      {
+        name: 'UVEditor',
+        tooltip: '启动UV资产编辑器',
+        icon: '#icon-UVEditor',
+        iconclass: 'icon',
+        class: 'UVs',
+        id: 'UVEditor'
+      }
+    ]
   }
 ]
 
@@ -1334,7 +1866,61 @@ const triModelList = [
           }
         ]
       },
-      { name: '网格体编辑', id: 't-s-gridEditing', options: [] },
+      {
+        name: '网格体编辑',
+        id: 't-s-gridEditing',
+        options: [
+          {
+            val: 'Delete',
+            tooltip: '清除激活的三角形选择',
+            icon: '#icon-shanshufaxian',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Disconnect',
+            tooltip: '断开选定三角形与其相邻项的连接，沿选择边界创建网格体边界',
+            icon: '#icon-duankai',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Flip Normals',
+            tooltip: '翻转选定三角形的法线。这将在选择边界创建硬法线。',
+            icon: '#icon-fanzhuanfaxian',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Create Polygroup',
+            tooltip: '为选定三角形指定一个新的唯一多边形组索引',
+            icon: '#icon-chuangjianduozu',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Separate',
+            tooltip: '从激活网格体object删除选定三角形,并新建一个包含这些三角形的网格体Object',
+            icon: '#icon-fenkai',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Duplicateler',
+            tooltip: '新建一个网格体Object,包含选定的三角形',
+            icon: '#icon-tongfu',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Smooth Border',
+            tooltip: '平滑选择边界',
+            icon: '#icon-pinghuabiankuang',
+            class: 'icon-s',
+            type: 'button'
+          }
+        ]
+      },
       {
         name: '网格体元素可视化',
         id: 't-s-gridVisual',
@@ -1371,7 +1957,7 @@ const triModelList = [
               { val: 'R', num: '245' },
               { val: 'G', num: '15' },
               { val: 'B', num: '15' },
-              { val: 'A', num: '255' }
+              { val: 'A', num: '1' }
             ]
           },
           {
@@ -1382,7 +1968,7 @@ const triModelList = [
               { val: 'R', num: '240' },
               { val: 'G', num: '160' },
               { val: 'B', num: '15' },
-              { val: 'A', num: '255' }
+              { val: 'A', num: '1' }
             ]
           },
           {
@@ -1399,6 +1985,176 @@ const triModelList = [
         ]
       },
       { name: '网格体统计数据', id: 't-s-gridData', options: [] }
+    ]
+  },
+  {
+    name: 'TriEd',
+    typeList: [
+      {
+        name: '三角形编辑',
+        id: 't-e-one',
+        options: []
+      },
+      {
+        name: '边缘编辑',
+        id: 't-e-two',
+        options: []
+      },
+      {
+        name: '选择操作',
+        id: 't-e-there',
+        options: []
+      },
+      {
+        name: '选项过滤器',
+        id: 't-e-four',
+        options: []
+      },
+      {
+        name: '其他选择选项',
+        id: 't-e-five',
+        options: []
+      },
+      {
+        name: '正交视口行为',
+        id: 't-e-six',
+        options: []
+      },
+      {
+        name: '高级',
+        id: 't-e-seven',
+        options: []
+      },
+      {
+        name: '选项',
+        id: 't-e-eight',
+        options: []
+      },
+      {
+        name: '小工具',
+        id: 't-e-nine',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'HFill',
+    typeList: [
+      {
+        name: '填充洞',
+        id: 'h-f-one',
+        options: []
+      },
+      {
+        name: '选项编辑',
+        id: 'h-f-two',
+        options: []
+      },
+      {
+        name: '洞填充统计数据',
+        id: 'h-f-there',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Mirror',
+    typeList: [
+      {
+        name: '镜像',
+        id: 'm-r-one',
+        options: []
+      },
+      {
+        name: '高级',
+        id: 'm-r-two',
+        options: []
+      },
+      {
+        name: '重定位选项',
+        id: 'm-r-there',
+        options: []
+      },
+      {
+        name: '高级',
+        id: 'm-r-four',
+        options: []
+      },
+      {
+        name: '工具输出选项',
+        id: 'm-r-five',
+        options: []
+      },
+      {
+        name: '预设镜像方向',
+        id: 'm-r-six',
+        options: []
+      },
+      {
+        name: '重定位平面',
+        id: 'm-r-seven',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'PinCut',
+    typeList: [
+      {
+        name: '平面剪切',
+        id: 'p-c-one',
+        options: []
+      },
+      {
+        name: '高级',
+        id: 'p-c-two',
+        options: []
+      },
+      {
+        name: '工具输出选项',
+        id: 'p-c-there',
+        options: []
+      },
+      {
+        name: '操作',
+        id: 'p-c-four',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'PolyCut',
+    typeList: [
+      {
+        name: 'PolyCut',
+        id: 'p-l-c-one',
+        options: []
+      },
+      {
+        name: '高级',
+        id: 'p-l-c-two',
+        options: []
+      },
+      {
+        name: '形状',
+        id: 'p-l-c-there',
+        options: []
+      },
+      {
+        name: '操作',
+        id: 'p-l-c-four',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Trim',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
     ]
   }
 ]
