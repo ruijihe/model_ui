@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-08 10:57:15
+ * @LastEditTime: 2023-03-13 15:29:36
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -32,6 +32,10 @@ class modelingList {
 
         <div class="m-title">
           <div>自由造型</div>
+        </div>
+
+        <div id="searchInputBox">
+          <input id="searchInput">
         </div>
 
         <div class="modelingListContent">
@@ -95,6 +99,70 @@ class modelingList {
           }
         }
       })
+      //输入框数据操作
+      const projects = data.modelingData
+      let newArr = []
+      let optionArr = []
+      let optionList = []
+      let searchItem = []
+      optionArr = projects.map((item) => {
+        const list = item.list
+        newArr.push(...list)
+        optionList = newArr.filter((item, index) => {
+          return newArr.findIndex((obj) => obj.id === item.id) === index
+        })
+        return optionList
+      })
+      let searchArr = optionArr[optionArr.length - 1]
+
+      $('#searchInput')
+        .autocomplete({
+          minLength: 0,
+          source: [],
+          maxHeight: 400,
+          classes: {
+            'ui-autocomplete': 'tooltipBox'
+          },
+          focus: function (event, ui) {
+            $('#searchInput').val(ui.item.name)
+            return false
+          },
+          select: function (event, ui) {
+            $('#searchInput').val(ui.item.name)
+            return false
+          },
+          search: function (event, ui) {
+            let searchTerm = $('#searchInput').val()
+            const filteredData = searchArr.filter(function (ele) {
+              return ele.name.toLowerCase().includes(searchTerm.toLowerCase())
+            })
+            if (filteredData.length > 0) {
+              $(this).autocomplete('option', 'source', filteredData)
+            } else {
+              $(this).autocomplete('option', 'source', ['No Results'])
+            }
+          }
+        })
+        .autocomplete('instance')._renderItem = function (ul, item) {
+        if (item === 'No Results') {
+          $('<li class="tooltipOption">').text(item).appendTo(ul)
+          return
+        }
+        return $('<li class="tooltipOption">')
+          .append(
+            `
+            <div class="x-y-flex">
+              <div>
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="${item.icon}"></use>
+                </svg>
+              </div>
+              <div>${item.name}</div>
+            </div>
+          `
+          )
+          .appendTo(ul)
+      }
     })
 
     //总隐藏开关

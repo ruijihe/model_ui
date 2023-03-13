@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-08 18:15:12
+ * @LastEditTime: 2023-03-10 09:21:50
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -1468,10 +1468,34 @@ const modelSettingList = [
         name: '操作',
         id: 'shapeHandle',
         options: [
-          { val: '挤出', tooltip: '', icon: '#icon-jichu', class: 'e-s-icon', type: 'button' },
-          { val: 'offSet', tooltip: '', icon: '#icon-Offset_1', class: 'e-s-icon', type: 'button' },
-          { val: 'lnset', tooltip: '', icon: '#icon-lnset', class: 'e-s-icon', type: 'button' },
-          { val: 'outSet', tooltip: '', icon: '#icon-Outset', class: 'e-s-icon', type: 'button' },
+          {
+            val: 'Extrude',
+            tooltip: '通过移动和缝合挤压当前选定面的集。',
+            icon: '#icon-jichu',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'OffSet',
+            tooltip: '类似于挤压，但默认沿着顶点法线移动顶点，而非朝单一方向移动。',
+            icon: '#icon-Offset_1',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Inset',
+            tooltip: '嵌入当前选定面的集。在视口中点击以确认嵌入距离。',
+            icon: '#icon-lnset',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'OutSet',
+            tooltip: '外凸当前选定面的集。在视口中点击以确认外凸距离。',
+            icon: '#icon-Outset',
+            class: 'e-s-icon',
+            type: 'button'
+          },
           { val: '斜角', tooltip: '', icon: '#icon-xiejiao', class: 'e-s-icon', type: 'button' },
           { val: '合并', tooltip: '', icon: '#icon-hebing-1', class: 'e-s-icon', type: 'button' },
           { val: '面部切割', tooltip: '', icon: '#icon-mianbuqige', class: 'e-s-icon', type: 'button' },
@@ -1484,44 +1508,44 @@ const modelSettingList = [
         name: '形状编辑',
         id: 'shapeEditing',
         options: [
-          { val: '插入边缘', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' },
-          { val: '', icon: '', class: 'e-s-icon', type: 'button' }
+          { val: '插入边缘', tooltip: '', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘2', tooltip: '', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' },
+          { val: '', icon: '', tooltip: '', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '边缘编辑',
         id: 'edgeEditing',
         options: [
-          { val: '焊接', icon: '#icon-hanxie', class: 'e-s-icon', type: 'button' },
-          { val: '伸直', icon: '#icon-shenzhi', class: 'e-s-icon', type: 'button' },
-          { val: '填充孔', icon: '#icon-chenchongkong', class: 'e-s-icon', type: 'button' },
-          { val: '斜角_1', icon: '#icon-xiejiao_1', class: 'e-s-icon', type: 'button' },
-          { val: '桥', icon: '#icon-qiao', class: 'e-s-icon', type: 'button' }
+          { val: '焊接', tooltip: '', icon: '#icon-hanxie', class: 'e-s-icon', type: 'button' },
+          { val: '伸直', tooltip: '', icon: '#icon-shenzhi', class: 'e-s-icon', type: 'button' },
+          { val: '填充孔', tooltip: '', icon: '#icon-chenchongkong', class: 'e-s-icon', type: 'button' },
+          { val: '斜角_1', tooltip: '', icon: '#icon-xiejiao_1', class: 'e-s-icon', type: 'button' },
+          { val: '桥', tooltip: '', icon: '#icon-qiao', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: 'UV',
         id: 'UV',
-        options: [{ val: '平面投影', icon: '#icon-pingmiantouying', class: 'e-s-icon', type: 'button' }]
+        options: [{ val: '平面投影', tooltip: '', icon: '#icon-pingmiantouying', class: 'e-s-icon', type: 'button' }]
       },
       {
         name: '选择操作',
         id: 'selectingOperation',
         options: [
-          { val: '反相选区', icon: '#icon-fanxiangxuanqu', class: 'e-s-icon', type: 'button' },
-          { val: '全选', icon: '#icon-quanxuan', class: 'e-s-icon', type: 'button' }
+          { val: '反相选区', tooltip: '', icon: '#icon-fanxiangxuanqu', class: 'e-s-icon', type: 'button' },
+          { val: '全选', tooltip: '', icon: '#icon-quanxuan', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
         name: '选项过滤器',
         id: 'optionFilter',
         options: [
-          { val: '选择点', icon: '#icon-xuanzhaidian', class: 'e-s-icon', type: 'button' },
-          { val: '选择线', icon: '#icon-xuanzhaixian', class: 'e-s-icon', type: 'button' },
-          { val: '选择面', icon: '#icon-xuanzhaimian', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘1', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘2', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' }
+          { val: '选择点', tooltip: '', icon: '#icon-xuanzhaidian', class: 'e-s-icon', type: 'button' },
+          { val: '选择线', tooltip: '', icon: '#icon-xuanzhaixian', class: 'e-s-icon', type: 'button' },
+          { val: '选择面', tooltip: '', icon: '#icon-xuanzhaimian', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘1', tooltip: '', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
+          { val: '插入边缘2', tooltip: '', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' }
         ]
       },
       {
@@ -1993,47 +2017,168 @@ const triModelList = [
       {
         name: '三角形编辑',
         id: 't-e-one',
-        options: []
+        options: [
+          {
+            val: 'Extrude',
+            tooltip: '挤压当前选定面的集。在视口中点击以确认挤压高度。',
+            icon: '#icon-sanjiaoxing-Extrude',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Offset',
+            tooltip: '类似于挤压,但默认沿着顶点法线移动顶点，而非朝单一方向移动。',
+            icon: '#icon-sanjiaoxing-Offset',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Inset',
+            tooltip: '嵌入当前选定面的集。在视口中点击以确认嵌入距离。',
+            icon: '#icon-sanjiaoxing-lnset',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Outset',
+            tooltip: '外凸当前选定面的集。在视口中点击以确认外凸距离。',
+            icon: '#icon-sanjiaoxing-Outset',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Cut Faces',
+            tooltip: '剪切当前选定面的集。在视口中点击两次以设置剪切线。',
+            icon: '#icon-2-11',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Flip',
+            tooltip: '翻转当前选定面的集的法线和面朝向',
+            icon: '#icon-sanjiaoxing-flip',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Recalc NormalsFlip',
+            tooltip: '重新计算当前选定面的集的法线',
+            icon: '#icon-2-10',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Duplicate',
+            tooltip: '复制选定面',
+            icon: '#icon-sanjiaoxing-Duplicate',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Disconnecttte',
+            tooltip: '在边界处分离选定的面',
+            icon: '#icon-sanjiaoxing-disconnect',
+            class: 'e-s-icon',
+            type: 'button'
+          },
+          {
+            val: 'Poke',
+            tooltip: '戳每个面的中心点',
+            icon: '#icon-sanjiaoxing-poke',
+            class: 'e-s-icon',
+            type: 'button'
+          }
+        ]
       },
       {
         name: '边缘编辑',
         id: 't-e-two',
-        options: []
+        options: [
+          { val: '', tooltip: '', icon: '#icon-', class: 'e-s-icon', type: 'button' },
+          {
+            val: 'Fill Holelit',
+            tooltip: '填充任何选定边界边缘的相邻洞',
+            icon: '#icon-chenchongkong-la',
+            class: 'icon-s',
+            type: 'button'
+          },
+          { val: 'Flip', tooltip: '', icon: '#icon-kongfan-la', class: 'icon-s', type: 'button' },
+          { val: 'Split', tooltip: '', icon: '#icon-fenli-la', class: 'e-s-icon', type: 'button' },
+          { val: 'Weld', tooltip: '', icon: '#icon-hanxie-la', class: 'e-s-icon', type: 'button' }
+        ]
       },
       {
         name: '选择操作',
         id: 't-e-there',
-        options: []
+        options: [
+          {
+            val: 'Invert Selection',
+            tooltip: '反转当前选择。如选择为空，与全选的效果相同，并同样依赖于选择过滤器。',
+            icon: '#icon-fanxiangxuanqu',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Select All',
+            tooltip: '选择所有元素。根据选择过滤器，其中顶点首选边界，而非面。',
+            icon: '#icon-quanxuan',
+            class: 'icon-s',
+            type: 'button'
+          }
+        ]
       },
       {
         name: '选项过滤器',
         id: 't-e-four',
-        options: []
+        options: [
+          { val: 'Select Vertices', tooltip: '', icon: '#icon-xuanzhaidian', class: 'icon-s', type: 'button' },
+          { val: 'Select Edges', tooltip: '', icon: '#icon-xuanzhaixian', class: 'icon-s', type: 'button' },
+          { val: 'Select Faces', tooltip: '', icon: '#icon-xuanzhaimian', class: 'icon-s', type: 'button' }
+        ]
       },
       {
         name: '其他选择选项',
         id: 't-e-five',
-        options: []
+        options: [{ val: '边框忽略遮挡', type: 'checkbox', class: 's-c-b-box' }]
       },
       {
         name: '正交视口行为',
         id: 't-e-six',
-        options: []
+        options: [
+          { val: '首选投影元素', type: 'checkbox', class: 's-c-b-box' },
+          { val: '选择下射线', type: 'checkbox', class: 's-c-b-box' },
+          { val: '忽略遮挡', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '高级',
         id: 't-e-seven',
-        options: []
+        options: [
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box' },
+          { val: '启用边框', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '选项',
         id: 't-e-eight',
-        options: []
+        options: [
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示可选择角落', type: 'checkbox', class: 's-c-b-box' },
+          { val: '小工具可见', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '小工具',
         id: 't-e-nine',
-        options: []
+        options: [
+          {
+            val: '本地帧模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '来自几何体' }]
+          },
+          { val: '锁定旋转', type: 'checkbox', class: 's-c-b-box' }
+        ]
       }
     ]
   },
@@ -2043,17 +2188,35 @@ const triModelList = [
       {
         name: '填充洞',
         id: 'h-f-one',
-        options: []
+        options: [
+          {
+            val: '填充类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '最小' }]
+          },
+          { val: '删除孤立的三角形', type: 'checkbox', class: 's-c-b-box' },
+          { val: '快速填充小型孔洞', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '选项编辑',
         id: 'h-f-two',
-        options: []
+        options: [
+          { val: '', tooltip: '', icon: '#icon-fanxiangxuanqu', class: 'icon-s', type: 'button' },
+          { val: '', tooltip: '', icon: '#icon-quanxuan', class: 'icon-s', type: 'button' }
+        ]
       },
       {
         name: '洞填充统计数据',
         id: 'h-f-there',
-        options: []
+        options: [
+          { val: '初始洞', type: 'input' },
+          { val: '选定洞', type: 'input' },
+          { val: '成功填充', type: 'input' },
+          { val: '填充失败', type: 'input' },
+          { val: '剩余洞', type: 'input' }
+        ]
       }
     ]
   },
@@ -2063,32 +2226,93 @@ const triModelList = [
       {
         name: '镜像',
         id: 'm-r-one',
-        options: []
+        options: [
+          {
+            val: '操作模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '镜像并附加' }, { val: '镜像已存在项' }]
+          },
+          { val: '首先沿镜面裁剪', type: 'checkbox', class: 's-c-b-box' },
+          { val: '在镜面上结合顶点', type: 'checkbox', class: 's-c-b-box' },
+          { val: '平面公差', type: 'input' },
+          { val: '显示预览', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '高级',
         id: 'm-r-two',
-        options: []
+        options: [{ val: '允许领结顶点创造', type: 'checkbox', class: 's-c-b-box' }]
       },
       {
         name: '重定位选项',
         id: 'm-r-there',
-        options: []
+        options: [{ val: 'ctrl+点击', type: 'input' }]
       },
       {
         name: '高级',
         id: 'm-r-four',
-        options: []
+        options: [{ val: '按钮仅变更朝向', type: 'checkbox', class: 's-c-b-box' }]
       },
       {
         name: '工具输出选项',
         id: 'm-r-five',
-        options: []
+        options: [
+          {
+            val: '保存模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '更新资产' }, { val: '新建资产' }]
+          }
+        ]
       },
       {
         name: '预设镜像方向',
         id: 'm-r-six',
-        options: []
+        options: [
+          {
+            val: 'Left',
+            tooltip: '移动镜像平面并调整其法线,以向左镜像整个选择。',
+            icon: '#icon-wangzuojingxiang',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Right',
+            tooltip: '移动镜像平面并调整其法线,以向右镜像整个选择。',
+            icon: '#icon-wangyoujingxiang',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Up',
+            tooltip: '移动镜像平面并调整其法线,以向上镜像整个选择。',
+            icon: '#icon-wangshangjingxiang',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Down',
+            tooltip: '移动镜像平面并调整其法线,以向下镜像整个选择。',
+            icon: '#icon-wangxiajingxiang',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Forward',
+            tooltip: '移动镜像平面并调整其法线,以向前镜像整个选择。',
+            icon: '#icon-wangqianjingxiang',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Backward',
+            tooltip: '移动镜像平面并调整其法线,以向后镜像整个选择。',
+            icon: '#icon-wanghoujingxiang',
+            class: 'icon-s',
+            type: 'button'
+          }
+        ]
       },
       {
         name: '重定位平面',
@@ -2103,22 +2327,42 @@ const triModelList = [
       {
         name: '平面剪切',
         id: 'p-c-one',
-        options: []
+        options: [
+          { val: '保持两半', type: 'checkbox', class: 's-c-b-box' },
+          { val: '两半之间距', type: 'input' },
+          { val: '显示预览', type: 'checkbox', class: 's-c-b-box' },
+          { val: '填充剪切洞', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '高级',
         id: 'p-c-two',
-        options: []
+        options: [{ val: '填充跨度', type: 'checkbox', class: 's-c-b-box' }]
       },
       {
         name: '工具输出选项',
         id: 'p-c-there',
-        options: []
+        options: [{ val: '将分离部分导出为新网格体资产', type: 'checkbox', class: 's-c-b-box' }]
       },
       {
         name: '操作',
         id: 'p-c-four',
-        options: []
+        options: [
+          {
+            val: 'Cut',
+            tooltip: '用当前的平面进行裁剪，不退出工具（热键:T)',
+            icon: '#icon-dangqiancaijian',
+            class: 'icon-s',
+            type: 'button'
+          },
+          {
+            val: 'Flip Plane',
+            tooltip: '翻转剪切平面（热键:R)',
+            icon: '#icon-fanzhuanjianqi',
+            class: 'icon-s',
+            type: 'button'
+          }
+        ]
       }
     ]
   },
@@ -2128,22 +2372,54 @@ const triModelList = [
       {
         name: 'PolyCut',
         id: 'p-l-c-one',
-        options: []
+        options: [
+          {
+            val: '操作',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '修剪外部' }, { val: '修剪内部' }, { val: '插入多边形' }, { val: '剪切穿过' }]
+          },
+          { val: '用布尔剪切', type: 'checkbox', class: 's-c-b-box' },
+          { val: '尝试修补裂缝', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '高级',
         id: 'p-l-c-two',
-        options: []
+        options: [
+          { val: '可以接受失败结果', type: 'checkbox', class: 's-c-b-box' },
+          { val: '失败时显示中间结果', type: 'checkbox', class: 's-c-b-box' }
+        ]
       },
       {
         name: '形状',
         id: 'p-l-c-there',
-        options: []
+        options: [
+          {
+            val: '形状',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '环形' }, { val: '正方形' }, { val: '矩形' }, { val: '圆角矩形' }, { val: '自定义' }]
+          },
+          { val: '多边形比例', type: 'input' },
+          { val: '宽度', type: 'input' },
+          { val: '高度', type: 'input' },
+          { val: '角比率', type: 'input' },
+          { val: '细分', type: 'input' }
+        ]
       },
       {
         name: '操作',
         id: 'p-l-c-four',
-        options: []
+        options: [
+          {
+            val: 'Draw Polygon',
+            tooltip: '挤压当前选定面的集。在视口中点击以确认挤压高度。',
+            icon: '#icon-huizhiduobianxing',
+            class: 'icon-s',
+            type: 'button'
+          }
+        ]
       }
     ]
   },

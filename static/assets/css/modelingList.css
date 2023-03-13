@@ -10,7 +10,7 @@
 .modelingListContent{
   overflow:hidden overlay;
   width: 100%;
-  height: calc(100% - 48px);
+  height: calc(100% - 80px);
   position: relative;
   z-index: 1;
   padding: 0 8px;
@@ -212,3 +212,39 @@
 .icon-xia-xiaoxiao{
   color: #e4e4e4 !important;
 }
+
+#searchInputBox{
+  width: 100%;
+  height: 32px;
+  padding: 0 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+#searchInput{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  /* box-shadow: 0 3px 6px #0000000a; */
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.tooltipOption{
+  height: 32px !important;
+  padding: 4px 0 8px 0 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  box-shadow: 0 3px 6px #0000000a !important;
+  font-weight: 400;
+  font-size: 12px;
+  color: #b9b9b9;
+}
+
+.ui-state-active{
+  background-color: #00559d0a !important;
+  border: none !important;
+  color: #00559d !important;
+}
+
