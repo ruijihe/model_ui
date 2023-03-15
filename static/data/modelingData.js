@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-15 11:12:16
+ * @LastEditTime: 2023-03-15 14:19:34
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -56,7 +56,7 @@ const modelingData = [
         tooltip: 'Create new Box objects',
         icon: '#icon-juxing-3',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'rectangle'
       },
       {
@@ -64,7 +64,7 @@ const modelingData = [
         tooltip: 'Create new Cyl objects',
         icon: '#icon-yuanzhu',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'cylinder'
       },
       {
@@ -72,7 +72,7 @@ const modelingData = [
         tooltip: 'Create new Sphere objects',
         icon: '#icon-qiuxing',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'sphere'
       },
       {
@@ -80,7 +80,7 @@ const modelingData = [
         tooltip: 'Create new Cone objects',
         icon: '#icon-zhuixing',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'taper'
       },
       {
@@ -88,7 +88,7 @@ const modelingData = [
         tooltip: 'Create new Torus objects',
         icon: '#icon-huanxing',
         iconclass: 'icon-b',
-        class: 'shape',
+        class: 'Shapes',
         id: 'annular'
       },
       {
@@ -96,7 +96,7 @@ const modelingData = [
         tooltip: 'Create new Arrow objects',
         icon: '#icon-jiantou-1',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'arrows'
       },
       {
@@ -104,7 +104,7 @@ const modelingData = [
         tooltip: 'Create new Rect objects',
         icon: '#icon-fangpian',
         iconclass: 'icon-b',
-        class: 'shape',
+        class: 'Shapes',
         id: 'fangpian'
       },
       {
@@ -112,7 +112,7 @@ const modelingData = [
         tooltip: 'Create new Disc objects',
         icon: '#icon-shepian',
         iconclass: 'icon-b',
-        class: 'shape',
+        class: 'Shapes',
         id: 'disc'
       },
       {
@@ -120,7 +120,7 @@ const modelingData = [
         tooltip: 'Create new Stairs objects',
         icon: '#icon-tixing-1',
         iconclass: 'icon',
-        class: 'shape',
+        class: 'Shapes',
         id: 'trapezoid'
       }
     ]
@@ -133,7 +133,7 @@ const modelingData = [
         tooltip: 'Draw and extrude polygons to create new objects',
         icon: '#icon-PolyExt',
         iconclass: 'icon',
-        class: 'create',
+        class: 'Create',
         id: 'PolyExt'
       },
       {
@@ -141,7 +141,7 @@ const modelingData = [
         tooltip: 'Draw and extrude PolyPaths to create new objects',
         icon: '#icon-PathExt',
         iconclass: 'icon',
-        class: 'create',
+        class: 'Create',
         id: 'PathExt'
       },
       {
@@ -149,7 +149,7 @@ const modelingData = [
         tooltip: 'Draw and revolve PolyPaths to create new objects',
         icon: '#icon-luojingxiuding',
         iconclass: 'icon-s',
-        class: 'create',
+        class: 'Create',
         id: 'pathDefinition'
       },
       {
@@ -157,7 +157,7 @@ const modelingData = [
         tooltip: 'Revolve mesh boundary loops to create new objects',
         icon: '#icon-BdryRev',
         iconclass: 'icon-s',
-        class: 'create',
+        class: 'Create',
         id: 'BdryRev'
       },
       {
@@ -165,7 +165,7 @@ const modelingData = [
         tooltip: 'Create patterns of meshes',
         icon: '#icon-Pattern',
         iconclass: 'icon',
-        class: 'create',
+        class: 'Create',
         id: 'Pattern'
       },
       {
@@ -173,7 +173,7 @@ const modelingData = [
         tooltip: 'Duplicate single meshes to create new objects',
         icon: '#icon-Mashup',
         iconclass: 'icon',
-        class: 'create',
+        class: 'Create',
         id: 'Mashup'
       },
       {
@@ -181,7 +181,7 @@ const modelingData = [
         tooltip: 'Merge multiple meshes to create new objects',
         icon: '#icon-bujia',
         iconclass: 'icon-b',
-        class: 'create',
+        class: 'Create',
         id: 'subjoin'
       }
     ]
@@ -194,7 +194,7 @@ const modelingData = [
         tooltip: 'create block out meshes using a repositionable grid',
         icon: '#icon-jichumuxing-3',
         iconclass: 'icon-b',
-        class: 'model',
+        class: 'PolyModel',
         id: 'cube'
       },
       {
@@ -202,7 +202,7 @@ const modelingData = [
         tooltip: 'Edit meshes via PolyGroups',
         icon: '#icon-bianji-2',
         iconclass: 'icon',
-        class: 'model',
+        class: 'PolyModel',
         id: 'edit'
       },
       {
@@ -210,7 +210,7 @@ const modelingData = [
         tooltip: 'Deform meshes via PolyGroups',
         icon: '#icon-bianxing',
         iconclass: 'icon',
-        class: 'model',
+        class: 'PolyModel',
         id: 'transformation'
       },
       {
@@ -218,7 +218,7 @@ const modelingData = [
         tooltip: 'Apply Boolean operations to mesh pairs',
         icon: '#icon-wangluobuer',
         iconclass: 'icon-b',
-        class: 'model',
+        class: 'PolyModel',
         id: 'mshBool'
       },
       {
@@ -226,7 +226,7 @@ const modelingData = [
         tooltip: 'split one mesh into parts using a second mesh',
         icon: '#icon-buerfenge',
         iconclass: 'icon-b',
-        class: 'model',
+        class: 'PolyModel',
         id: 'mshCut'
       },
       {
@@ -234,7 +234,7 @@ const modelingData = [
         tooltip: 'Subdivide mesh via PolyGroups or triangles',
         icon: '#icon-xifen',
         iconclass: 'icon',
-        class: 'model',
+        class: 'PolyModel',
         id: 'subDiv'
       }
     ]
@@ -247,7 +247,7 @@ const modelingData = [
         tooltip: 'Select and edit mesh triangles',
         icon: '#icon-TriSel',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'TriSel'
       },
       {
@@ -255,7 +255,7 @@ const modelingData = [
         tooltip: 'Edit mesh via triangles',
         icon: '#icon-sanjiaoxingbianji',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'TriED'
       },
       {
@@ -263,7 +263,7 @@ const modelingData = [
         tooltip: 'Fill holes in mesh',
         icon: '#icon-chenbutong',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'HFill'
       },
       {
@@ -271,7 +271,7 @@ const modelingData = [
         tooltip: 'Mirror selected meshes',
         icon: '#icon-jingxiang',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'Mirror'
       },
       {
@@ -279,7 +279,7 @@ const modelingData = [
         tooltip: 'cut selected meshes with plane',
         icon: '#icon-pingmianjianqi',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'PinCut'
       },
       {
@@ -287,7 +287,7 @@ const modelingData = [
         tooltip: 'cut mesh with extruded polygon',
         icon: '#icon-PolyCut',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'PolyCut'
       },
       {
@@ -295,7 +295,7 @@ const modelingData = [
         tooltip: 'Trim/cut selected mesh with second mesh',
         icon: '#icon-Trim',
         iconclass: 'icon',
-        class: 'triModel',
+        class: 'TriModel',
         id: 'Trim'
       }
     ]
@@ -308,7 +308,7 @@ const modelingData = [
         tooltip: 'vertex sculpting',
         icon: '#icon-VSclpt',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: ''
       },
       {
@@ -316,7 +316,7 @@ const modelingData = [
         tooltip: 'Dynamic mesh sculpting',
         icon: '#icon-DSclpt',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'DSclpt'
       },
       {
@@ -324,7 +324,7 @@ const modelingData = [
         tooltip: 'Smooth mesh surface',
         icon: '#icon-pinghua',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'Smooth'
       },
       {
@@ -332,7 +332,7 @@ const modelingData = [
         tooltip: 'offset mesh surface',
         icon: '#icon-offsef',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'Offset'
       },
       {
@@ -340,7 +340,7 @@ const modelingData = [
         tooltip: 'Reshape mesh using space deformers',
         icon: '#icon-zhouqu',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'Warp'
       },
       {
@@ -348,7 +348,7 @@ const modelingData = [
         tooltip: 'Deform mesh with 3D lattice/grid',
         icon: '#icon-dianzhenbianxing',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'Lattice'
       },
       {
@@ -356,7 +356,7 @@ const modelingData = [
         tooltip: 'Displace mesh surface with optional subdivision',
         icon: '#icon-zhihuan',
         iconclass: 'icon',
-        class: 'deForm',
+        class: 'Deform',
         id: 'Displce'
       }
     ]
@@ -369,7 +369,7 @@ const modelingData = [
         tooltip: 'Transform selected meshes',
         icon: '#icon-bianhuan',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'XForm'
       },
       {
@@ -377,7 +377,7 @@ const modelingData = [
         tooltip: 'Align objects',
         icon: '#icon-duiqi-3',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'Align'
       },
       {
@@ -385,7 +385,7 @@ const modelingData = [
         tooltip: 'Edit mesh pivots',
         icon: '#icon-bianjishuzhoudian',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'Pivot'
       },
       {
@@ -393,7 +393,7 @@ const modelingData = [
         tooltip: 'Add actor to act as a pivot for child components',
         icon: '#icon-tianjiashuzhoudian',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'PivotAct'
       },
       {
@@ -401,7 +401,7 @@ const modelingData = [
         tooltip: 'Bake rotation and scale into mesh asset',
         icon: '#icon-hongbeibianhuan',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'BakeRS'
       },
       {
@@ -409,7 +409,7 @@ const modelingData = [
         tooltip: 'Transfer meshes',
         icon: '#icon-zhuanyi',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'Transfer'
       },
       {
@@ -417,7 +417,7 @@ const modelingData = [
         tooltip: 'Convert meshes',
         icon: '#icon-zhuanhuan',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'Convert'
       },
       {
@@ -425,7 +425,7 @@ const modelingData = [
         tooltip: 'split meshes',
         icon: '#icon-fenge',
         iconclass: 'icon',
-        class: 'transForm',
+        class: 'Transform',
         id: 'Split'
       }
     ]

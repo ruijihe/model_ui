@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-15 11:16:10
+ * @LastEditTime: 2023-03-15 17:14:42
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -36,6 +36,11 @@ class modelingList {
 
         <div id="searchInputBox">
           <input id="searchInput">
+
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href=""></use>
+          </svg>
+
         </div>
 
         <div class="modelingListContent">
@@ -54,7 +59,7 @@ class modelingList {
                       ${e.list
                         .map((iconList) => {
                           return `
-                            <div title="${iconList.tooltip}" id="${iconList.id}" class="m-c-box  ${iconList.class}">
+                            <div title="${iconList.tooltip}" id="${iconList.id}" class="m-c-box ${iconList.label} ${iconList.class}">
 
                               <svg class="${iconList.iconclass}" aria-hidden="true">
                                 <use xlink:href="${iconList.icon}"></use>
@@ -82,6 +87,9 @@ class modelingList {
   }
 
   event() {
+    $('.modelingListContent').scroll(function () {
+      console.log($(this).scrollTop())
+    })
     $(function () {
       //输入框数据操作
       const projects = data.modelingData
@@ -97,6 +105,16 @@ class modelingList {
         return optionList
       })
       let searchArr = optionArr[optionArr.length - 1]
+      //返回index
+      function filterArr(val, id) {
+        const name = val
+        const arr = projects.filter((item) => {
+          return item.name === name
+        })
+        const index = arr[0].list.findIndex((obj) => obj.label === id)
+        return index
+      }
+      // 搜索框
       $('#searchInput')
         .autocomplete({
           minLength: 0,
@@ -104,19 +122,61 @@ class modelingList {
           classes: {
             'ui-autocomplete': 'tooltipBox'
           },
-          focus: function (event, ui) {
-            $('#searchInput').val(ui.item.label)
-            return false
-          },
           select: function (event, ui) {
+            const val = ui.item.class
+            const label = ui.item.label
+            const index = filterArr(val, label)
+
+            const offset = $(`.${label}`).offset()
+            const offsetTop = offset.top
+            // 样式操作
+            $('.m-p-setting').removeClass('none')
+            $('.m-c-box').removeClass('m-c-box-check')
+            $(`.${label}`).addClass('m-c-box-check')
+
+            // 渲染视图
+            let arr = []
+            switch (val) {
+              // 形状
+              case 'Shapes':
+                arr = data.shapeSettingList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // 模型
+              case 'PolyModel':
+                arr = data.modelSettingList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // 创造
+              case 'Create':
+                arr = data.createList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // TriModel
+              case 'TriModel':
+                arr = data.triModelList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // deForm
+              case 'Deform':
+                break
+              // transForm
+              case 'Transform':
+                break
+
+              default:
+                break
+            }
+
             $('#searchInput').val(ui.item.label)
+
             return false
           }
         })
         .autocomplete('instance')._renderItem = function (ul, item) {
         let searchTerm = $('#searchInput').val()
         if (searchTerm === '') {
-          return
+          return $('<li class="tooltipOption">')
         } else {
           return $('<li class="tooltipOption">')
             .append(
@@ -127,7 +187,7 @@ class modelingList {
                   <use xlink:href="${item.icon}"></use>
                 </svg>
               </div>
-              <div>${item.label}</div>
+              <div class="ui-label">${item.label}</div>
             </div>
           `
             )
@@ -135,6 +195,8 @@ class modelingList {
         }
       }
     })
+
+    // tooltip
     $(function () {
       $('.m-c-box').tooltip({
         track: true,
@@ -213,48 +275,32 @@ class modelingList {
       $('.m-c-box').removeClass('m-c-box-check')
       $(this).addClass('m-c-box-check')
       //形状
-      if ($(this).hasClass('shape')) {
+      if ($(this).hasClass('Shapes')) {
+        console.log(index)
         arr = data.shapeSettingList
         new publicSetting({ index: index, publicSettingList: arr })
       }
       //模型
-      else if ($(this).hasClass('model')) {
-        arr = data.modelSettingList
+      else if ($(this).hasClass('PolyModel')) {
         let id = $(this).attr('id')
+        arr = data.modelSettingList
         new publicSetting({ index: index, publicSettingList: arr })
-
-        switch (id) {
-          //立方体
-          case 'cube':
-            break
-
-          //编辑
-          case 'edit':
-            break
-
-          //变形
-          case 'transformation':
-            break
-
-          default:
-            break
-        }
       }
       //创造
-      else if ($(this).hasClass('create')) {
+      else if ($(this).hasClass('Create')) {
         arr = data.createList
         new publicSetting({ index: index, publicSettingList: arr })
       }
       //TriModel
-      else if ($(this).hasClass('triModel')) {
+      else if ($(this).hasClass('TriModel')) {
         arr = data.triModelList
         new publicSetting({ index: index, publicSettingList: arr })
       }
-      //deForm
-      else if ($(this).hasClass('deForm')) {
+      //Deform
+      else if ($(this).hasClass('Deform')) {
       }
-      //transForm
-      else if ($(this).hasClass('transForm')) {
+      //Transform
+      else if ($(this).hasClass('Transform')) {
       }
     })
   }

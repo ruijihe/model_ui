@@ -229,6 +229,7 @@
   /* box-shadow: 0 3px 6px #0000000a; */
   box-sizing: border-box;
   padding: 0 8px;
+  color: #707070;
 }
 
 .tooltipOption{
