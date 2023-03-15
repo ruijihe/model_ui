@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-13 15:29:36
+ * @LastEditTime: 2023-03-15 11:16:10
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -60,7 +60,7 @@ class modelingList {
                                 <use xlink:href="${iconList.icon}"></use>
                               </svg>
 
-                              <div style="margin-top:12px">${iconList.name}</div>
+                              <div style="margin-top:12px">${iconList.label}</div>
  
                             </div>    
                             
@@ -83,6 +83,59 @@ class modelingList {
 
   event() {
     $(function () {
+      //输入框数据操作
+      const projects = data.modelingData
+      let newArr = []
+      let optionArr = []
+      let optionList = []
+      optionArr = projects.map((item) => {
+        const list = item.list
+        newArr.push(...list)
+        optionList = newArr.filter((item, index) => {
+          return newArr.findIndex((obj) => obj.id === item.id) === index
+        })
+        return optionList
+      })
+      let searchArr = optionArr[optionArr.length - 1]
+      $('#searchInput')
+        .autocomplete({
+          minLength: 0,
+          source: searchArr,
+          classes: {
+            'ui-autocomplete': 'tooltipBox'
+          },
+          focus: function (event, ui) {
+            $('#searchInput').val(ui.item.label)
+            return false
+          },
+          select: function (event, ui) {
+            $('#searchInput').val(ui.item.label)
+            return false
+          }
+        })
+        .autocomplete('instance')._renderItem = function (ul, item) {
+        let searchTerm = $('#searchInput').val()
+        if (searchTerm === '') {
+          return
+        } else {
+          return $('<li class="tooltipOption">')
+            .append(
+              `
+            <div class="x-y-flex">
+              <div>
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="${item.icon}"></use>
+                </svg>
+              </div>
+              <div>${item.label}</div>
+            </div>
+          `
+            )
+            .appendTo(ul)
+        }
+      }
+    })
+    $(function () {
       $('.m-c-box').tooltip({
         track: true,
         classes: {
@@ -99,70 +152,6 @@ class modelingList {
           }
         }
       })
-      //输入框数据操作
-      const projects = data.modelingData
-      let newArr = []
-      let optionArr = []
-      let optionList = []
-      let searchItem = []
-      optionArr = projects.map((item) => {
-        const list = item.list
-        newArr.push(...list)
-        optionList = newArr.filter((item, index) => {
-          return newArr.findIndex((obj) => obj.id === item.id) === index
-        })
-        return optionList
-      })
-      let searchArr = optionArr[optionArr.length - 1]
-
-      $('#searchInput')
-        .autocomplete({
-          minLength: 0,
-          source: [],
-          maxHeight: 400,
-          classes: {
-            'ui-autocomplete': 'tooltipBox'
-          },
-          focus: function (event, ui) {
-            $('#searchInput').val(ui.item.name)
-            return false
-          },
-          select: function (event, ui) {
-            $('#searchInput').val(ui.item.name)
-            return false
-          },
-          search: function (event, ui) {
-            let searchTerm = $('#searchInput').val()
-            const filteredData = searchArr.filter(function (ele) {
-              return ele.name.toLowerCase().includes(searchTerm.toLowerCase())
-            })
-            if (filteredData.length > 0) {
-              $(this).autocomplete('option', 'source', filteredData)
-            } else {
-              $(this).autocomplete('option', 'source', ['No Results'])
-            }
-          }
-        })
-        .autocomplete('instance')._renderItem = function (ul, item) {
-        if (item === 'No Results') {
-          $('<li class="tooltipOption">').text(item).appendTo(ul)
-          return
-        }
-        return $('<li class="tooltipOption">')
-          .append(
-            `
-            <div class="x-y-flex">
-              <div>
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="${item.icon}"></use>
-                </svg>
-              </div>
-              <div>${item.name}</div>
-            </div>
-          `
-          )
-          .appendTo(ul)
-      }
     })
 
     //总隐藏开关
@@ -200,6 +189,7 @@ class modelingList {
         }
       }
     })
+
     // 类型开关
     $('.m-c-title').click(function () {
       let content = this.nextElementSibling
@@ -215,7 +205,6 @@ class modelingList {
     })
 
     // 选择操作
-
     $('.m-c-box').click(function () {
       $('.m-p-setting').removeClass('none')
       let arr = []
