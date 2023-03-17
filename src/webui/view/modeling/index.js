@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-15 17:14:42
+ * @LastEditTime: 2023-03-17 11:02:14
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -129,6 +129,7 @@ class modelingList {
 
             const offset = $(`.${label}`).offset()
             const offsetTop = offset.top
+            console.log(offsetTop)
             // 样式操作
             $('.m-p-setting').removeClass('none')
             $('.m-c-box').removeClass('m-c-box-check')
@@ -159,6 +160,8 @@ class modelingList {
                 break
               // deForm
               case 'Deform':
+                arr = data.deFormList
+                new publicSetting({ index: index, publicSettingList: arr })
                 break
               // transForm
               case 'Transform':
@@ -181,7 +184,7 @@ class modelingList {
           return $('<li class="tooltipOption">')
             .append(
               `
-            <div class="x-y-flex">
+            <div style="height:32px" class="x-y-flex">
               <div>
                 <svg class="icon" aria-hidden="true">
                   <use xlink:href="${item.icon}"></use>
@@ -298,6 +301,8 @@ class modelingList {
       }
       //Deform
       else if ($(this).hasClass('Deform')) {
+        arr = data.deFormList
+        new publicSetting({ index: index, publicSettingList: arr })
       }
       //Transform
       else if ($(this).hasClass('Transform')) {

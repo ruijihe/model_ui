@@ -68,19 +68,28 @@
 .coordInput{
   width: 35px;
   height: 30px;
+  color: #707070;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.c-i-title{
+  color: #707070;
+  font-size: 12px;
 }
 
 /* 编辑设置 */
 .e-s-btn{
-  width: 32px;
-  height: 32px;
+  font-size: 12px;
+  height: 25px;
   border-radius: 4px;
   background: #fff;
   text-align: center;
-  /* line-height: 32px; */
+  line-height: 25px;
   margin-right: 8px;
   cursor: pointer;
   margin-bottom: 8px;
+  color: #707070;
 }
 
 .e-s-btn:hover{

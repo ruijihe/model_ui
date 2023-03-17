@@ -73,7 +73,7 @@
 }
 
 .m-c-box{
-   width: 56px;
+   width: 52px;
    height: 64px;
    border-radius: 4px;
    display: flex;
@@ -88,9 +88,9 @@
    color: #707070;
 }
 
-.m-c-box:nth-child(2n){
+/* .m-c-box:nth-child(2n){
  margin-right: 0;
-}
+} */
 
 .m-c-hint{
    position: absolute;

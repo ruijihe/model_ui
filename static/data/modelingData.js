@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-15 14:19:34
+ * @LastEditTime: 2023-03-17 16:16:47
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -3008,6 +3008,580 @@ const createList = [
   }
 ]
 
+const deFormList = [
+  {
+    name: 'VSclpt',
+    typeList: [
+      {
+        name: 'VSclpt',
+        id: 'vs-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '笔刷',
+        id: 'vs-two',
+        options: [
+          { val: '大小', type: 'input', num: '' },
+          { val: '流', type: 'input', num: '' },
+          { val: '间距', type: 'input', num: '' },
+          { val: '延迟', type: 'input', num: '' },
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '雕刻',
+        id: 'vs-there',
+        options: [
+          {
+            type: 'replaceEngrave',
+            iconVal: '#icon-diaokeiMX',
+            selectList: [
+              { val: '平滑' },
+              { val: '线性' },
+              { val: '反转' },
+              { val: '舍入' },
+              { val: 'Box平滑' },
+              { val: 'Box线性' },
+              { val: 'Box翻转' },
+              { val: 'BoxRound' }
+            ],
+            btnList: [{ val: '体积' }, { val: 'Cmp' }, { val: 'Grp' }]
+          }
+        ]
+      },
+      {
+        name: '透明度',
+        id: 'vs-four',
+        options: []
+      },
+      {
+        name: '对称',
+        id: 'vs-five',
+        options: [{ val: '启用对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      },
+      {
+        name: '雕刻笔刷',
+        id: 'vs-six',
+        options: [
+          { val: '强度', type: 'input', num: '0.5' },
+          { val: '衰减', type: 'input', num: '1.0' }
+        ]
+      },
+      {
+        name: '转移平滑笔刷',
+        id: 'vs-seven',
+        options: [
+          { val: '强度', type: 'input', num: '0.5' },
+          { val: '衰减', type: 'input', num: '1.0' },
+          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '渲染',
+        id: 'vs-eight',
+        options: [
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          {
+            val: '材质模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '现有材质' },
+              { val: '漫反射' },
+              { val: '灰色' },
+              { val: '柔软' },
+              { val: '透明' },
+              { val: '切线法线' },
+              { val: '顶点颜色' },
+              { val: '自定义图片' },
+              { val: '自定义' }
+            ]
+          },
+          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'DSclpt',
+    typeList: [
+      {
+        name: 'DSclpt',
+        id: 'ds-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '笔刷',
+        id: 'ds-two',
+        options: [
+          { val: '大小', type: 'input', num: '0.25' },
+          { val: '衰减', type: 'input', num: '0.5' },
+          { val: '深度', type: 'input', num: '0.0' },
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '雕刻',
+        id: 'ds-there',
+        options: [
+          {
+            val: '笔刷类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '移动' },
+              { val: '开尔文抓取' },
+              { val: '尖锐开尔文抓取' },
+              { val: '平滑' },
+              { val: '造型(法线 )' },
+              { val: '造型(视点)' },
+              { val: '造型最大' },
+              { val: '膨胀' },
+              { val: '开尔文缩放' },
+              { val: '捏握' },
+              { val: '开尔文扭曲' },
+              { val: '平整' },
+              { val: '平面(法线)' },
+              { val: '平面(视点)' },
+              { val: 'FixedPlane' },
+              { val: '重取样' }
+            ]
+          },
+          { val: '强度', type: 'input', num: '0.0' },
+          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '冻结目标', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '平滑',
+        id: 'ds-four',
+        options: [
+          { val: '平滑强度', type: 'input', num: '' },
+          { val: '保留三密度', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '重构网格',
+        id: 'ds-five',
+        options: [
+          { val: '启用重构网格', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '相对三大小', type: 'input', num: '0' },
+          { val: '保留细节', type: 'input', num: '0' },
+          { val: '平滑率', type: 'input', num: '0.1' }
+        ]
+      },
+      {
+        name: '约束',
+        id: 'ds-six',
+        options: [
+          { val: '允许翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '允许切割', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '允许折叠', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '保留锐边', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '防止法线翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '防止微笑三角形', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '边界约束',
+        id: 'ds-seven',
+        options: [
+          {
+            val: '网格体边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }]
+          },
+          {
+            val: '粗边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }, { val: '忽略' }]
+          },
+          {
+            val: '材质边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }, { val: '忽略' }]
+          }
+        ]
+      },
+      {
+        name: '高级',
+        id: 'ds-eight',
+        options: [{ val: '迭代', type: 'input', num: '5' }]
+      },
+      {
+        name: '网格体编辑',
+        id: 'ds-nine',
+        options: [{ val: 'Discard Attributes', tooltip: 'Discard Attributes', type: 'button' }]
+      },
+      {
+        name: '渲染',
+        id: 'ds-ten',
+        options: [
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          {
+            val: '材质模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '' }, { val: '' }, { val: '' }]
+          },
+          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          {
+            val: '颜色',
+            type: 'colorModule',
+            id: 'ds-wireFrameColor',
+            inputList: [
+              { val: 'R', num: '82', inputId: 'ds-wireFrameInput' },
+              { val: 'G', num: '159', inputId: 'ds-wireFrameInput' },
+              { val: 'B', num: '225', inputId: 'ds-wireFrameInput' },
+              { val: 'A', num: '1', inputId: 'ds-wireFrameInput' }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Smooth',
+    typeList: [
+      {
+        name: 'Smooth',
+        id: 'sm-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '平滑类型',
+        id: 'sm-two',
+        options: [
+          {
+            val: '平滑类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '快速迭代式' }, { val: '快速隐式' }, { val: '迭代漫反射' }]
+          }
+        ]
+      },
+      {
+        name: '迭代平滑选项',
+        id: 'sm-there',
+        options: [
+          { val: '每步平滑', type: 'input', num: '0.8' },
+          { val: '步', type: 'input', num: '0.5' },
+          { val: '平滑边界', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      },
+      {
+        name: '权重图',
+        id: 'sm-four',
+        options: [
+          {
+            val: '权重圈',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'none' }, { val: '反转权重图', type: 'checkbox', class: 's-c-b-box' }]
+          }
+        ]
+      },
+      {
+        name: '高级',
+        id: 'sm-five',
+        options: [{ val: '最小平滑数', type: 'input', num: '0.8' }]
+      }
+    ]
+  },
+  {
+    name: 'Offset',
+    typeList: [
+      {
+        name: 'Offset',
+        id: 'of-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '偏移类型',
+        id: 'of-two',
+        options: [
+          {
+            val: '偏移类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '迭代式' }, { val: '隐式' }]
+          },
+          { val: '距离', type: 'input', num: '1.0' },
+          { val: '创建壳', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '迭代偏移选项',
+        id: 'of-there',
+        options: [
+          { val: '步', type: 'input', num: '0.8' },
+          { val: '偏移边界', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '每步平滑', type: 'input', num: '0.5' },
+          { val: '重新投影平滑', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '权重图',
+        id: 'of-four',
+        options: [
+          {
+            val: '权重圈',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'none' }]
+          },
+          { val: '反装权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Warp',
+    typeList: [
+      {
+        name: 'Warp',
+        id: 'wp-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'wp-two',
+        options: [
+          {
+            val: '操作类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '弯曲' }, { val: '张开/挤压' }, { val: '扭曲' }]
+          },
+          { val: '上边界', type: 'input', num: '' },
+          { val: '下边界', type: 'input', num: '' },
+          { val: '弯曲度', type: 'input', num: '' },
+          { val: '锁定底部', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '显示底部网格体', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '绘图可视化', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '小工具',
+        id: 'wp-there',
+        options: [{ val: 'Ctrl+点击与法线对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      },
+      {
+        name: '选项',
+        id: 'wp-four',
+        options: [{ val: 'Shift to Center', tooltip: '将小工具移至Object的中心,而无需变更朝向。', type: 'button' }]
+      }
+    ]
+  },
+  {
+    name: 'Lattice',
+    typeList: [
+      {
+        name: 'Lattice',
+        id: 'lt-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '变形',
+        id: 'lt-two',
+        options: [
+          { val: 'Clear Constraints', tooltip: '清除所有约束点阵点', type: 'button' },
+          { val: 'Constrain', tooltip: '约束选定点定点', type: 'button' },
+          { val: '软变形', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '分辨率',
+        id: 'lt-there',
+        options: [
+          { val: 'X轴分辨率', type: 'input', num: '5' },
+          { val: 'Y轴分辨率', type: 'input', num: '5' },
+          { val: 'Z轴分辨率', type: 'input', num: '5' },
+          { val: '填充', type: 'input', num: '0.1' }
+        ]
+      },
+      {
+        name: '插值',
+        id: 'lt-four',
+        options: [
+          {
+            val: '插值类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '线性' }, { val: '立方' }]
+          },
+          { val: '变形法线', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '小工具',
+        id: 'lt-five',
+        options: [
+          {
+            val: '小工具坐标系',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '场景' }, { val: '本地' }]
+          },
+          { val: '设置枢轴点模式', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Displce',
+    typeList: [
+      {
+        name: 'Displce',
+        id: 'dp-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'ConfirmBtn'
+          }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'dp-two',
+        options: [
+          {
+            val: '置换类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '常量' }, { val: '2D纹理贴图' }, { val: '随机噪声' }, { val: 'Perlin噪声' }]
+          },
+          { val: '置换强度', type: 'input', num: '10.0' },
+          { val: '随机种子', type: 'input', num: '31337' },
+          {
+            val: '细分类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '扁平' }, { val: 'PN三角形' }]
+          },
+          { val: '细分', type: 'input', num: '4' },
+          {
+            val: '权重图',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'none' }]
+          },
+          { val: '反转权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+        ]
+      },
+      {
+        name: '高级',
+        id: 'dp-there',
+        options: [{ val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      },
+      {
+        name: '方向过滤选项',
+        id: 'dp-four',
+        options: [
+          { val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '过滤方向', type: 'coord', xNum: '0.0', yNum: '0.1', zNum: '0.2' },
+          { val: '过滤宽度', type: 'input', num: '4' }
+        ]
+      },
+      {
+        name: 'Perlin噪声选项',
+        id: 'dp-five',
+        options: [{ val: '属性', type: 'addElement', num: '2' }]
+      }
+    ]
+  }
+]
+
 const outlineList = [
   {
     name: '变换',
@@ -3109,5 +3683,6 @@ export default {
   modelSettingList,
   triModelList,
   outlineList,
-  createList
+  createList,
+  deFormList
 }

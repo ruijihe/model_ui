@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-07 10:27:45
+ * @LastEditTime: 2023-03-17 16:20:40
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -41,7 +41,7 @@ class toolSet {
           <div>${this.opts.name}</div>
           
           <div class="retracementInput x-y-flex">
-            <input type="number" max="100" class="s-c-b-input" />
+            <input value="${this.opts.options.num}" type="number" max="100" class="s-c-b-input" />
             <div class="s-c-b-border"></div>
             <button class="s-c-b-button">
               <svg class="icon-withdraw" aria-hidden="true">
@@ -58,7 +58,7 @@ class toolSet {
       $('#' + this.opts.location).append(`
             <div class="x-y-flex s-c-b-options">
               <div class="${this.opts.class}">${this.opts.name}</div>
-              <input type="checkbox" />
+              <input type="checkbox" checked="${this.opts.options.isChecked}" />
             </div>
         `)
     }
@@ -131,23 +131,23 @@ class toolSet {
     else if (this.opts.type == 'coord') {
       $('#' + this.opts.location).append(`
           <div class="s-c-b-options">
-              <div style="margin-bottom:8px">${this.opts.name}</div>
+              <div style="margin-bottom:8px">${this.opts.options.val}</div>
 
               <div class="x-y-flex">
 
                 <div class="coordInputBox x-y-flex">
                   <div class="c-i-title">X</div>
-                  <input class="coordInput" type="number"/>
+                  <input value="${this.opts.options.xNum}" class="coordInput" type="number"/>
                 </div>
 
                 <div class="coordInputBox x-y-flex">
                   <div class="c-i-title">Y</div>
-                  <input class="coordInput" type="number"/>
+                  <input value="${this.opts.options.yNum}" class="coordInput" type="number"/>
                 </div>
 
                 <div class="coordInputBox x-y-flex">
                   <div class="c-i-title">Z</div>
-                  <input class="coordInput" type="number"/>
+                  <input value="${this.opts.options.zNum}" class="coordInput" type="number"/>
                 </div>
 
               </div>
@@ -157,10 +157,8 @@ class toolSet {
     // 图标按钮
     else if (this.opts.type == 'button') {
       $('#' + this.opts.location).append(`
-              <button class="e-s-btn" name="${this.opts.tooltip}" title="${this.opts.name}">
-                <svg class="${this.opts.class}" aria-hidden="true">
-                  <use xlink:href="${this.opts.icon}"></use>
-                </svg>
+              <button class="e-s-btn" name="${this.opts.options.tooltip}" title="${this.opts.options.val}">
+              ${this.opts.options.val}
               </button>
           `)
     }
@@ -339,6 +337,50 @@ class toolSet {
           </div>
         </div>
        `)
+    }
+    // 可替换图标
+    else if (this.opts.type == 'replaceEngrave') {
+      $('#' + this.opts.location).append(`
+        <div class="re-one x-y-flex">
+          <div class="re-iconBox">
+            <svg class="re-icon" aria-hidden="true">
+              <use xlink:href="${this.opts.options.iconVal}"></use>
+            </svg>
+          </div>
+          
+          <div class="re-selectBox">
+              <div style="margin-bottom:8px" class="x-y-flex">
+                <div>衰减</div>
+
+                <select class="s-c-b-select" name="" id="">
+                ${this.opts.options.selectList
+                  .map((ele) => {
+                    return `
+                  <option>${ele.val}</option>
+                  `
+                  })
+                  .join('')}
+                </select>
+              </div>
+
+              <button class="re-freezeBtn">冻结目标</button>
+          </div>
+        </div>
+
+        <div class="re-two">
+          <div>地区</div>
+          <div>
+            ${this.opts.options.btnList
+              .map((ele) => {
+                return `
+              <button class="re-btn">${ele.val}</button>
+              `
+              })
+              .join('')}
+
+          </div>
+        </div>
+      `)
     }
   }
 

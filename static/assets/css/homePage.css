@@ -125,6 +125,38 @@ body {
   display: none;
 }
 
+/* 工具栏 */
+#toolBar{
+  position: absolute;
+  right: 312px;
+  height: 24px;
+  display: flex;
+}
+
+.toolBarBtn{
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
+  margin-right: 8px;
+}
+
+.toolBarIcon{
+  width: 10px;
+  height: 10px;
+}
+
+.t-b-title{
+  font-weight: 500;
+  font-size: 12px;
+  color: #707070;
+}
+
+.t-b-name{
+  font-weight: 300;
+  font-size: 12px;
+  color: #707070;
+}
 
 
 
