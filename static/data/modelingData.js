@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-17 16:16:47
+ * @LastEditTime: 2023-03-20 17:45:00
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -3047,7 +3047,7 @@ const deFormList = [
         options: [
           {
             type: 'replaceEngrave',
-            iconVal: '#icon-diaokeiMX',
+            iconVal: '#icon-pinghua_1',
             selectList: [
               { val: '平滑' },
               { val: '线性' },
@@ -3058,14 +3058,56 @@ const deFormList = [
               { val: 'Box翻转' },
               { val: 'BoxRound' }
             ],
-            btnList: [{ val: '体积' }, { val: 'Cmp' }, { val: 'Grp' }]
+            btnList: [{ val: '体积' }, { val: 'Cmp' }, { val: 'Grp' }],
+            iconList: [
+              { val: '平滑', icon: '#icon-pinghua_1' },
+              { val: '填充', icon: '#icon-chenchong' },
+              { val: '移动', icon: '#icon-yidong-1' },
+              { val: '雕刻N', icon: '#icon-diaokeiN' },
+              { val: '雕刻V', icon: '#icon-diaokeiV' },
+              { val: '雕刻MX', icon: '#icon-diaokeiMX' },
+              { val: '膨胀', icon: '#icon-pengzhang' },
+              { val: '捏握', icon: '#icon-nieou' },
+              { val: '平整', icon: '#icon-pingzheng' },
+              { val: '平面N', icon: '#icon-pingmianN' },
+              { val: '平面V', icon: '#icon-pingmianV' },
+              { val: '平面W', icon: '#icon-pingmianW' },
+              { val: '缩放', icon: '#icon-suofang-1' },
+              { val: '抓握', icon: '#icon-zhuaou' },
+              { val: '抓锋', icon: '#icon-zhuafeng' },
+              { val: '扭曲', icon: '#icon-zhouqu_1' }
+            ]
           }
         ]
       },
       {
         name: '透明度',
         id: 'vs-four',
-        options: []
+        options: [
+          {
+            type: 'replaceEngraveInput',
+            iconVal: '#icon-pinghua_1',
+            btnList: [{ val: '体积' }, { val: 'Cmp' }, { val: 'Grp' }],
+            iconList: [
+              { val: '平滑', icon: '#icon-pinghua_1' },
+              { val: '填充', icon: '#icon-chenchong' },
+              { val: '移动', icon: '#icon-yidong-1' },
+              { val: '雕刻N', icon: '#icon-diaokeiN' },
+              { val: '雕刻V', icon: '#icon-diaokeiV' },
+              { val: '雕刻MX', icon: '#icon-diaokeiMX' },
+              { val: '膨胀', icon: '#icon-pengzhang' },
+              { val: '捏握', icon: '#icon-nieou' },
+              { val: '平整', icon: '#icon-pingzheng' },
+              { val: '平面N', icon: '#icon-pingmianN' },
+              { val: '平面V', icon: '#icon-pingmianV' },
+              { val: '平面W', icon: '#icon-pingmianW' },
+              { val: '缩放', icon: '#icon-suofang-1' },
+              { val: '抓握', icon: '#icon-zhuaou' },
+              { val: '抓锋', icon: '#icon-zhuafeng' },
+              { val: '扭曲', icon: '#icon-zhouqu_1' }
+            ]
+          }
+        ]
       },
       {
         name: '对称',

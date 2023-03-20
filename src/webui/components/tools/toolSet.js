@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-17 16:20:40
+ * @LastEditTime: 2023-03-20 18:12:35
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -346,6 +346,25 @@ class toolSet {
             <svg class="re-icon" aria-hidden="true">
               <use xlink:href="${this.opts.options.iconVal}"></use>
             </svg>
+
+            <div class="re-brushBox none">
+              <div style="margin-bottom:8px">笔刷类型</div>
+              <div class="w-flex">
+                ${this.opts.options.iconList
+                  .map((item) => {
+                    return `
+                      <div class="re-brushIconBox">
+                        <svg class="re-brushIcon" aria-hidden="true">
+                          <use xlink:href="${item.icon}"></use>
+                        </svg>
+
+                        <div>${item.val}</div>
+                      </div>
+                    `
+                  })
+                  .join('')}
+              </div>
+            </div>
           </div>
           
           <div class="re-selectBox">
@@ -378,6 +397,41 @@ class toolSet {
               })
               .join('')}
 
+          </div>
+        </div>
+      `)
+    }
+    // 可替换图标带输入框
+    else if (this.opts.type == 'replaceEngraveInput') {
+      $('#' + this.opts.location).append(`
+        <div class="re-one x-y-flex">
+          <div class="re-iconBox">
+            <svg class="re-icon" aria-hidden="true">
+              <use xlink:href="${this.opts.options.iconVal}"></use>
+            </svg>
+
+            <div class="re-brushBox none">
+              <div style="margin-bottom:8px">资产</div>
+              <div class="w-flex">
+                ${this.opts.options.iconList
+                  .map((item) => {
+                    return `
+                      <div class="re-brushIconBox">
+                        <svg class="re-brushIcon" aria-hidden="true">
+                          <use xlink:href="${item.icon}"></use>
+                        </svg>
+
+                        <div>${item.val}</div>
+                      </div>
+                    `
+                  })
+                  .join('')}
+              </div>
+            </div>
+          </div>
+          
+          <div class="re-selectBox">
+   
           </div>
         </div>
       `)
@@ -481,6 +535,52 @@ class toolSet {
         }
         let newRgb = $(colorBox).css('background-color')
       })
+    // replaceEngrave组件
+    $(function () {
+      //冻结按钮
+      $('.re-freezeBtn')
+        .off('click')
+        .click(function () {
+          if ($(this).hasClass('freezeBtnColor')) {
+            $(this).removeClass('freezeBtnColor')
+          } else {
+            $(this).addClass('freezeBtnColor')
+          }
+        })
+      // 地区
+      $('.re-btn')
+        .off('click')
+        .click(function () {
+          $('.re-btn').removeClass('freezeBtnColor')
+          $(this).addClass('freezeBtnColor')
+        })
+      // 弹出笔刷
+      $('.re-iconBox')
+        .off('click')
+        .click(function (e) {
+          let box = this.lastElementChild
+          if ($(box).hasClass('none')) {
+            $('.m-p-s-content').removeClass('overflow-y')
+            $(box).removeClass('none')
+          } else {
+            $(box).addClass('none')
+            $('.m-p-s-content').addClass('overflow-y')
+          }
+        })
+      // 替换笔刷
+      $('.re-brushIconBox')
+        .off('click')
+        .click(function () {
+          $('.re-brushIconBox').removeClass('r-b-i-check')
+          $(this).addClass('r-b-i-check')
+          let clickBox = $($(this).children()[0].children).attr('xlink:href')
+          let iconBox = $($(this).parent().parent().parent().children()[0].children[0])
+          $(iconBox).attr('xlink:href', `${clickBox}`)
+          $('.re-brushBox').addClass('none')
+          $('.m-p-s-content').addClass('overflow-y')
+          event.stopPropagation()
+        })
+    })
   }
 }
 export { toolSet }

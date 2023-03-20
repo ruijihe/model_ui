@@ -104,7 +104,6 @@ body {
   top: calc(50% - 85px);
   line-height: 85px;
   text-align: center;
-  z-index: 10;
 }
 
 

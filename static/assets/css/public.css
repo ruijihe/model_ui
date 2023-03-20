@@ -48,6 +48,11 @@
   grid-template-columns:33.33% 33.33% 33.33%;
 }
 
+/* 溢出隐藏 */
+.overflow-y{
+  overflow: hidden overlay; 
+}
+
 /* 去除数字输入框箭头 */
 
 input::-webkit-outer-spin-button,
