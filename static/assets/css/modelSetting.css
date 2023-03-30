@@ -81,18 +81,20 @@
 /* 编辑设置 */
 .e-s-btn{
   font-size: 12px;
-  height: 25px;
+  height: 30px;
   border-radius: 4px;
   background: #fff;
   text-align: center;
-  line-height: 25px;
   margin-right: 8px;
   cursor: pointer;
   margin-bottom: 8px;
   color: #707070;
+  padding: 8px 8px;
 }
 
 .e-s-btn:hover{
+  background: #00559d;
+  color: #fff;
 }
 
 .e-s-icon{
@@ -112,4 +114,15 @@
   top: 0;
   left: 0;
   background-color: #fcfcfc;
+}
+
+.iconBtn{
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #f1f1f1;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #707070;
 }

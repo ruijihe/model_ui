@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-20 17:45:00
+ * @LastEditTime: 2023-03-25 15:18:06
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -192,7 +192,7 @@ const modelingData = [
       {
         label: 'CubeGr',
         tooltip: 'create block out meshes using a repositionable grid',
-        icon: '#icon-jichumuxing-3',
+        icon: '#icon-CubeGr-1',
         iconclass: 'icon-b',
         class: 'PolyModel',
         id: 'cube'
@@ -665,25 +665,6 @@ const shapeSettingList = [
     name: '矩形',
     typeList: [
       {
-        name: '矩形',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'boxCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'boxConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '设置',
         id: 'outType',
         options: [
@@ -746,25 +727,6 @@ const shapeSettingList = [
     name: '圆柱',
     typeList: [
       {
-        name: '圆柱',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'cylinderCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'cylinderConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '设置',
         id: 'outType',
         options: [
@@ -825,25 +787,6 @@ const shapeSettingList = [
   {
     name: '球形',
     typeList: [
-      {
-        name: '球形',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'sphereCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'sphereConfirmBtn'
-          }
-        ]
-      },
       {
         name: '设置',
         id: 'outType',
@@ -906,25 +849,6 @@ const shapeSettingList = [
     name: '锥形',
     typeList: [
       {
-        name: '锥形',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'coneCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'coneConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '设置',
         id: 'outType',
         options: [
@@ -985,25 +909,6 @@ const shapeSettingList = [
     name: '环形',
     typeList: [
       {
-        name: '环形',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'torusCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'torusConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '设置',
         id: 'outType',
         options: [
@@ -1063,25 +968,6 @@ const shapeSettingList = [
   {
     name: '箭头',
     typeList: [
-      {
-        name: '箭头',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'arrowCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'arrowsConfirmBtn'
-          }
-        ]
-      },
       {
         name: '设置',
         id: 'outType',
@@ -1144,25 +1030,6 @@ const shapeSettingList = [
   {
     name: '方片',
     typeList: [
-      {
-        name: '方片',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'rectCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'rectConfirmBtn'
-          }
-        ]
-      },
       {
         name: '设置',
         id: 'outType',
@@ -1228,25 +1095,6 @@ const shapeSettingList = [
     name: '碟片',
     typeList: [
       {
-        name: '碟片',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'discCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'discConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '设置',
         id: 'outType',
         options: [
@@ -1308,25 +1156,6 @@ const shapeSettingList = [
   {
     name: '梯形',
     typeList: [
-      {
-        name: '梯形',
-        id: 'confirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'stairsCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'stairsConfirmBtn'
-          }
-        ]
-      },
       {
         name: '设置',
         id: 'outType',
@@ -1396,8 +1225,62 @@ const shapeSettingList = [
 
 const modelSettingList = [
   {
-    name: '挤出模型',
+    name: 'CubeGr',
     typeList: [
+      {
+        name: '操作',
+        id: 'cg-two',
+        options: [
+          { val: 'Pull', tooltip: '也可以用E调用', type: 'button' },
+          { val: 'Push', tooltip: '也可以用Q调用', type: 'button' },
+          { val: 'Slide Back', tooltip: '也可以用Shift + E调用', type: 'button' },
+          { val: 'Slide Forward', tooltip: '也可以用Shift + Q调用', type: 'button' },
+          {
+            val: 'Corner Mode',
+            tooltip: '进入一个模式，可以选择特定角落，以推/拉那些角落。</br>然后按应用提交结果。</br>也可以用Z来切换。',
+            type: 'button'
+          },
+          { val: 'Flip', tooltip: '也可以用T调用', type: 'button' }
+        ]
+      },
+      {
+        name: 'Grid Reinitialization',
+        id: 'cg-there',
+        options: [
+          {
+            val: 'Reset Grid from Actor',
+            tooltip:
+              '根据网格源actor中的actor重设网格位置和朝向。这将允许通过将网格粘贴到稍后使用的actor的变换中来保存</br>网格位置/朝向,或是依赖工具根据使用的网格初始化新建网格体变换的事实。',
+            type: 'button'
+          },
+          {
+            val: '网格源Actor',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '无' },
+              { val: 'Box' },
+              { val: 'DirectionalLight' },
+              { val: 'ExponentialHeightFog' },
+              { val: 'Floor' },
+              { val: 'SkyAtmosphere' },
+              { val: 'SkyLight' },
+              { val: 'SM_SkySphere' },
+              { val: 'VolumetricCloud' }
+            ]
+          },
+          {
+            icon: '#icon-xiqu',
+            tooltip: '从场景中选取Actor',
+            type: 'iconButton'
+          },
+          {
+            icon: '#icon-zaishikouzhongxuanzhai',
+            tooltip: "在视口中选择'StaticMeshActor_1'",
+            type: 'iconButton'
+          }
+        ]
+      },
       {
         name: '选项',
         id: 'cubeOptions',
@@ -1469,8 +1352,26 @@ const modelSettingList = [
     ]
   },
   {
-    name: '编辑',
+    name: 'PolyEd',
     typeList: [
+      {
+        name: 'PolyEd',
+        id: 'pe-one',
+        options: [
+          {
+            val: '取消',
+            type: 'confirmButton',
+            class: 'cancelButton',
+            id: 'pe-CancelBtn'
+          },
+          {
+            val: '确认',
+            type: 'confirmButton',
+            class: 'confirmButton',
+            id: 'pe-ConfirmBtn'
+          }
+        ]
+      },
       {
         name: '操作',
         id: 'shapeHandle',
@@ -1601,7 +1502,7 @@ const modelSettingList = [
     ]
   },
   {
-    name: '变形',
+    name: 'PolyDef',
     typeList: [
       {
         name: '选项',
@@ -1638,7 +1539,7 @@ const modelSettingList = [
     ]
   },
   {
-    name: '网格布尔',
+    name: 'MshBool',
     typeList: [
       {
         name: '布尔',
@@ -1714,7 +1615,7 @@ const modelSettingList = [
     ]
   },
   {
-    name: '布尔分割',
+    name: 'MshCut',
     typeList: [
       {
         name: '布尔',
@@ -1747,7 +1648,7 @@ const modelSettingList = [
     ]
   },
   {
-    name: '细分',
+    name: 'SubDiv',
     typeList: [
       {
         name: '设置',
@@ -1783,7 +1684,7 @@ const modelSettingList = [
 
 const triModelList = [
   {
-    name: 'triSel',
+    name: 'TriSel',
     typeList: [
       {
         name: '选项编辑',
@@ -2101,7 +2002,7 @@ const triModelList = [
         name: '边缘编辑',
         id: 't-e-two',
         options: [
-          { val: '', tooltip: '', icon: '#icon-', class: 'e-s-icon', type: 'button' },
+          { val: 'Collapse', tooltip: 'Collapse', type: 'button' },
           {
             val: 'Fill Holelit',
             tooltip: '填充任何选定边界边缘的相邻洞',
@@ -2210,8 +2111,8 @@ const triModelList = [
         name: '选项编辑',
         id: 'h-f-two',
         options: [
-          { val: '', tooltip: '', icon: '#icon-fanxiangxuanqu', class: 'icon-s', type: 'button' },
-          { val: '', tooltip: '', icon: '#icon-quanxuan', class: 'icon-s', type: 'button' }
+          { val: 'Clear', tooltip: 'Clear', type: 'button' },
+          { val: 'Select All', tooltip: 'Select All', type: 'button' }
         ]
       },
       {
@@ -2324,7 +2225,9 @@ const triModelList = [
       {
         name: '重定位平面',
         id: 'm-r-seven',
-        options: []
+        options: [
+          { val: 'Shif to Center', tooltip: '在不更改其法线的前提下将镜像平面移动到边界框的中心。', type: 'button' }
+        ]
       }
     ]
   },
@@ -2434,9 +2337,94 @@ const triModelList = [
     name: 'Trim',
     typeList: [
       {
-        name: '',
-        id: '',
-        options: []
+        name: '操作',
+        id: 't-r-one',
+        options: [
+          {
+            val: '哪个网格体',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '修剪A' }, { val: '修剪B' }]
+          },
+          {
+            val: '修剪侧面',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '移除内部' }, { val: '移除外部' }]
+          }
+        ]
+      },
+      {
+        name: '高级',
+        id: 't-r-two',
+        options: [{ val: '卷绕阈值', type: 'input', num: '0.5' }]
+      },
+      {
+        name: '显示',
+        id: 't-r-there',
+        options: [
+          { val: '显示修剪网格体', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '修剪网格体的不透明度', type: 'input', num: '0.2' },
+          {
+            val: '修剪网格体的颜色',
+            type: 'colorModule',
+            id: 't-r-wireFrameColor',
+            inputList: [
+              { val: 'R', num: '128', inputId: 't-m-r-wireFrameInput' },
+              { val: 'G', num: '128', inputId: 't-m-g-wireFrameInput' },
+              { val: 'B', num: '128', inputId: 't-m-b-wireFrameInput' },
+              { val: 'A', num: '255', inputId: 't-m-a-wireFrameInput' }
+            ]
+          }
+        ]
+      },
+      {
+        name: '变换',
+        id: 't-r-four',
+        options: [{ val: '显示小工具', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }]
+      },
+      {
+        name: 'Output type',
+        id: 't-r-five',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }, { val: 'From Input' }]
+          }
+        ]
+      },
+      {
+        name: '输出对象',
+        id: 't-r-six',
+        options: [
+          {
+            val: '写出至',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '新对象' }, { val: '首次输入Object' }, { val: '最后输入Object' }]
+          },
+          { val: '名称', type: 'input', num: 'Trim' }
+        ]
+      },
+      {
+        name: 'On Tool Accept',
+        id: 't-r-seven',
+        options: [
+          {
+            val: '处理输入',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '删除输入' },
+              { val: '隐藏输入' },
+              { val: '保持输入' },
+              { val: '保持第一个输入' },
+              { val: '保持最后一个输入' }
+            ]
+          }
+        ]
       }
     ]
   }
@@ -2446,25 +2434,6 @@ const createList = [
   {
     name: 'PolyExt',
     typeList: [
-      {
-        name: 'polyExt',
-        id: 'polyExtConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'polyExtCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'polyExtConfirmBtn'
-          }
-        ]
-      },
       {
         name: '多边形',
         id: 'polyExtPolygon',
@@ -2576,25 +2545,6 @@ const createList = [
     name: 'PathExt',
     typeList: [
       {
-        name: 'PathExt',
-        id: 'pathExtConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'pathExtCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'pathExtConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '路径',
         id: 'pathExtPath',
         options: [
@@ -2629,25 +2579,6 @@ const createList = [
   {
     name: '路径定义',
     typeList: [
-      {
-        name: '路径定义',
-        id: 'pathExtConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'pathRevCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'pathRevConfirmBtn'
-          }
-        ]
-      },
       {
         name: '旋转',
         id: 'pathExtRotate',
@@ -2712,25 +2643,6 @@ const createList = [
     name: 'BdryRev',
     typeList: [
       {
-        name: 'BdryRev',
-        id: 'bdryRevConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'bdryRevCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'bdryRevConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '旋转',
         id: 'bdryRevRotate',
         options: [
@@ -2793,25 +2705,6 @@ const createList = [
   {
     name: 'Pattern',
     typeList: [
-      {
-        name: 'Pattern',
-        id: 'patternConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'patternCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'patternConfirmBtn'
-          }
-        ]
-      },
       {
         name: '形状',
         id: 'patternForm',
@@ -2899,25 +2792,6 @@ const createList = [
   {
     name: 'Mashup',
     typeList: [
-      {
-        name: 'Mashup',
-        id: 'mashupConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'mashupCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'mashupConfirmBtn'
-          }
-        ]
-      },
       { name: '输出对象', id: 'mashupObj', options: [{ val: '名称', type: 'input' }] },
       {
         name: '输出类型',
@@ -2948,25 +2822,6 @@ const createList = [
   {
     name: '附加',
     typeList: [
-      {
-        name: '附加',
-        id: 'subjoinConfirm',
-        position: 'ture',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'subjoinCancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'subjoinConfirmBtn'
-          }
-        ]
-      },
       {
         name: '输出对象',
         id: 'subjoinObj',
@@ -3013,24 +2868,6 @@ const deFormList = [
     name: 'VSclpt',
     typeList: [
       {
-        name: 'VSclpt',
-        id: 'vs-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '笔刷',
         id: 'vs-two',
         options: [
@@ -3038,7 +2875,7 @@ const deFormList = [
           { val: '流', type: 'input', num: '' },
           { val: '间距', type: 'input', num: '' },
           { val: '延迟', type: 'input', num: '' },
-          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3112,7 +2949,7 @@ const deFormList = [
       {
         name: '对称',
         id: 'vs-five',
-        options: [{ val: '启用对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+        options: [{ val: '启用对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }]
       },
       {
         name: '雕刻笔刷',
@@ -3128,14 +2965,14 @@ const deFormList = [
         options: [
           { val: '强度', type: 'input', num: '0.5' },
           { val: '衰减', type: 'input', num: '1.0' },
-          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
         name: '渲染',
         id: 'vs-eight',
         options: [
-          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           {
             val: '材质模式',
             type: 'select',
@@ -3152,7 +2989,7 @@ const deFormList = [
               { val: '自定义' }
             ]
           },
-          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       }
     ]
@@ -3161,31 +2998,13 @@ const deFormList = [
     name: 'DSclpt',
     typeList: [
       {
-        name: 'DSclpt',
-        id: 'ds-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '笔刷',
         id: 'ds-two',
         options: [
           { val: '大小', type: 'input', num: '0.25' },
           { val: '衰减', type: 'input', num: '0.5' },
           { val: '深度', type: 'input', num: '0.0' },
-          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '命中返回面', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3216,8 +3035,8 @@ const deFormList = [
             ]
           },
           { val: '强度', type: 'input', num: '0.0' },
-          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '冻结目标', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '保留UV流', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '冻结目标', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3225,14 +3044,14 @@ const deFormList = [
         id: 'ds-four',
         options: [
           { val: '平滑强度', type: 'input', num: '' },
-          { val: '保留三密度', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '保留三密度', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
         name: '重构网格',
         id: 'ds-five',
         options: [
-          { val: '启用重构网格', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '启用重构网格', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           { val: '相对三大小', type: 'input', num: '0' },
           { val: '保留细节', type: 'input', num: '0' },
           { val: '平滑率', type: 'input', num: '0.1' }
@@ -3242,12 +3061,12 @@ const deFormList = [
         name: '约束',
         id: 'ds-six',
         options: [
-          { val: '允许翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '允许切割', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '允许折叠', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '保留锐边', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '防止法线翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '防止微笑三角形', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '允许翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '允许切割', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '允许折叠', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '保留锐边', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '防止法线翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '防止微笑三角形', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3288,14 +3107,24 @@ const deFormList = [
         name: '渲染',
         id: 'ds-ten',
         options: [
-          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           {
             val: '材质模式',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '' }, { val: '' }, { val: '' }]
+            optionsList: [
+              { val: '现有材质' },
+              { val: '漫反射' },
+              { val: '灰色' },
+              { val: '柔软' },
+              { val: '透明' },
+              { val: '切线法线' },
+              { val: '顶点颜色' },
+              { val: '自定义图片' },
+              { val: '自定义' }
+            ]
           },
-          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '扁平着色', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           {
             val: '颜色',
             type: 'colorModule',
@@ -3314,24 +3143,6 @@ const deFormList = [
   {
     name: 'Smooth',
     typeList: [
-      {
-        name: 'Smooth',
-        id: 'sm-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
       {
         name: '平滑类型',
         id: 'sm-two',
@@ -3376,24 +3187,6 @@ const deFormList = [
     name: 'Offset',
     typeList: [
       {
-        name: 'Offset',
-        id: 'of-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '偏移类型',
         id: 'of-two',
         options: [
@@ -3404,7 +3197,7 @@ const deFormList = [
             optionsList: [{ val: '迭代式' }, { val: '隐式' }]
           },
           { val: '距离', type: 'input', num: '1.0' },
-          { val: '创建壳', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '创建壳', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3412,9 +3205,9 @@ const deFormList = [
         id: 'of-there',
         options: [
           { val: '步', type: 'input', num: '0.8' },
-          { val: '偏移边界', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '偏移边界', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           { val: '每步平滑', type: 'input', num: '0.5' },
-          { val: '重新投影平滑', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '重新投影平滑', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3427,7 +3220,7 @@ const deFormList = [
             class: 's-c-b-box',
             optionsList: [{ val: 'none' }]
           },
-          { val: '反装权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '反装权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       }
     ]
@@ -3435,24 +3228,6 @@ const deFormList = [
   {
     name: 'Warp',
     typeList: [
-      {
-        name: 'Warp',
-        id: 'wp-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
       {
         name: '选项',
         id: 'wp-two',
@@ -3466,15 +3241,15 @@ const deFormList = [
           { val: '上边界', type: 'input', num: '' },
           { val: '下边界', type: 'input', num: '' },
           { val: '弯曲度', type: 'input', num: '' },
-          { val: '锁定底部', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '显示底部网格体', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '绘图可视化', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '锁定底部', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '显示底部网格体', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '绘图可视化', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
         name: '小工具',
         id: 'wp-there',
-        options: [{ val: 'Ctrl+点击与法线对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+        options: [{ val: 'Ctrl+点击与法线对齐', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }]
       },
       {
         name: '选项',
@@ -3487,30 +3262,12 @@ const deFormList = [
     name: 'Lattice',
     typeList: [
       {
-        name: 'Lattice',
-        id: 'lt-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '变形',
         id: 'lt-two',
         options: [
           { val: 'Clear Constraints', tooltip: '清除所有约束点阵点', type: 'button' },
           { val: 'Constrain', tooltip: '约束选定点定点', type: 'button' },
-          { val: '软变形', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '软变形', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3533,7 +3290,7 @@ const deFormList = [
             class: 's-c-b-box',
             optionsList: [{ val: '线性' }, { val: '立方' }]
           },
-          { val: '变形法线', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '变形法线', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
@@ -3546,7 +3303,7 @@ const deFormList = [
             class: 's-c-b-box',
             optionsList: [{ val: '场景' }, { val: '本地' }]
           },
-          { val: '设置枢轴点模式', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '设置枢轴点模式', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       }
     ]
@@ -3554,24 +3311,6 @@ const deFormList = [
   {
     name: 'Displce',
     typeList: [
-      {
-        name: 'Displce',
-        id: 'dp-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'ConfirmBtn'
-          }
-        ]
-      },
       {
         name: '选项',
         id: 'dp-two',
@@ -3597,20 +3336,20 @@ const deFormList = [
             class: 's-c-b-box',
             optionsList: [{ val: 'none' }]
           },
-          { val: '反转权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
-          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }
+          { val: '反转权重图', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
       {
         name: '高级',
         id: 'dp-there',
-        options: [{ val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+        options: [{ val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }]
       },
       {
         name: '方向过滤选项',
         id: 'dp-four',
         options: [
-          { val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '禁用尺寸警告', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' },
           { val: '过滤方向', type: 'coord', xNum: '0.0', yNum: '0.1', zNum: '0.2' },
           { val: '过滤宽度', type: 'input', num: '4' }
         ]
@@ -3624,6 +3363,151 @@ const deFormList = [
   }
 ]
 
+const transFormList = [
+  {
+    name: 'XForm',
+    typeList: [
+      {
+        name: 'XForm',
+        id: 'xf-two',
+        options: [
+          {
+            val: '变换模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '共享小工具' }, { val: '共享小工具（本地）' }, { val: '多小工具' }]
+          },
+          { val: '应用到实例', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
+        ]
+      },
+      {
+        name: '枢轴点',
+        id: 'xf-there',
+        options: [{ val: '设置枢轴点模式', type: 'checkbox', class: 's-c-b-box', isChecked: '' }]
+      },
+      {
+        name: '对齐拖动',
+        id: 'xf-four',
+        options: [
+          { val: '启用', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          {
+            val: '对齐拖动源',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '点击点' }, { val: '枢轴点' }]
+          },
+          {
+            val: '旋转模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '忽略' }, { val: '对齐' }, { val: '对齐翻转' }]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Align',
+    typeList: [
+      {
+        name: '选项',
+        id: 'ag-two',
+        options: [
+          {
+            val: '对齐类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '枢轴点' }, { val: '边界盒体' }]
+          },
+          {
+            val: '对齐到',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '首个选择' }, { val: '上个选择' }, { val: '组合式' }]
+          },
+          {
+            val: '轴',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: '中央' },
+              { val: '底部' },
+              { val: '顶部' },
+              { val: '左边' },
+              { val: '右边' },
+              { val: '前方' },
+              { val: '后方' },
+              { val: '最小' },
+              { val: '最大' }
+            ]
+          }
+        ]
+      },
+      {
+        name: '轴',
+        id: 'ag-there',
+        options: [
+          { val: '对齐X', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          { val: '对齐Y', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          { val: '对齐Z', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Pivot',
+    typeList: [
+      {
+        name: '选项',
+        id: 'pv-two',
+        options: [
+          { val: '启用对齐拖动', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          {
+            val: '旋转模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '忽略' }, { val: '对齐' }, { val: '对齐翻转' }]
+          }
+        ]
+      },
+      {
+        name: '合体位置',
+        id: 'pv-there',
+        options: [
+          { val: 'Center', tooltip: 'Center', type: 'button' },
+          { val: 'Bottom', tooltip: 'Bottom', type: 'button' },
+          { val: 'Top', tooltip: 'Top', type: 'button' },
+          { val: 'Left', tooltip: 'Left', type: 'button' },
+          { val: 'Right', tooltip: 'Right', type: 'button' },
+          { val: 'Back', tooltip: 'Back', type: 'button' },
+          { val: 'Front', tooltip: 'Front', type: 'button' },
+          { val: 'World origin', tooltip: '', type: 'button' },
+          { val: '使用世界盒体', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'PivotAct',
+    typeList: []
+  },
+  {
+    name: 'BakeRS',
+    typeList: []
+  },
+  {
+    name: 'TransFer',
+    typeList: []
+  },
+  {
+    name: 'Convert',
+    typeList: []
+  },
+  {
+    name: 'Split',
+    typeList: []
+  }
+]
 const outlineList = [
   {
     name: '变换',
@@ -3726,5 +3610,6 @@ export default {
   triModelList,
   outlineList,
   createList,
-  deFormList
+  deFormList,
+  transFormList
 }

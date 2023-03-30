@@ -232,6 +232,22 @@
   color: #707070;
 }
 
+.searchIcon{
+  position: absolute;
+  right: 16PX;
+  font-size: 14px !important;
+  color: #00559D;
+}
+
+
+.searchIcon path {
+  fill: inherit;
+}
+
+use.searchUse{
+  fill: red;
+}
+
 .tooltipOption{
   height: 32px !important;
   padding: 4px 0 8px 0 !important;
@@ -249,3 +265,6 @@
   color: #00559d !important;
 }
 
+#accomplishBox{
+  
+}

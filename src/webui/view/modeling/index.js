@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-17 11:02:14
+ * @LastEditTime: 2023-03-27 09:26:19
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -34,13 +34,10 @@ class modelingList {
           <div>自由造型</div>
         </div>
 
-        <div id="searchInputBox">
+        <div id="searchInputBox" class="x-y-flex">
           <input id="searchInput">
-
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href=""></use>
-          </svg>
-
+          
+          <i class="iconfont icon-xiaoding-xiankuang searchIcon"></i>
         </div>
 
         <div class="modelingListContent">
@@ -84,6 +81,8 @@ class modelingList {
     `)
 
     $('.modelingContent').append(`<div class="m-c-modelOperation"></div>`)
+
+    $('.modelingContent').append(`<div id="accomplishBox" class="accomplishBox"></div>`)
   }
 
   event() {
@@ -165,6 +164,8 @@ class modelingList {
                 break
               // transForm
               case 'Transform':
+                arr = data.transFormList
+                new publicSetting({ index: index, publicSettingList: arr })
                 break
 
               default:
@@ -306,6 +307,8 @@ class modelingList {
       }
       //Transform
       else if ($(this).hasClass('Transform')) {
+        arr = data.transFormList
+        new publicSetting({ index: index, publicSettingList: arr })
       }
     })
   }

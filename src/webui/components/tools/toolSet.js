@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-20 18:12:35
+ * @LastEditTime: 2023-03-25 15:53:20
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -44,8 +44,8 @@ class toolSet {
             <input value="${this.opts.options.num}" type="number" max="100" class="s-c-b-input" />
             <div class="s-c-b-border"></div>
             <button class="s-c-b-button">
-              <svg class="icon-withdraw" aria-hidden="true">
-                <use xlink:href="#icon-fanhui"></use>
+              <svg class="icon-withdraw" >
+                <use class="withdrawUse" xlink:href="#icon-fanhui"></use>
               </svg>
             </button>
           </div>
@@ -58,7 +58,7 @@ class toolSet {
       $('#' + this.opts.location).append(`
             <div class="x-y-flex s-c-b-options">
               <div class="${this.opts.class}">${this.opts.name}</div>
-              <input type="checkbox" checked="${this.opts.options.isChecked}" />
+              <input type="checkbox" ${this.opts.options.isChecked} />
             </div>
         `)
     }
@@ -154,11 +154,21 @@ class toolSet {
           </div>
         `)
     }
-    // 图标按钮
+    // 按钮
     else if (this.opts.type == 'button') {
       $('#' + this.opts.location).append(`
               <button class="e-s-btn" name="${this.opts.options.tooltip}" title="${this.opts.options.val}">
               ${this.opts.options.val}
+              </button>
+          `)
+    }
+    // 图标按钮
+    else if (this.opts.type == 'iconButton') {
+      $('#' + this.opts.location).append(`
+              <button class="iconBtn" title="${this.opts.options.tooltip}">
+                <svg class="icon-withdraw" aria-hidden="true">
+                  <use xlink:href="${this.opts.options.icon}"></use>
+                </svg>
               </button>
           `)
     }
@@ -256,8 +266,8 @@ class toolSet {
     // 确定按钮
     else if (this.opts.type == 'confirmButton') {
       $('#' + this.opts.location).append(`
-              <button id="${this.opts.buttonId}" class="${this.opts.class}">
-                ${this.opts.name}
+              <button id="${this.opts.options.id}" class="${this.opts.options.class}">
+                ${this.opts.options.val}
               </button>
           `)
     }
@@ -411,7 +421,7 @@ class toolSet {
             </svg>
 
             <div class="re-brushBox none">
-              <div style="margin-bottom:8px">资产</div>
+              <div style="margin-bottom:8px">纹路贴图</div>
               <div class="w-flex">
                 ${this.opts.options.iconList
                   .map((item) => {
@@ -431,7 +441,27 @@ class toolSet {
           </div>
           
           <div class="re-selectBox">
-   
+            <div class="x-y-flex" style="margin-bottom:4px">
+              <div>角度</div>
+              <input style="margin-left:8px" class="s-c-b-input"/>
+              <div class="s-c-b-border"></div>
+              <button class="s-c-b-button">
+                <svg class="icon-withdraw" aria-hidden="true">
+                  <use xlink:href="#icon-fanhui"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="x-y-flex">
+              <button class="t-s-btn">随机</button>
+              <input disabled="disabled" class="s-c-b-input t-s-b-input disabledStyle"/>
+              <div class="s-c-b-border"></div>
+              <button class="s-c-b-button">
+                <svg class="icon-withdraw" aria-hidden="true">
+                  <use xlink:href="#icon-fanhui"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       `)
@@ -455,6 +485,23 @@ class toolSet {
             return `<div class="tooltipcontent-o">${this.title}</div>
                     <div class="tooltipcontent-t">选定对象上调用事件</div>
                     <div class="tooltipcontent-t">${this.name}</div>
+                    `
+          }
+        }
+      })
+      $('.iconBtn').tooltip({
+        track: true,
+        classes: {
+          'ui-tooltip': 'tooltip',
+          'ui-tooltip-content': 'tooltip-content'
+        },
+        position: {
+          my: 'left top+25'
+        },
+        content: function () {
+          if ($(this).is('button')) {
+            return `
+                    <div style="font-size:12px;font-weight: 300;">${this.title}</div>
                     `
           }
         }
@@ -579,6 +626,33 @@ class toolSet {
           $('.re-brushBox').addClass('none')
           $('.m-p-s-content').addClass('overflow-y')
           event.stopPropagation()
+        })
+      //随机按钮
+      $('.t-s-btn')
+        .off('click')
+        .click(function () {
+          if ($(this).hasClass('freezeBtnColor')) {
+            $(this).removeClass('freezeBtnColor')
+            $('.t-s-b-input').attr('disabled', 'disabled')
+            $('.t-s-b-input').addClass('disabledStyle')
+          } else {
+            $(this).addClass('freezeBtnColor')
+            $('.t-s-b-input').removeAttr('disabled')
+            $('.t-s-b-input').removeClass('disabledStyle')
+          }
+        })
+    })
+    //撤回按钮
+    $(function () {
+      $('.s-c-b-button')
+        .off('click')
+        .click(function () {
+          if ($(this).hasClass('disabledBtnStyle')) {
+            $(this).removeClass('disabledBtnStyle')
+          } else {
+            $(this).addClass('disabledBtnStyle')
+            $('.withdrawUse').attr('fill', 'red')
+          }
         })
     })
   }
