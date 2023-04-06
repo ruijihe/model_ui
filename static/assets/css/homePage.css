@@ -73,16 +73,16 @@ body {
 
 /* 模型 */
 .modelingBody{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
+
 }
 
 #modeling{
   height: calc(100% - 48px);
   display: flex;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .modelingContent{
@@ -112,6 +112,9 @@ body {
   width: 304px;
   height: calc(100% - 48px);
   display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 
@@ -128,6 +131,7 @@ body {
 #toolBar{
   position: absolute;
   right: 312px;
+  top: 48px;
   height: 24px;
   display: flex;
 }

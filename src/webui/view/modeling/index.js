@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-27 09:26:19
+ * @LastEditTime: 2023-04-06 10:19:37
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -87,7 +87,7 @@ class modelingList {
 
   event() {
     $('.modelingListContent').scroll(function () {
-      console.log($(this).scrollTop())
+      // console.log($(this).scrollTop())
     })
     $(function () {
       //输入框数据操作
@@ -165,6 +165,41 @@ class modelingList {
               // transForm
               case 'Transform':
                 arr = data.transFormList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // MeshOpsList
+              case 'MeshOps':
+                arr = data.MeshOpsList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // VoxOpsList
+              case 'VoxOps':
+                arr = data.VoxOpsList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // AttributesList
+              case 'Attributes':
+                arr = data.AttributesList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // UVsList
+              case 'UVs':
+                arr = data.UVsList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // BakingList
+              case '':
+                arr = data.BakingList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // VolumesList
+              case '':
+                arr = data.VolumesList
+                new publicSetting({ index: index, publicSettingList: arr })
+                break
+              // LODsList
+              case '':
+                arr = data.LODsList
                 new publicSetting({ index: index, publicSettingList: arr })
                 break
 
@@ -308,6 +343,30 @@ class modelingList {
       //Transform
       else if ($(this).hasClass('Transform')) {
         arr = data.transFormList
+        new publicSetting({ index: index, publicSettingList: arr })
+      }
+      //MeshOps
+      else if ($(this).hasClass('MeshOps')) {
+        console.log('MeshOps')
+        arr = data.MeshOpsList
+        new publicSetting({ index: index, publicSettingList: arr })
+      }
+      //VoxOps
+      else if ($(this).hasClass('VoxOps')) {
+        console.log('VoxOps')
+        arr = data.VoxOpsList
+        new publicSetting({ index: index, publicSettingList: arr })
+      }
+      //Attributes
+      else if ($(this).hasClass('Attributes')) {
+        console.log('Attributes')
+        arr = data.AttributesList
+        new publicSetting({ index: index, publicSettingList: arr })
+      }
+      //UVs
+      else if ($(this).hasClass('UVs')) {
+        console.log('UVs')
+        arr = data.UVsList
         new publicSetting({ index: index, publicSettingList: arr })
       }
     })

@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-25 15:18:06
+ * @LastEditTime: 2023-04-06 10:09:58
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -1231,16 +1231,17 @@ const modelSettingList = [
         name: '操作',
         id: 'cg-two',
         options: [
-          { val: 'Pull', tooltip: '也可以用E调用', type: 'button' },
-          { val: 'Push', tooltip: '也可以用Q调用', type: 'button' },
-          { val: 'Slide Back', tooltip: '也可以用Shift + E调用', type: 'button' },
-          { val: 'Slide Forward', tooltip: '也可以用Shift + Q调用', type: 'button' },
+          { val: 'Pull', tooltip: '也可以用E调用', class: 'e-s-btn', type: 'button' },
+          { val: 'Push', tooltip: '也可以用Q调用', class: 'e-s-btn', type: 'button' },
+          { val: 'Slide Back', tooltip: '也可以用Shift + E调用', class: 'e-s-btn', type: 'button' },
+          { val: 'Slide Forward', tooltip: '也可以用Shift + Q调用', class: 'e-s-btn', type: 'button' },
           {
             val: 'Corner Mode',
             tooltip: '进入一个模式，可以选择特定角落，以推/拉那些角落。</br>然后按应用提交结果。</br>也可以用Z来切换。',
+            class: 'e-s-btn',
             type: 'button'
           },
-          { val: 'Flip', tooltip: '也可以用T调用', type: 'button' }
+          { val: 'Flip', tooltip: '也可以用T调用', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
@@ -1251,6 +1252,7 @@ const modelSettingList = [
             val: 'Reset Grid from Actor',
             tooltip:
               '根据网格源actor中的actor重设网格位置和朝向。这将允许通过将网格粘贴到稍后使用的actor的变换中来保存</br>网格位置/朝向,或是依赖工具根据使用的网格初始化新建网格体变换的事实。',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
@@ -1373,87 +1375,143 @@ const modelSettingList = [
         ]
       },
       {
-        name: '操作',
+        name: '面编辑',
         id: 'shapeHandle',
         options: [
           {
             val: 'Extrude',
             tooltip: '通过移动和缝合挤压当前选定面的集。',
             icon: '#icon-jichu',
-            class: 'e-s-icon',
+            class: 'e-s-btn secondLevelBtn',
             type: 'button'
           },
           {
             val: 'OffSet',
             tooltip: '类似于挤压，但默认沿着顶点法线移动顶点，而非朝单一方向移动。',
             icon: '#icon-Offset_1',
-            class: 'e-s-icon',
+            class: 'e-s-btn secondLevelBtn',
+            type: 'button'
+          },
+          {
+            val: 'Push Pull',
+            tooltip: '与挤压/偏移类似，但以布尔方式执行，这意味着面可以切掉网格体或桥接网格体部分。',
+            icon: '#icon-Offset_1',
+            class: 'e-s-btn secondLevelBtn',
             type: 'button'
           },
           {
             val: 'Inset',
             tooltip: '嵌入当前选定面的集。在视口中点击以确认嵌入距离。',
             icon: '#icon-lnset',
-            class: 'e-s-icon',
+            class: 'e-s-btn secondLevelBtn',
             type: 'button'
           },
           {
             val: 'OutSet',
             tooltip: '外凸当前选定面的集。在视口中点击以确认外凸距离。',
             icon: '#icon-Outset',
-            class: 'e-s-icon',
+            class: 'e-s-btn secondLevelBtn',
             type: 'button'
           },
-          { val: '斜角', tooltip: '', icon: '#icon-xiejiao', class: 'e-s-icon', type: 'button' },
-          { val: '合并', tooltip: '', icon: '#icon-hebing-1', class: 'e-s-icon', type: 'button' },
-          { val: '面部切割', tooltip: '', icon: '#icon-mianbuqige', class: 'e-s-icon', type: 'button' },
-          { val: '面部翻转', tooltip: '', icon: '#icon-mianbufanzhuan', class: 'icon-b', type: 'button' },
-          { val: '重分三角', tooltip: '', icon: '#icon-tongfensanjiao', class: 'e-s-icon', type: 'button' },
-          { val: '断开面部', tooltip: '', icon: '#icon-duankaimianbu', class: 'e-s-icon', type: 'button' }
+          { val: 'Bevel', tooltip: 'Bevel', icon: '#icon-xiejiao', class: 'e-s-btn secondLevelBtn', type: 'button' },
+          { val: 'Delete', tooltip: 'Delete', icon: '#icon-hebing-1', class: 'e-s-btn', type: 'button' },
+          { val: 'Merge', tooltip: 'Merge', icon: '#icon-mianbuqige', class: 'e-s-btn', type: 'button' },
+          {
+            val: 'Cut Faces',
+            tooltip: '剪切当前选定面的集。在视口中点击两次以设置剪切线。',
+            icon: '#icon-mianbufanzhuan',
+            class: 'e-s-btn secondLevelBtn',
+            type: 'button'
+          },
+          {
+            val: 'Recalc Normals',
+            tooltip: '重新计算当前选定面的集的法线',
+            icon: '#icon-tongfensanjiao',
+            class: 'e-s-btn',
+            type: 'button'
+          },
+          { val: 'Flip', tooltip: 'Flip', class: 'e-s-btn secondLevelBtn', type: 'button' },
+          { val: 'Retriangulate', tooltip: '对每个选定的面重分三角', class: 'e-s-btn', type: 'button' },
+          { val: 'Decompose', tooltip: '将每个选定面分割为每个三角形的单独多边形', class: 'e-s-btn', type: 'button' },
+          { val: 'Disconnect', tooltip: '在边界处分离选定的面', class: 'e-s-btn', type: 'button' },
+          { val: 'Duplicate', tooltip: '复制他们边界处的选定面', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
         name: '形状编辑',
         id: 'shapeEditing',
         options: [
-          { val: '插入边缘', tooltip: '', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘2', tooltip: '', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' },
-          { val: '', icon: '', tooltip: '', class: 'e-s-icon', type: 'button' }
+          { val: 'Insert Edge Loop', tooltip: 'Insert Edge Loop', class: 'e-s-btn', type: 'button' },
+          { val: 'Insert Edge', tooltip: 'Insert Edge', class: 'e-s-btn', type: 'button' },
+          {
+            val: 'Simplify by Groups',
+            tooltip: '通过移除共享的直边上的顶点和重新三角剖分来简化每个多边形组',
+            class: 'e-s-btn',
+            type: 'button'
+          }
         ]
       },
       {
         name: '边缘编辑',
         id: 'edgeEditing',
         options: [
-          { val: '焊接', tooltip: '', icon: '#icon-hanxie', class: 'e-s-icon', type: 'button' },
-          { val: '伸直', tooltip: '', icon: '#icon-shenzhi', class: 'e-s-icon', type: 'button' },
-          { val: '填充孔', tooltip: '', icon: '#icon-chenchongkong', class: 'e-s-icon', type: 'button' },
-          { val: '斜角_1', tooltip: '', icon: '#icon-xiejiao_1', class: 'e-s-icon', type: 'button' },
-          { val: '桥', tooltip: '', icon: '#icon-qiao', class: 'e-s-icon', type: 'button' }
+          { val: 'Weld', tooltip: 'Weld', class: 'e-s-btn', type: 'button' },
+          { val: 'Straighten', tooltip: 'Straighten', class: 'e-s-btn', type: 'button' },
+          { val: 'Fill Hole', tooltip: '填充任何选定边界边缘的相邻洞', class: 'e-s-btn', type: 'button' },
+          { val: 'Bevel', tooltip: 'Bevel', class: 'e-s-btn', type: 'button' },
+          { val: 'Bridge', tooltip: 'Bridge', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
         name: 'UV',
         id: 'UV',
-        options: [{ val: '平面投影', tooltip: '', icon: '#icon-pingmiantouying', class: 'e-s-icon', type: 'button' }]
+        options: [
+          {
+            val: 'Planar Projection',
+            tooltip: '将平面投影UV指定到网格体',
+            icon: '#icon-pingmiantouying',
+            class: 'e-s-btn',
+            type: 'button'
+          }
+        ]
       },
       {
-        name: '选择操作',
+        name: 'Selection Actions',
         id: 'selectingOperation',
         options: [
-          { val: '反相选区', tooltip: '', icon: '#icon-fanxiangxuanqu', class: 'e-s-icon', type: 'button' },
-          { val: '全选', tooltip: '', icon: '#icon-quanxuan', class: 'e-s-icon', type: 'button' }
+          {
+            val: 'Invert Selection',
+            tooltip: '反转当前选择。如选择为空，与全选的效果相同，并同样依赖于选择过滤器。',
+            class: 'e-s-btn',
+            type: 'button'
+          },
+          {
+            val: 'Select All',
+            tooltip: '选择所有元素。根据选择过滤器，其中顶点首选边界，而非面。',
+            class: 'e-s-btn',
+            type: 'button'
+          }
         ]
       },
       {
         name: '选项过滤器',
         id: 'optionFilter',
         options: [
-          { val: '选择点', tooltip: '', icon: '#icon-xuanzhaidian', class: 'e-s-icon', type: 'button' },
-          { val: '选择线', tooltip: '', icon: '#icon-xuanzhaixian', class: 'e-s-icon', type: 'button' },
-          { val: '选择面', tooltip: '', icon: '#icon-xuanzhaimian', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘1', tooltip: '', icon: '#icon-zharubianhuan1', class: 'e-s-icon', type: 'button' },
-          { val: '插入边缘2', tooltip: '', icon: '#icon-zharubianyuan2', class: 'e-s-icon', type: 'button' }
+          { val: 'Select Vertices', tooltip: '', class: 'e-s-btn', type: 'button' },
+          { val: 'Select Edges', tooltip: '', class: 'e-s-btn', type: 'button' },
+          { val: 'Select Faces', tooltip: '', class: 'e-s-btn', type: 'button' },
+          {
+            val: 'Select Edge Loops',
+            tooltip: '设置时,将选择边缘环。边缘环是沿一串价-4]顶点的路径。',
+            class: 'e-s-btn',
+            type: 'button'
+          },
+          {
+            val: 'Select Edge Rings',
+            tooltip: '设置时,将选择四边形面上彼此相对的边缘环。',
+            class: 'e-s-btn',
+            type: 'button'
+          }
         ]
       },
       {
@@ -1494,7 +1552,7 @@ const modelSettingList = [
         name: '拓扑选项',
         id: 'edTopology',
         options: [
-          { val: '再生额外的角落', icon: '#icon-zaishengewaidijiaola', class: 'e-s-icon', type: 'button' },
+          { val: '再生额外的角落', icon: '#icon-zaishengewaidijiaola', class: 'e-s-btn', type: 'button' },
           { val: '添加额外的角', type: 'checkbox', class: 's-c-b-box' },
           { val: '额外角度度数', type: 'input' }
         ]
@@ -1690,51 +1748,51 @@ const triModelList = [
         name: '选项编辑',
         id: 't-s-selectEditing',
         options: [
-          { val: '清除', icon: '#icon-qingshu', class: 'e-s-icon', type: 'button', tooltip: '清除激活的三角形选择' },
+          { val: '清除', icon: '#icon-qingshu', class: 'e-s-btn', type: 'button', tooltip: '清除激活的三角形选择' },
           {
             val: '全选',
             icon: '#icon-ziyaocaoxing-quanxuan',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '选择网格体中的所有三角形'
           },
-          { val: '反转', icon: '#icon-fanzhuan-3', class: 'e-s-icon', type: 'button', tooltip: '反转激活三角形选择' },
+          { val: '反转', icon: '#icon-fanzhuan-3', class: 'e-s-btn', type: 'button', tooltip: '反转激活三角形选择' },
           {
             val: '增加',
             icon: '#icon-cengjia-1',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '增加激活三角形选择，以包括接触选择边界上顶点的所有三角形'
           },
           {
             val: '移除',
             icon: '#icon-yishu',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '移除接触到选择边界上顶点的所有三角形，以缩小激活三角形选择'
           },
           {
             val: '全部增加',
             icon: '#icon-quanbucengjia',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '增加激活选择以包含通过共享边连接的所有三角形（即泛填充)'
           },
           {
             val: '全部连接',
             icon: '#icon-quanbulianxie',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '按三角形数量选择最大的连接网格体组件'
           },
           {
             val: '区域连接',
             icon: '#icon-quyulianxie',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button',
             tooltip: '按网格体区域选择最大的连接网格体组件'
           },
-          { val: '优化', icon: '#icon-youhua', class: 'e-s-icon', type: 'button', tooltip: '优化选择边界' }
+          { val: '优化', icon: '#icon-youhua', class: 'e-s-btn', type: 'button', tooltip: '优化选择边界' }
         ]
       },
       {
@@ -1806,49 +1864,49 @@ const triModelList = [
             val: 'Delete',
             tooltip: '清除激活的三角形选择',
             icon: '#icon-shanshufaxian',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Disconnect',
             tooltip: '断开选定三角形与其相邻项的连接，沿选择边界创建网格体边界',
             icon: '#icon-duankai',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Flip Normals',
             tooltip: '翻转选定三角形的法线。这将在选择边界创建硬法线。',
             icon: '#icon-fanzhuanfaxian',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Create Polygroup',
             tooltip: '为选定三角形指定一个新的唯一多边形组索引',
             icon: '#icon-chuangjianduozu',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Separate',
             tooltip: '从激活网格体object删除选定三角形,并新建一个包含这些三角形的网格体Object',
             icon: '#icon-fenkai',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Duplicateler',
             tooltip: '新建一个网格体Object,包含选定的三角形',
             icon: '#icon-tongfu',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Smooth Border',
             tooltip: '平滑选择边界',
             icon: '#icon-pinghuabiankuang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -1930,70 +1988,70 @@ const triModelList = [
             val: 'Extrude',
             tooltip: '挤压当前选定面的集。在视口中点击以确认挤压高度。',
             icon: '#icon-sanjiaoxing-Extrude',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Offset',
             tooltip: '类似于挤压,但默认沿着顶点法线移动顶点，而非朝单一方向移动。',
             icon: '#icon-sanjiaoxing-Offset',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Inset',
             tooltip: '嵌入当前选定面的集。在视口中点击以确认嵌入距离。',
             icon: '#icon-sanjiaoxing-lnset',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Outset',
             tooltip: '外凸当前选定面的集。在视口中点击以确认外凸距离。',
             icon: '#icon-sanjiaoxing-Outset',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Cut Faces',
             tooltip: '剪切当前选定面的集。在视口中点击两次以设置剪切线。',
             icon: '#icon-2-11',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Flip',
             tooltip: '翻转当前选定面的集的法线和面朝向',
             icon: '#icon-sanjiaoxing-flip',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Recalc NormalsFlip',
             tooltip: '重新计算当前选定面的集的法线',
             icon: '#icon-2-10',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Duplicate',
             tooltip: '复制选定面',
             icon: '#icon-sanjiaoxing-Duplicate',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Disconnecttte',
             tooltip: '在边界处分离选定的面',
             icon: '#icon-sanjiaoxing-disconnect',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Poke',
             tooltip: '戳每个面的中心点',
             icon: '#icon-sanjiaoxing-poke',
-            class: 'e-s-icon',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -2002,17 +2060,17 @@ const triModelList = [
         name: '边缘编辑',
         id: 't-e-two',
         options: [
-          { val: 'Collapse', tooltip: 'Collapse', type: 'button' },
+          { val: 'Collapse', class: 'e-s-btn', tooltip: 'Collapse', type: 'button' },
           {
             val: 'Fill Holelit',
             tooltip: '填充任何选定边界边缘的相邻洞',
             icon: '#icon-chenchongkong-la',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
-          { val: 'Flip', tooltip: '', icon: '#icon-kongfan-la', class: 'icon-s', type: 'button' },
-          { val: 'Split', tooltip: '', icon: '#icon-fenli-la', class: 'e-s-icon', type: 'button' },
-          { val: 'Weld', tooltip: '', icon: '#icon-hanxie-la', class: 'e-s-icon', type: 'button' }
+          { val: 'Flip', tooltip: '', icon: '#icon-kongfan-la', class: 'e-s-btn', type: 'button' },
+          { val: 'Split', tooltip: '', icon: '#icon-fenli-la', class: 'e-s-btn', type: 'button' },
+          { val: 'Weld', tooltip: '', icon: '#icon-hanxie-la', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
@@ -2023,14 +2081,14 @@ const triModelList = [
             val: 'Invert Selection',
             tooltip: '反转当前选择。如选择为空，与全选的效果相同，并同样依赖于选择过滤器。',
             icon: '#icon-fanxiangxuanqu',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Select All',
             tooltip: '选择所有元素。根据选择过滤器，其中顶点首选边界，而非面。',
             icon: '#icon-quanxuan',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -2039,9 +2097,9 @@ const triModelList = [
         name: '选项过滤器',
         id: 't-e-four',
         options: [
-          { val: 'Select Vertices', tooltip: '', icon: '#icon-xuanzhaidian', class: 'icon-s', type: 'button' },
-          { val: 'Select Edges', tooltip: '', icon: '#icon-xuanzhaixian', class: 'icon-s', type: 'button' },
-          { val: 'Select Faces', tooltip: '', icon: '#icon-xuanzhaimian', class: 'icon-s', type: 'button' }
+          { val: 'Select Vertices', tooltip: '', icon: '#icon-xuanzhaidian', class: 'e-s-btn', type: 'button' },
+          { val: 'Select Edges', tooltip: '', icon: '#icon-xuanzhaixian', class: 'e-s-btn', type: 'button' },
+          { val: 'Select Faces', tooltip: '', icon: '#icon-xuanzhaimian', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
@@ -2111,8 +2169,8 @@ const triModelList = [
         name: '选项编辑',
         id: 'h-f-two',
         options: [
-          { val: 'Clear', tooltip: 'Clear', type: 'button' },
-          { val: 'Select All', tooltip: 'Select All', type: 'button' }
+          { val: 'Clear', tooltip: 'Clear', class: 'e-s-btn', type: 'button' },
+          { val: 'Select All', tooltip: 'Select All', class: 'e-s-btn', type: 'button' }
         ]
       },
       {
@@ -2182,42 +2240,42 @@ const triModelList = [
             val: 'Left',
             tooltip: '移动镜像平面并调整其法线,以向左镜像整个选择。',
             icon: '#icon-wangzuojingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Right',
             tooltip: '移动镜像平面并调整其法线,以向右镜像整个选择。',
             icon: '#icon-wangyoujingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Up',
             tooltip: '移动镜像平面并调整其法线,以向上镜像整个选择。',
             icon: '#icon-wangshangjingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Down',
             tooltip: '移动镜像平面并调整其法线,以向下镜像整个选择。',
             icon: '#icon-wangxiajingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Forward',
             tooltip: '移动镜像平面并调整其法线,以向前镜像整个选择。',
             icon: '#icon-wangqianjingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Backward',
             tooltip: '移动镜像平面并调整其法线,以向后镜像整个选择。',
             icon: '#icon-wanghoujingxiang',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -2226,7 +2284,12 @@ const triModelList = [
         name: '重定位平面',
         id: 'm-r-seven',
         options: [
-          { val: 'Shif to Center', tooltip: '在不更改其法线的前提下将镜像平面移动到边界框的中心。', type: 'button' }
+          {
+            val: 'Shif to Center',
+            tooltip: '在不更改其法线的前提下将镜像平面移动到边界框的中心。',
+            class: 'e-s-btn',
+            type: 'button'
+          }
         ]
       }
     ]
@@ -2262,14 +2325,14 @@ const triModelList = [
             val: 'Cut',
             tooltip: '用当前的平面进行裁剪，不退出工具（热键:T)',
             icon: '#icon-dangqiancaijian',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           },
           {
             val: 'Flip Plane',
             tooltip: '翻转剪切平面（热键:R)',
             icon: '#icon-fanzhuanjianqi',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -2326,7 +2389,7 @@ const triModelList = [
             val: 'Draw Polygon',
             tooltip: '挤压当前选定面的集。在视口中点击以确认挤压高度。',
             icon: '#icon-huizhiduobianxing',
-            class: 'icon-s',
+            class: 'e-s-btn',
             type: 'button'
           }
         ]
@@ -3101,7 +3164,7 @@ const deFormList = [
       {
         name: '网格体编辑',
         id: 'ds-nine',
-        options: [{ val: 'Discard Attributes', tooltip: 'Discard Attributes', type: 'button' }]
+        options: [{ val: 'Discard Attributes', tooltip: 'Discard Attributes', class: 'e-s-btn', type: 'button' }]
       },
       {
         name: '渲染',
@@ -3254,7 +3317,14 @@ const deFormList = [
       {
         name: '选项',
         id: 'wp-four',
-        options: [{ val: 'Shift to Center', tooltip: '将小工具移至Object的中心,而无需变更朝向。', type: 'button' }]
+        options: [
+          {
+            val: 'Shift to Center',
+            tooltip: '将小工具移至Object的中心,而无需变更朝向。',
+            class: 'e-s-btn',
+            type: 'button'
+          }
+        ]
       }
     ]
   },
@@ -3265,8 +3335,8 @@ const deFormList = [
         name: '变形',
         id: 'lt-two',
         options: [
-          { val: 'Clear Constraints', tooltip: '清除所有约束点阵点', type: 'button' },
-          { val: 'Constrain', tooltip: '约束选定点定点', type: 'button' },
+          { val: 'Clear Constraints', tooltip: '清除所有约束点阵点', class: 'e-s-btn', type: 'button' },
+          { val: 'Constrain', tooltip: '约束选定点定点', class: 'e-s-btn', type: 'button' },
           { val: '软变形', type: 'checkbox', class: 's-c-b-box', isChecked: 'checked' }
         ]
       },
@@ -3474,14 +3544,14 @@ const transFormList = [
         name: '合体位置',
         id: 'pv-there',
         options: [
-          { val: 'Center', tooltip: 'Center', type: 'button' },
-          { val: 'Bottom', tooltip: 'Bottom', type: 'button' },
-          { val: 'Top', tooltip: 'Top', type: 'button' },
-          { val: 'Left', tooltip: 'Left', type: 'button' },
-          { val: 'Right', tooltip: 'Right', type: 'button' },
-          { val: 'Back', tooltip: 'Back', type: 'button' },
-          { val: 'Front', tooltip: 'Front', type: 'button' },
-          { val: 'World origin', tooltip: '', type: 'button' },
+          { val: 'Center', tooltip: 'Center', class: 'e-s-btn', type: 'button' },
+          { val: 'Bottom', tooltip: 'Bottom', class: 'e-s-btn', type: 'button' },
+          { val: 'Top', tooltip: 'Top', class: 'e-s-btn', type: 'button' },
+          { val: 'Left', tooltip: 'Left', class: 'e-s-btn', type: 'button' },
+          { val: 'Right', tooltip: 'Right', class: 'e-s-btn', type: 'button' },
+          { val: 'Back', tooltip: 'Back', class: 'e-s-btn', type: 'button' },
+          { val: 'Front', tooltip: 'Front', class: 'e-s-btn', type: 'button' },
+          { val: 'World origin', tooltip: '', class: 'e-s-btn', type: 'button' },
           { val: '使用世界盒体', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
         ]
       }
@@ -3489,25 +3559,130 @@ const transFormList = [
   },
   {
     name: 'PivotAct',
-    typeList: []
+    typeList: [
+      {
+        name: '枢轴点位置',
+        id: 'pa-one',
+        options: [
+          { val: '位置', type: 'coord', xNum: '', yNum: '', zNum: '' },
+          { val: '旋转', type: 'coord', xNum: '', yNum: '', zNum: '' }
+        ]
+      }
+    ]
   },
   {
     name: 'BakeRS',
-    typeList: []
+    typeList: [
+      {
+        name: '选项',
+        id: 'br-one',
+        options: [
+          { val: '烘焙旋转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          {
+            val: '烘焙缩放',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '烘焙完整缩放' }, { val: '烘焙不均匀缩放' }, { val: '不烘焙缩放' }]
+          },
+          { val: '复位枢轴点', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
+        ]
+      }
+    ]
   },
   {
     name: 'TransFer',
-    typeList: []
+    typeList: [
+      {
+        name: '选项',
+        id: 'tf-one',
+        options: [{ val: '传输材质', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      },
+      {
+        name: '源网格体',
+        id: 'tf-two',
+        options: [
+          {
+            val: '源LOD',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'LOD 0' }]
+          }
+        ]
+      },
+      {
+        name: '目标网格体',
+        id: 'tf-there',
+        options: [
+          {
+            val: '目标LOD',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'LOD O' }, { val: 'LOD 1 (New)' }, { val: 'HiRes' }]
+          }
+        ]
+      }
+    ]
   },
   {
     name: 'Convert',
-    typeList: []
+    typeList: [
+      {
+        name: 'OutPut Type',
+        id: 'cv-one',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
+          }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'cv-two',
+        options: [{ val: '传输材质', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      }
+    ]
   },
   {
     name: 'Split',
-    typeList: []
+    typeList: [
+      {
+        name: 'OutPut Type',
+        id: 'sl-one',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }, { val: 'From Input' }]
+          }
+        ]
+      },
+      {
+        name: '选项',
+        id: 'sl-two',
+        options: [{ val: '传输材质', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' }]
+      }
+    ]
   }
 ]
+
+const MeshOpsList = []
+
+const VoxOpsList = []
+
+const AttributesList = []
+
+const UVsList = []
+
+const BakingList = []
+
+const VolumesList = []
+
+const LODsList = []
+
 const outlineList = [
   {
     name: '变换',
@@ -3611,5 +3786,12 @@ export default {
   outlineList,
   createList,
   deFormList,
-  transFormList
+  transFormList,
+  MeshOpsList,
+  VoxOpsList,
+  AttributesList,
+  UVsList,
+  BakingList,
+  VolumesList,
+  LODsList
 }
