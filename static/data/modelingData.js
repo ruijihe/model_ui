@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-06 10:09:58
+ * @LastEditTime: 2023-04-06 17:52:50
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -662,7 +662,7 @@ const modelingData = [
 
 const shapeSettingList = [
   {
-    name: '矩形',
+    name: 'Box',
     typeList: [
       {
         name: '设置',
@@ -672,7 +672,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -680,12 +680,72 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '宽度', type: 'input' },
-          { val: '深度', type: 'input' },
-          { val: '高度', type: 'input' },
-          { val: '宽度细分', type: 'input' },
-          { val: '深度细分', type: 'input' },
-          { val: '高度细分', type: 'input' },
+          { val: '宽度', type: 'input', num: '100.00' },
+          { val: '深度', type: 'input', num: '100.00' },
+          { val: '高度', type: 'input', num: '100.00' },
+          { val: '宽度细分', type: 'input', num: '1' },
+          { val: '深度细分', type: 'input', num: '1' },
+          { val: '高度细分', type: 'input', num: '1' },
+          {
+            val: '多边形组模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '每面' }, { val: '每个形状' }, { val: '每四边形' }]
+          }
+        ]
+      },
+      {
+        name: '定位',
+        id: 'position',
+        options: [
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
+          { val: '旋转', type: 'input', num: '0.0' },
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      },
+      {
+        name: '材质',
+        id: 'texture',
+        options: [
+          { val: '材质名称', type: 'img' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Cyl',
+    typeList: [
+      {
+        name: '设置',
+        id: 'outType',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
+          }
+        ]
+      },
+      {
+        name: '形状',
+        id: 'rectangleForm',
+        options: [
+          { val: '半径', type: 'input', num: '50.0' },
+          { val: '高度', type: 'input', num: '200.0' },
+          { val: '径像切片', type: 'input', num: '16' },
+          { val: '高度细分', type: 'input', num: '1' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -707,7 +767,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -716,7 +776,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -724,7 +784,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '圆柱',
+    name: 'Sphere',
     typeList: [
       {
         name: '设置',
@@ -734,7 +794,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -742,77 +802,16 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '半径', type: 'input' },
-          { val: '高度', type: 'input' },
-          { val: '径像切片', type: 'input' },
-          { val: '高度细分', type: 'input' },
-          { val: '深度细分', type: 'input' },
-          {
-            val: '多边形组模式',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
-          }
-        ]
-      },
-      {
-        name: '定位',
-        id: 'position',
-        options: [
-          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-
-          {
-            val: '枢轴点位置',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '在场景上' }, { val: '底部' }]
-          },
-
-          { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
-        ]
-      },
-      {
-        name: '材质',
-        id: 'texture',
-        options: [
-          { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
-          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
-        ]
-      }
-    ]
-  },
-  {
-    name: '球形',
-    typeList: [
-      {
-        name: '设置',
-        id: 'outType',
-        options: [
-          {
-            val: '输出类型',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
-          }
-        ]
-      },
-      {
-        name: '形状',
-        id: 'rectangleForm',
-        options: [
-          { val: '半径', type: 'input' },
+          { val: '半径', type: 'input', num: '50.0' },
           {
             val: '多边形组模式',
             type: 'select',
             class: 's-c-b-box',
             optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
           },
-          { val: '细分', type: 'input' },
-          { val: '水平切片', type: 'input' },
-          { val: '垂直切片', type: 'input' },
+          { val: '细分', type: 'input', num: '16' },
+          { val: '水平切片', type: 'input', num: '16' },
+          { val: '垂直切片', type: 'input', num: '16' },
           { val: '多边形组模式', type: 'select', class: 's-c-b-box', optionsList: [{ val: '多面' }, { val: '每面' }] }
         ]
       },
@@ -829,7 +828,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -838,7 +837,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -846,7 +845,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '锥形',
+    name: 'Cone',
     typeList: [
       {
         name: '设置',
@@ -856,7 +855,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -864,10 +863,10 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '半径', type: 'input' },
-          { val: '高度', type: 'input' },
-          { val: '径向切片', type: 'input' },
-          { val: '高度细分', type: 'input' },
+          { val: '半径', type: 'input', num: '50.0' },
+          { val: '高度', type: 'input', num: '200.0' },
+          { val: '径向切片', type: 'input', num: '16' },
+          { val: '高度细分', type: 'input', num: '1' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -889,7 +888,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -898,7 +897,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -906,7 +905,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '环形',
+    name: 'Torus',
     typeList: [
       {
         name: '设置',
@@ -916,7 +915,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -924,10 +923,10 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '大半径', type: 'input' },
-          { val: '小半径', type: 'input' },
-          { val: '主要切片', type: 'input' },
-          { val: '小切片', type: 'input' },
+          { val: '大半径', type: 'input', num: '50.0' },
+          { val: '小半径', type: 'input', num: '25.0' },
+          { val: '主要切片', type: 'input', num: '16' },
+          { val: '小切片', type: 'input', num: '16' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -949,7 +948,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -958,7 +957,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -966,7 +965,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '箭头',
+    name: 'Arrow',
     typeList: [
       {
         name: '设置',
@@ -976,7 +975,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -984,12 +983,12 @@ const shapeSettingList = [
         name: '形状',
         id: 'rectangleForm',
         options: [
-          { val: '杆半径', type: 'input' },
-          { val: '杆高度', type: 'input' },
-          { val: '头半径', type: 'input' },
-          { val: '头高度', type: 'input' },
-          { val: '径向切片', type: 'input' },
-          { val: '高度细节', type: 'input' },
+          { val: '杆半径', type: 'input', num: '20.0' },
+          { val: '杆高度', type: 'input', num: '200.0' },
+          { val: '头半径', type: 'input', num: '60.0' },
+          { val: '头高度', type: 'input', num: '120.0' },
+          { val: '径向切片', type: 'input', num: '16' },
+          { val: '高度细节', type: 'input', num: '1' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -1011,7 +1010,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -1020,7 +1019,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -1028,7 +1027,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '方片',
+    name: 'Rect',
     typeList: [
       {
         name: '设置',
@@ -1038,71 +1037,7 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
-          }
-        ]
-      },
-      {
-        name: '形状',
-        id: 'rectangleForm',
-        options: [
-          { val: '矩形类型', type: 'select', class: 's-c-b-box', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
-
-          { val: '宽度', type: 'input' },
-          { val: '深度', type: 'input' },
-          { val: '宽度细化', type: 'input' },
-          { val: '深度细化', type: 'input' },
-          { val: '角半径', type: 'input' },
-          { val: '角切片', type: 'input' },
-          {
-            val: '多边形组模式',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
-          }
-        ]
-      },
-      {
-        name: '定位',
-        id: 'position',
-        options: [
-          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
-
-          {
-            val: '枢轴点位置',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '在场景上' }, { val: '底部' }]
-          },
-
-          { val: '旋转', type: 'input' },
-          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
-        ]
-      },
-      {
-        name: '材质',
-        id: 'texture',
-        options: [
-          { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
-          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
-          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
-        ]
-      }
-    ]
-  },
-  {
-    name: '碟片',
-    typeList: [
-      {
-        name: '设置',
-        id: 'outType',
-        options: [
-          {
-            val: '输出类型',
-            type: 'select',
-            class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -1112,10 +1047,12 @@ const shapeSettingList = [
         options: [
           { val: '矩形类型', type: 'select', class: 's-c-b-box', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
 
-          { val: '半径', type: 'input' },
-          { val: '径向切片', type: 'input' },
-          { val: '径向细分', type: 'input' },
-          { val: '洞半径', type: 'input' },
+          { val: '宽度', type: 'input', num: '100.0' },
+          { val: '深度', type: 'input', num: '100.0' },
+          { val: '宽度细化', type: 'input', num: '1' },
+          { val: '深度细化', type: 'input', num: '1' },
+          { val: '角半径', type: 'input', num: '25.0' },
+          { val: '角切片', type: 'input', num: '16' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -1137,7 +1074,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -1146,7 +1083,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]
@@ -1154,7 +1091,7 @@ const shapeSettingList = [
     ]
   },
   {
-    name: '梯形',
+    name: 'Disc',
     typeList: [
       {
         name: '设置',
@@ -1164,7 +1101,69 @@ const shapeSettingList = [
             val: '输出类型',
             type: 'select',
             class: 's-c-b-box',
-            optionsList: [{ val: '静态网格体' }, { val: '每面' }, { val: '每四边形' }]
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
+          }
+        ]
+      },
+      {
+        name: '形状',
+        id: 'rectangleForm',
+        options: [
+          { val: '矩形类型', type: 'select', class: 's-c-b-box', optionsList: [{ val: '矩形' }, { val: '圆盘' }] },
+
+          { val: '半径', type: 'input', num: '50.0' },
+          { val: '径向切片', type: 'input', num: '16' },
+          { val: '径向细分', type: 'input', num: '1' },
+          { val: '洞半径', type: 'input', num: '25.0' },
+          {
+            val: '多边形组模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '每个形状' }, { val: '每面' }, { val: '每四边形' }]
+          }
+        ]
+      },
+      {
+        name: '定位',
+        id: 'position',
+        options: [
+          { val: '目标表面', type: 'select', class: 's-c-b-box', optionsList: [{ val: '在场景上' }, { val: '底部' }] },
+
+          {
+            val: '枢轴点位置',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '在场景上' }, { val: '底部' }]
+          },
+
+          { val: '旋转', type: 'input', num: '0.0' },
+          { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      },
+      {
+        name: '材质',
+        id: 'texture',
+        options: [
+          { val: '材质名称', type: 'img' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
+          { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
+          { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Stairs',
+    typeList: [
+      {
+        name: '设置',
+        id: 'outType',
+        options: [
+          {
+            val: '输出类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: 'Static Mesh' }, { val: 'Volume' }, { val: 'Dynamic Mesh' }]
           }
         ]
       },
@@ -1178,12 +1177,13 @@ const shapeSettingList = [
             class: 's-c-b-box',
             optionsList: [{ val: '线性' }, { val: '浮动' }, { val: '弯曲' }, { val: '螺旋' }]
           },
-          { val: '步骤数', type: 'input' },
-          { val: '步宽', type: 'input' },
-          { val: '步高', type: 'input' },
-          { val: '曲线角度', type: 'input' },
-          { val: '螺旋角', type: 'input' },
-          { val: '内部半径', type: 'input' },
+          { val: '步骤数', type: 'input', num: '8' },
+          { val: '步宽', type: 'input', num: '150.0' },
+          { val: '步高', type: 'input', num: '20.0' },
+          { val: '步深', type: 'input', num: '30.0' },
+          { val: '曲线角度', type: 'input', num: '90.0' },
+          { val: '螺旋角', type: 'input', num: '90.0' },
+          { val: '内部半径', type: 'input', num: '150.0' },
           {
             val: '多边形组模式',
             type: 'select',
@@ -1205,7 +1205,7 @@ const shapeSettingList = [
             optionsList: [{ val: '在场景上' }, { val: '底部' }]
           },
 
-          { val: '旋转', type: 'input' },
+          { val: '旋转', type: 'input', num: '0.0' },
           { val: '对齐到法线', type: 'checkbox', class: 's-c-b-box' }
         ]
       },
@@ -1214,7 +1214,7 @@ const shapeSettingList = [
         id: 'texture',
         options: [
           { val: '材质名称', type: 'img' },
-          { val: 'UV缩放', type: 'input' },
+          { val: 'UV缩放', type: 'input', num: '1.0' },
           { val: '全局UV缩放', type: 'checkbox', class: 's-c-b-box' },
           { val: '显示线框', type: 'checkbox', class: 's-c-b-box' }
         ]

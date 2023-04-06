@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-04 14:40:03
+ * @LastEditTime: 2023-04-06 17:33:48
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -70,8 +70,9 @@ class toolSet {
           <div class="x-y-flex s-c-b-options">
                         
               <div class="x-y-flex s-c-b-o-box">
-                <img src="../../../../static/assets/images/caizhi.png"/>
   
+                <div class="czimg"></div>
+      
                 <div class="s-c-b-i-box">
                   <div>${this.opts.name}</div>
   

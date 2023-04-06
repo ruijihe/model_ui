@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-06 10:19:37
+ * @LastEditTime: 2023-04-06 17:54:19
  * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -315,7 +315,6 @@ class modelingList {
       $(this).addClass('m-c-box-check')
       //形状
       if ($(this).hasClass('Shapes')) {
-        console.log(index)
         arr = data.shapeSettingList
         new publicSetting({ index: index, publicSettingList: arr })
       }
