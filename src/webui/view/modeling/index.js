@@ -1,9 +1,9 @@
 /*
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
- * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-06 10:19:37
- * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
+ * @LastEditors: VC
+ * @LastEditTime: 2023-04-06 18:09:49
+ * @FilePath: \model_ui\src\webui\view\modeling\index.js
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
@@ -11,6 +11,7 @@
 
 import data from '../../../../static/data/modelingData.js'
 import { publicSetting } from '../../components/publicSetting/index.js'
+import SignalsTool from '../../../common/Signals.js'
 
 class modelingList {
   constructor() {
@@ -315,7 +316,8 @@ class modelingList {
       $(this).addClass('m-c-box-check')
       //形状
       if ($(this).hasClass('Shapes')) {
-        console.log(index)
+        console.log('id -- ', this.id);
+        SignalsTool.dispatch('dispatchShape', this.id);
         arr = data.shapeSettingList
         new publicSetting({ index: index, publicSettingList: arr })
       }

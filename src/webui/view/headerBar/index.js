@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-25 09:40:19
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-02-25 10:25:05
+ * @LastEditTime: 2023-04-06 16:05:20
  * @FilePath: \RjhUitraEdit\src\webui\view\headerBar\index.js
  * @Description:
  *
@@ -29,7 +29,9 @@ class headerBar {
     $('#modelingHeader').append(`
 
       <div class="m-h-img flex">
-        <img src="../../../../static/assets/images/2720.png"/>
+        <svg class="icon-img" aria-hidden="true">
+          <use xlink:href="#icon-bodi_2"></use>
+        </svg>
         <div class="x-y-flex">睿几何设计平台</div>
       </div>
 
