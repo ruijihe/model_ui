@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 09:24:33
  * @LastEditors: VC
- * @LastEditTime: 2023-04-06 10:46:58
+ * @LastEditTime: 2023-04-07 16:36:28
  * @FilePath: \model_ui\src\webui\main.js
  * @Description:
  *
@@ -18,9 +18,3 @@ import './components/publicSetting/index.js'
 import './components/tools/toolSet.js' //工具集合
 import '../../static/lib/jquery/jquery-ui.js'
 import '../../static/lib/jquery/jquery.ui.touch-punch.min.js'
-
-import SignalsTool from '../common/Signals.js';
-
-SignalsTool.addSignal('test', ( str ) => {console.log( str );});
-console.log('signals - ', SignalsTool);
-SignalsTool.dispatch('test', 'test param --- ');

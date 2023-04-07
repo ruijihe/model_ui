@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
  * @LastEditors: VC
- * @LastEditTime: 2023-04-06 18:09:49
+ * @LastEditTime: 2023-04-07 11:30:15
  * @FilePath: \model_ui\src\webui\view\modeling\index.js
  * @Description:
  *
@@ -316,7 +316,7 @@ class modelingList {
       $(this).addClass('m-c-box-check')
       //形状
       if ($(this).hasClass('Shapes')) {
-        console.log('id -- ', this.id);
+        console.log('id -- ', this.id, SignalsTool);
         SignalsTool.dispatch('dispatchShape', this.id);
         arr = data.shapeSettingList
         new publicSetting({ index: index, publicSettingList: arr })
