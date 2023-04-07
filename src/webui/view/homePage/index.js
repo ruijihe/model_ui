@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 10:06:51
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-07 17:06:03
+ * @LastEditTime: 2023-04-07 17:29:36
  * @FilePath: \RjhUitraEdit\src\webui\view\homePage\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,28 +16,28 @@ class homePageBody {
         btnList: [
           { id: 'selectObj', val: '选择对象(Q)', tooltip: '', icon: 'icon-xuanzhai', class: 'toolBarIcon' },
           {
-            id: '',
+            id: 'moveAction',
             val: '选择并平移对象(W)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
             icon: 'icon-yidong',
             class: 'toolBarIcon'
           },
           {
-            id: '',
+            id: 'rotateAction',
             val: '选择并旋转对象(E)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
             icon: 'icon-xuanzhuanjiayidong',
             class: 'toolBarIcon'
           },
           {
-            id: '',
+            id: 'scaleAction',
             val: '选择并缩放对象(R)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
             icon: 'icon-suofang',
             class: 'toolBarIcon'
           },
           {
-            id: '',
+            id: 'spaceAction',
             val: '在世界场景和本地(对象)之间循环变形小工具坐标系(Ctrl + `)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
             icon: 'icon-shijie',
@@ -172,11 +172,23 @@ class homePageBody {
 
         switch (id) {
           case 'selectObj':
-            console.log(id)
             SignalsTool.dispatch('selection')
             break
 
-          case '':
+          case 'moveAction':
+            SignalsTool.dispatch('moveAction')
+            break
+
+          case 'rotateAction':
+            SignalsTool.dispatch('rotateAction')
+            break
+
+          case 'scaleAction':
+            SignalsTool.dispatch('scaleAction')
+            break
+
+          case 'spaceAction':
+            SignalsTool.dispatch('spaceAction')
             break
 
           default:
