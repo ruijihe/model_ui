@@ -2,60 +2,70 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 10:06:51
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-20 18:12:07
+ * @LastEditTime: 2023-04-07 17:06:03
  * @FilePath: \RjhUitraEdit\src\webui\view\homePage\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
+
+import SignalsTool from '../../../common/Signals.js'
+
 class homePageBody {
   constructor(options) {
     this.opts = Object.assign(
       {
         btnList: [
-          { val: '选择对象(Q)', tooltip: '', icon: '#icon-xuanzhai', class: 'toolBarIcon' },
+          { id: 'selectObj', val: '选择对象(Q)', tooltip: '', icon: 'icon-xuanzhai', class: 'toolBarIcon' },
           {
+            id: '',
             val: '选择并平移对象(W)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
-            icon: '#icon-yidong',
+            icon: 'icon-yidong',
             class: 'toolBarIcon'
           },
           {
+            id: '',
             val: '选择并旋转对象(E)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
-            icon: '#icon-xuanzhuanjiayidong',
+            icon: 'icon-xuanzhuanjiayidong',
             class: 'toolBarIcon'
           },
           {
+            id: '',
             val: '选择并缩放对象(R)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
-            icon: '#icon-suofang',
+            icon: 'icon-suofang',
             class: 'toolBarIcon'
           },
           {
+            id: '',
             val: '在世界场景和本地(对象)之间循环变形小工具坐标系(Ctrl + `)',
             tooltip: '长按(Ctrl + Alt)获得更多信息',
-            icon: '#icon-shijie',
+            icon: 'icon-shijie',
             class: 'toolBarIcon'
           },
           {
+            id: '',
             val: '控制对象对齐表面的方式',
             tooltip: '',
-            icon: '#icon-duiqibiaomian',
+            icon: 'icon-duiqibiaomian',
             class: 'toolBarIcon'
           },
           {
+            id: '',
             val: '拖动对象时，启用/禁用对象自动对齐网格',
             tooltip: '',
-            icon: '#icon-zidongduiqiwangluo',
+            icon: 'icon-zidongduiqiwangluo',
             class: 'toolBarIcon'
           },
-          { val: '启用/禁用将对象与旋转网格对齐', tooltip: '', icon: '#icon-jiaozhai', class: 'toolBarIcon' },
+          { id: '', val: '启用/禁用将对象与旋转网格对齐', tooltip: '', icon: 'icon-jiaozhai', class: 'toolBarIcon' },
           {
+            id: '',
             val: '启用/禁用将对象与缩放网格对齐',
             tooltip: '',
-            icon: '#icon-suofangwangluoduiqi',
+            icon: 'icon-suofangwangluoduiqi',
             class: 'toolBarIcon'
           },
-          { val: '摄像机速度', tooltip: '', icon: '#icon-shexiangsuzhai', class: 'toolBarIcon' }
+          { id: '', val: '摄像机速度', tooltip: '', icon: 'icon-shexiangsuzhai', class: 'toolBarIcon' }
         ]
       },
       options
@@ -93,10 +103,8 @@ class homePageBody {
           ${this.opts.btnList
             .map((ele) => {
               return `
-                <button class="toolBarBtn" name="${ele.tooltip}" title="${ele.val}">
-                  <svg class="${ele.class}" aria-hidden="true">
-                    <use xlink:href="${ele.icon}"></use>
-                  </svg>
+                <button id="${ele.id}" class="toolBarBtn" name="${ele.tooltip}" title="${ele.val}">
+                  <i class="iconfont ${ele.class} ${ele.icon}"></i>
                 </button>
             `
             })
@@ -151,6 +159,28 @@ class homePageBody {
                     <div class="t-b-name">${this.name}</div>
                     `
           }
+        }
+      })
+    })
+
+    //工具栏按钮
+    $(function () {
+      $('.toolBarBtn').click(function () {
+        const id = $(this).attr('id')
+        $('.toolBarBtn').removeClass('toolBarColor')
+        $(this).addClass('toolBarColor')
+
+        switch (id) {
+          case 'selectObj':
+            console.log(id)
+            SignalsTool.dispatch('selection')
+            break
+
+          case '':
+            break
+
+          default:
+            break
         }
       })
     })

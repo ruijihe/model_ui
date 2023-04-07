@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-06 17:52:50
+ * @LastEditTime: 2023-04-07 15:06:18
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -3669,7 +3669,122 @@ const transFormList = [
   }
 ]
 
-const MeshOpsList = []
+const MeshOpsList = [
+  {
+    name: 'Simplfy',
+    typeList: [
+      {
+        name: '选项',
+        id: 'sy-one',
+        options: [
+          {
+            val: '简化器类型',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [
+              { val: 'QEM' },
+              { val: '法线意识' },
+              { val: 'UE标准' },
+              { val: '现有位置' },
+              { val: '最小形状保留' },
+              { val: '最小多边形组保留' }
+            ]
+          },
+          {
+            val: '目标模式',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '百分比' }, { val: '三角形数量' }, { val: '顶点数量' }, { val: '边长' }]
+          },
+          { val: '目标百分比', type: 'input', num: '50' },
+          { val: '目标边缘长度', type: 'input', num: '5.0' },
+          { val: '目标三角行数', type: 'input', num: '1000' },
+          { val: '目标顶点数', type: 'input', num: '1000' },
+          { val: '多边角公差', type: 'input', num: '0.1' },
+          { val: '丢弃属性', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          { val: '集合约束', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          { val: '集合公差', type: 'input', num: '0.0' },
+          { val: '重新投影', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
+        ]
+      },
+      {
+        name: '显示',
+        id: 'sy-two',
+        options: [{ val: '显示组颜色', type: 'checkbox', class: 's-c-b-box', isChecked: '' }]
+      },
+      {
+        name: '重构网格',
+        id: '',
+        options: []
+      },
+      {
+        name: '网格体统计数据',
+        id: '',
+        options: []
+      },
+      {
+        name: '网格体元素可视化',
+        id: '',
+        options: []
+      },
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Remesh',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Weld',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Jacket',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Merge',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  },
+  {
+    name: 'Project',
+    typeList: [
+      {
+        name: '',
+        id: '',
+        options: []
+      }
+    ]
+  }
+]
 
 const VoxOpsList = []
 
