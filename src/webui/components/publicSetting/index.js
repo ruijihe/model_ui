@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-16 09:58:40
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-11 16:29:16
+ * @LastEditTime: 2023-04-11 16:45:41
  * @FilePath: \RjhUitraEdit\src\webui\components\publicSetting\index.js
  * @Description:
  *
@@ -201,6 +201,8 @@ class publicSetting {
         let btnVal = $(this).html()
         $('.m-p-s-content').addClass('none')
         $('.SubMenuContent').removeClass('none')
+        $('.SubMenuContent').children().remove()
+        $('.e-s-btn').tooltip('destroy')
 
         switch (btnVal) {
           case 'Extrude':
