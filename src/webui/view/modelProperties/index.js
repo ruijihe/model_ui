@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-03 09:12:25
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-03-06 17:32:37
+ * @LastEditTime: 2023-04-10 17:26:05
  * @FilePath: \RjhUitraEdit\src\webui\view\modelProperties\index.js
  * @Description:
  *
@@ -93,20 +93,7 @@ class modelProperties {
                   </div>
       
                   <div style="padding:0 8px" id="${outLineSettingList.id}">
-                    ${outLineSettingList.options
-                      .map((options) => {
-                        new toolSet({
-                          publicSettingList: outLineSettingList,
-                          location: outLineSettingList.id,
-                          name: options.val,
-                          type: options.type,
-                          icon: options.icon,
-                          optionsList: options.optionsList,
-                          checkboxList: options.checkboxList,
-                          options: options
-                        })
-                      })
-                      .join('')}
+    
                   </div>    
                 </div>
                   `
@@ -129,140 +116,175 @@ class modelProperties {
 
       <div class="m-p-w-window"></div>
     `)
+
+    let tmpArr = []
+    res.forEach((item) => {
+      item.options.forEach((options) => {
+        tmpArr.push(
+          new toolSet({
+            publicSettingList: item,
+            location: item.id,
+            name: options.val,
+            type: options.type,
+            icon: options.icon,
+            optionsList: options.optionsList,
+            options: options
+          })
+        )
+      })
+    })
+
+    tmpArr.forEach((item) => {
+      item.renderView()
+      item.event()
+    })
   }
+
   event() {
-    let that = this
-    // 关闭视窗
-    $('.m-p-w-btn').click(function () {
-      let height = $('#modelingTools').height() - 25
-      $('.m-p-window').addClass('none')
-      //
-      if ($('.m-p-window').hasClass('none')) {
-        $('.m-p-w-show').removeClass('none')
+    $(function () {
+      let that = this
+      // 关闭视窗
+      $('.m-p-w-btn').click(function () {
+        let height = $('#modelingTools').height() - 25
+        $('.m-p-window').addClass('none')
+        //
+        if ($('.m-p-window').hasClass('none')) {
+          $('.m-p-w-show').removeClass('none')
+          $('.m-p-s-box').height(height)
+        }
+      })
+      // 打开视窗
+      $('.m-p-w-show').click(function () {
+        let height = $('#modelingTools').height() - 192
+        $('.m-p-window').removeClass('none')
+        $('.m-p-w-show').addClass('none')
         $('.m-p-s-box').height(height)
-      }
-    })
-    // 打开视窗
-    $('.m-p-w-show').click(function () {
-      let height = $('#modelingTools').height() - 192
-      $('.m-p-window').removeClass('none')
-      $('.m-p-w-show').addClass('none')
-      $('.m-p-s-box').height(height)
-    })
-    // 关闭设置
-    $('.m-p-s-btn').click(function () {
-      $('.m-p-s-box').addClass('none')
-      $('.m-p-s-show').removeClass('none')
-    })
-    // 打开设置
-    $('.m-p-s-show').click(function () {
-      $('.m-p-s-box').removeClass('none')
-      $('.m-p-s-show').addClass('none')
-    })
-    //切换视图
-    $('.m-p-view').click(function () {
-      $('.m-p-view').removeClass('viewCheck')
-      $(this).addClass('viewCheck')
-    })
-    //点击标题
-    $('.outlineBtn').click(function () {
-      let id = this.innerHTML
+      })
+      // 关闭设置
+      $('.m-p-s-btn').click(function () {
+        $('.m-p-s-box').addClass('none')
+        $('.m-p-s-show').removeClass('none')
+      })
+      // 打开设置
+      $('.m-p-s-show').click(function () {
+        $('.m-p-s-box').removeClass('none')
+        $('.m-p-s-show').addClass('none')
+      })
+      //切换视图
+      $('.m-p-view').click(function () {
+        $('.m-p-view').removeClass('viewCheck')
+        $(this).addClass('viewCheck')
+      })
+      //点击标题
+      $('.outlineBtn').click(function () {
+        let id = this.innerHTML
 
-      let reload = function () {
-        $('.outlineContent').children().remove()
-        $('.outlineContent').append(`
-        ${res
-          .map((outLineSettingList) => {
-            return `
-            <div class="s-c-box">
-
-              <div class="e-s-c-title x-y-flex">
-              ${outLineSettingList.name}
-                <div class="iconfont icon-shangla-xiaoxiao"></div>
+        let reload = function () {
+          $('.outlineContent').children().remove()
+          $('.outlineContent').append(`
+          ${res
+            .map((outLineSettingList) => {
+              return `
+              <div class="s-c-box">
+  
+                <div class="e-s-c-title x-y-flex">
+                ${outLineSettingList.name}
+                  <div class="iconfont icon-shangla-xiaoxiao"></div>
+                </div>
+  
+                <div style="padding:0 8px" id="${outLineSettingList.id}">
+     
+                </div>
               </div>
+                `
+            })
+            .join('')}
+          `)
 
-              <div style="padding:0 8px" id="${outLineSettingList.id}">
-                ${outLineSettingList.options
-                  .map((options) => {
-                    new toolSet({
-                      publicSettingList: outLineSettingList,
-                      location: outLineSettingList.id,
-                      name: options.val,
-                      type: options.type,
-                      icon: options.icon,
-                      optionsList: options.optionsList,
-                      checkboxList: options.checkboxList
-                    })
-                  })
-                  .join('')}
-              </div>
-            </div>
-              `
+          let clickArr = []
+          res.forEach((item) => {
+            item.options.forEach((options) => {
+              clickArr.push(
+                new toolSet({
+                  publicSettingList: item,
+                  location: item.id,
+                  name: options.val,
+                  type: options.type,
+                  icon: options.icon,
+                  optionsList: options.optionsList,
+                  options: options
+                })
+              )
+            })
           })
-          .join('')}
-        `)
-      }
-      switch (id) {
-        case '通用':
-          res = outlineList.filter((item) => {
-            return item.type === 'universal'
+
+          clickArr.forEach((item) => {
+            item.renderView()
+            item.event()
           })
-          reload()
-          break
+        }
+        switch (id) {
+          case '通用':
+            res = outlineList.filter((item) => {
+              return item.type === 'universal'
+            })
+            reload()
+            break
 
-        case 'Actor':
-          res = outlineList.filter((item) => {
-            return item.type === 'actor'
-          })
-          reload()
-          break
+          case 'Actor':
+            res = outlineList.filter((item) => {
+              return item.type === 'actor'
+            })
+            reload()
+            break
 
-        case 'LOD':
-          res = outlineList.filter((item) => {
-            return item.type === 'lod'
-          })
-          reload()
-          break
+          case 'LOD':
+            res = outlineList.filter((item) => {
+              return item.type === 'lod'
+            })
+            reload()
+            break
 
-        case '杂项':
-          res = outlineList.filter((item) => {
-            return item.type === ''
-          })
-          reload()
-          break
+          case '杂项':
+            res = outlineList.filter((item) => {
+              return item.type === ''
+            })
+            reload()
+            break
 
-        case '物理':
-          res = outlineList.filter((item) => {
-            return item.type === ''
-          })
-          reload()
-          break
+          case '物理':
+            res = outlineList.filter((item) => {
+              return item.type === ''
+            })
+            reload()
+            break
 
-        case '渲染':
-          res = outlineList.filter((item) => {
-            return item.type === ''
-          })
-          reload()
-          break
+          case '渲染':
+            res = outlineList.filter((item) => {
+              return item.type === ''
+            })
+            reload()
+            break
 
-        case '流送':
-          res = outlineList.filter((item) => {
-            return item.type === ''
-          })
-          reload()
-          break
+          case '流送':
+            res = outlineList.filter((item) => {
+              return item.type === ''
+            })
+            reload()
+            break
 
-        case '所有':
-          res = outlineList
-          reload()
-          break
+          case '所有':
+            res = outlineList
+            reload()
+            break
 
-        default:
-          break
-      }
+          default:
+            break
+        }
 
-      $('.outlineBtn').removeClass('outlineBtnCheck')
-      $(this).addClass('outlineBtnCheck')
+        $('.outlineBtn').removeClass('outlineBtnCheck')
+        $(this).addClass('outlineBtnCheck')
+      })
     })
   }
 }

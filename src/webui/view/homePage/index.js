@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 10:06:51
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-07 17:29:36
+ * @LastEditTime: 2023-04-11 16:21:49
  * @FilePath: \RjhUitraEdit\src\webui\view\homePage\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -119,9 +119,8 @@ class homePageBody {
 
     $('.m-p-setting').append(`
     
-
-
       <div class="m-p-s-content defaultColor overflow-y"></div>
+      <div class="SubMenuContent none defaultColor overflow-y"></div>
 
     `)
   }

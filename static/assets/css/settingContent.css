@@ -125,6 +125,17 @@
   font-size: 12px; 
 }
 
+.SubMenuContent{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 24px);
+  padding-bottom: 20px;
+  font-size: 12px; 
+  background-color: #fcfcfc;
+}
+
 .s-c-b-o-box{
    height: 48px;
 }

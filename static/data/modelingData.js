@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 15:09:00
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-07 15:06:18
+ * @LastEditTime: 2023-04-11 16:07:15
  * @FilePath: \RjhUitraEdit\static\data\modelingData.js
  * @Description:
  *
@@ -1357,24 +1357,6 @@ const modelSettingList = [
     name: 'PolyEd',
     typeList: [
       {
-        name: 'PolyEd',
-        id: 'pe-one',
-        options: [
-          {
-            val: '取消',
-            type: 'confirmButton',
-            class: 'cancelButton',
-            id: 'pe-CancelBtn'
-          },
-          {
-            val: '确认',
-            type: 'confirmButton',
-            class: 'confirmButton',
-            id: 'pe-ConfirmBtn'
-          }
-        ]
-      },
-      {
         name: '面编辑',
         id: 'shapeHandle',
         options: [
@@ -1430,7 +1412,7 @@ const modelSettingList = [
             class: 'e-s-btn',
             type: 'button'
           },
-          { val: 'Flip', tooltip: 'Flip', class: 'e-s-btn secondLevelBtn', type: 'button' },
+          { val: 'Flip', tooltip: 'Flip', class: 'e-s-btn', type: 'button' },
           { val: 'Retriangulate', tooltip: '对每个选定的面重分三角', class: 'e-s-btn', type: 'button' },
           { val: 'Decompose', tooltip: '将每个选定面分割为每个三角形的单独多边形', class: 'e-s-btn', type: 'button' },
           { val: 'Disconnect', tooltip: '在边界处分离选定的面', class: 'e-s-btn', type: 'button' },
@@ -3713,23 +3695,51 @@ const MeshOpsList = [
         options: [{ val: '显示组颜色', type: 'checkbox', class: 's-c-b-box', isChecked: '' }]
       },
       {
-        name: '重构网格',
-        id: '',
-        options: []
+        name: 'Edge Constraints',
+        id: 'sy-there',
+        options: [
+          { val: '保留锐边', type: 'checkbox', class: 's-c-b-box', isChecked: '' },
+          { val: '防止法线翻转', type: 'checkbox', class: 's-c-b-box', isChecked: 'true' },
+          { val: '防止微小三角形', type: 'checkbox', class: 's-c-b-box', isChecked: '' }
+        ]
+      },
+      {
+        name: 'Boundary Constraints',
+        id: 'sy-four',
+        options: [
+          {
+            val: '网格体边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }]
+          },
+          {
+            val: '组边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }, { val: '忽略' }]
+          },
+          {
+            val: '材质边界',
+            type: 'select',
+            class: 's-c-b-box',
+            optionsList: [{ val: '固定' }, { val: '细化' }, { val: '自由' }, { val: '忽略' }]
+          }
+        ]
       },
       {
         name: '网格体统计数据',
-        id: '',
+        id: 'sy-six',
         options: []
       },
       {
         name: '网格体元素可视化',
-        id: '',
+        id: 'sy-seven',
         options: []
       },
       {
         name: '',
-        id: '',
+        id: 'sy-eight',
         options: []
       }
     ]

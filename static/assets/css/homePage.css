@@ -169,4 +169,16 @@ body {
   color: #f1f1f1;
 }
 
+.createDom{
+  width: 272px;
+  height: 48px;
+  border-radius: 4px;
+  background: #fcfcfc;
+  box-shadow: 0 3px 6px #00559d14;
+  position: absolute;
+  left: calc(50% - 136px);
+  bottom: 72px;
+  padding: 8px 16px;
+}
+
 

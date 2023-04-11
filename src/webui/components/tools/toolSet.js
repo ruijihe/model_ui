@@ -2,7 +2,7 @@
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-13 10:56:18
  * @LastEditors: Ray 18565608435@163.com
- * @LastEditTime: 2023-04-06 17:33:48
+ * @LastEditTime: 2023-04-11 16:00:47
  * @FilePath: \RjhUitraEdit\src\webui\components\tools\toolSet.js
  * @Description:
  *
@@ -23,15 +23,8 @@ class toolSet {
       },
       options
     )
-    this.init()
   }
-  init() {
-    var timer = setTimeout(() => {
-      this.renderView()
-      this.event()
-      clearTimeout(timer)
-    }, 1)
-  }
+
   renderView() {
     //输入框
     if (this.opts.type == 'input') {
@@ -57,7 +50,7 @@ class toolSet {
     else if (this.opts.type == 'checkbox') {
       $('#' + this.opts.location).append(`
             <div class="x-y-flex s-c-b-options">
-              <div class="${this.opts.class}">${this.opts.name}</div>
+              <div class="${this.opts.options.class}">${this.opts.options.val}</div>
               <input type="checkbox" ${this.opts.options.isChecked} />
             </div>
         `)
@@ -651,51 +644,6 @@ class toolSet {
           } else {
             $(this).addClass('disabledBtnStyle')
             $('.withdrawUse').attr('fill', 'red')
-          }
-        })
-    })
-
-    //
-    $(function () {
-      $('.secondLevelBtn')
-        .off('click')
-        .click(function () {
-          let btnVal = $(this).html()
-          switch (btnVal) {
-            case 'Extrude':
-              console.log(btnVal)
-              break
-
-            case 'OffSet':
-              console.log(btnVal)
-              break
-
-            case 'Push Pull':
-              console.log(btnVal)
-              break
-
-            case 'Inset':
-              console.log(btnVal)
-              break
-
-            case 'OutSet':
-              console.log(btnVal)
-              break
-
-            case 'Bevel':
-              console.log(btnVal)
-              break
-
-            case 'Cut Faces':
-              console.log(btnVal)
-              break
-
-            case 'Flip':
-              console.log(btnVal)
-              break
-
-            default:
-              break
           }
         })
     })

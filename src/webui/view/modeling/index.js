@@ -1,9 +1,9 @@
 /*
  * @Author: Ray 18565608435@163.com
  * @Date: 2023-02-01 14:36:53
- * @LastEditors: VC
- * @LastEditTime: 2023-04-07 11:30:15
- * @FilePath: \model_ui\src\webui\view\modeling\index.js
+ * @LastEditors: Ray 18565608435@163.com
+ * @LastEditTime: 2023-04-11 16:30:19
+ * @FilePath: \RjhUitraEdit\src\webui\view\modeling\index.js
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
@@ -12,6 +12,7 @@
 import data from '../../../../static/data/modelingData.js'
 import { publicSetting } from '../../components/publicSetting/index.js'
 import SignalsTool from '../../../common/Signals.js'
+import addCreateBar from '../../components/tools/createBar.js'
 
 class modelingList {
   constructor() {
@@ -256,121 +257,130 @@ class modelingList {
       })
     })
 
-    //总隐藏开关
-    $('.m-c-btn').click(function () {
-      let modelingWidth = $('.modelingContent').width()
+    //隐藏开关
+    $(function () {
+      $('.m-c-btn').click(function () {
+        let modelingWidth = $('.modelingContent').width()
 
-      // 点击左侧图标后
-      if ($('.m-c-box').hasClass('m-c-box-check')) {
-        console.log(111)
-        // 关
-        if (modelingWidth > 0) {
-          $('#modelingList').css('display', 'none')
-          $('.m-p-setting').addClass('none')
-          $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
+        // 点击左侧图标后
+        if ($('.m-c-box').hasClass('m-c-box-check')) {
+          console.log(111)
+          // 关
+          if (modelingWidth > 0) {
+            $('#modelingList').css('display', 'none')
+            $('.m-p-setting').addClass('none')
+            $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
+          }
+          // 开
+          else {
+            $('#modelingList').css('display', 'block')
+            $('.m-p-setting').removeClass('none')
+            $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
+          }
         }
-        // 开
+        // 初始状态
         else {
-          $('#modelingList').css('display', 'block')
-          $('.m-p-setting').removeClass('none')
-          $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
+          // 关
+          if (modelingWidth > 0) {
+            $('#modelingList').css('display', 'none')
+            $('.m-p-setting').addClass('none')
+            $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
+          }
+          // 开
+          else {
+            $('#modelingList').css('display', 'block')
+            $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
+          }
         }
-      }
-      // 初始状态
-      else {
-        // 关
-        if (modelingWidth > 0) {
-          $('#modelingList').css('display', 'none')
-          $('.m-p-setting').addClass('none')
-          $('#m-c-btn').attr('class', 'iconfont icon-you-xiaoxiao')
-        }
-        // 开
-        else {
-          $('#modelingList').css('display', 'block')
-          $('#m-c-btn').attr('class', 'iconfont icon-zuo-xiaoxiao')
-        }
-      }
+      })
     })
 
-    // 类型开关
-    $('.m-c-title').click(function () {
-      let content = this.nextElementSibling
-      let icon = this.lastElementChild
+    //类型开关
+    $(function () {
+      $('.m-c-title').click(function () {
+        let content = this.nextElementSibling
+        let icon = this.lastElementChild
 
-      if ($(content).hasClass('none')) {
-        $(content).removeClass('none')
-        $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao shousuColor')
-      } else {
-        $(content).addClass('none')
-        $(icon).attr('class', 'iconfont icon-xia-xiaoxiao shousuColor')
-      }
+        if ($(content).hasClass('none')) {
+          $(content).removeClass('none')
+          $(icon).attr('class', 'iconfont icon-shangla-xiaoxiao shousuColor')
+        } else {
+          $(content).addClass('none')
+          $(icon).attr('class', 'iconfont icon-xia-xiaoxiao shousuColor')
+        }
+      })
     })
 
     // 选择操作
-    $('.m-c-box').click(function () {
-      $('.m-p-setting').removeClass('none')
-      let arr = []
-      let index = $(this).index()
-      // 点击添加背景色
-      $('.m-c-box').removeClass('m-c-box-check')
-      $(this).addClass('m-c-box-check')
-      //形状
-      if ($(this).hasClass('Shapes')) {
-        console.log('id -- ', this.id, SignalsTool);
-        SignalsTool.dispatch('dispatchShape', this.id);
-        arr = data.shapeSettingList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //模型
-      else if ($(this).hasClass('PolyModel')) {
-        let id = $(this).attr('id')
-        arr = data.modelSettingList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //创造
-      else if ($(this).hasClass('Create')) {
-        arr = data.createList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //TriModel
-      else if ($(this).hasClass('TriModel')) {
-        arr = data.triModelList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //Deform
-      else if ($(this).hasClass('Deform')) {
-        arr = data.deFormList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //Transform
-      else if ($(this).hasClass('Transform')) {
-        arr = data.transFormList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //MeshOps
-      else if ($(this).hasClass('MeshOps')) {
-        console.log('MeshOps')
-        arr = data.MeshOpsList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //VoxOps
-      else if ($(this).hasClass('VoxOps')) {
-        console.log('VoxOps')
-        arr = data.VoxOpsList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //Attributes
-      else if ($(this).hasClass('Attributes')) {
-        console.log('Attributes')
-        arr = data.AttributesList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
-      //UVs
-      else if ($(this).hasClass('UVs')) {
-        console.log('UVs')
-        arr = data.UVsList
-        new publicSetting({ index: index, publicSettingList: arr })
-      }
+    $(function () {
+      $('.m-c-box').click(function () {
+        $('.m-p-setting').removeClass('none')
+        $('.m-p-s-content').removeClass('none')
+        $('.SubMenuContent').addClass('none')
+        let arr = []
+        let index = $(this).index()
+        // 点击添加背景色
+        $('.m-c-box').removeClass('m-c-box-check')
+        $(this).addClass('m-c-box-check')
+        //形状
+        if ($(this).hasClass('Shapes')) {
+          console.log('id -- ', this.id, SignalsTool)
+          arr = data.shapeSettingList
+          new publicSetting({ index: index, publicSettingList: arr })
+          SignalsTool.dispatch('dispatchShape', this.id)
+        }
+        //模型
+        else if ($(this).hasClass('PolyModel')) {
+          let id = $(this).attr('id')
+          arr = data.modelSettingList
+          new publicSetting({ index: index, publicSettingList: arr })
+          SignalsTool.dispatch('polyEd')
+        }
+        //创造
+        else if ($(this).hasClass('Create')) {
+          arr = data.createList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //TriModel
+        else if ($(this).hasClass('TriModel')) {
+          arr = data.triModelList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //Deform
+        else if ($(this).hasClass('Deform')) {
+          arr = data.deFormList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //Transform
+        else if ($(this).hasClass('Transform')) {
+          arr = data.transFormList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //MeshOps
+        else if ($(this).hasClass('MeshOps')) {
+          console.log('MeshOps')
+          arr = data.MeshOpsList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //VoxOps
+        else if ($(this).hasClass('VoxOps')) {
+          console.log('VoxOps')
+          arr = data.VoxOpsList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //Attributes
+        else if ($(this).hasClass('Attributes')) {
+          console.log('Attributes')
+          arr = data.AttributesList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+        //UVs
+        else if ($(this).hasClass('UVs')) {
+          console.log('UVs')
+          arr = data.UVsList
+          new publicSetting({ index: index, publicSettingList: arr })
+        }
+      })
     })
   }
 }
