@@ -4,7 +4,8 @@
   "description": "",
   "source": "UltraEdit.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": " npx parcel build UltraEdit.html --dist-dir ./dist   --public-url ./ --no-source-maps --no-cache"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "homepage": "https://github.com/ruijihe/model_ui#readme",
   "dependencies": {
     "extrude-polyline": "^1.0.6",
-    "parcel": "^2.8.3",
+    "parcel": "^2.9.3",
     "signals": "^1.0.0",
     "three": "^0.144.0",
     "three-mesh-bvh": "^0.5.23"
